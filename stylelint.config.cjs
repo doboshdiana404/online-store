@@ -1,17 +1,17 @@
-const { propertyGroups } = require('stylelint-config-clean-order')
+const { propertyGroups } = require('stylelint-config-clean-order');
 
 const propertiesOrder = propertyGroups.map((properties) => ({
   noEmptyLineBetween: false,
   emptyLineBefore: 'always',
-  properties
-}))
+  properties,
+}));
 
 module.exports = {
   defaultSeverity: 'warning',
   extends: [
-    "stylelint-config-standard",
-    "stylelint-config-clean-order",
-    "stylelint-config-css-modules"
+    'stylelint-config-standard',
+    'stylelint-config-clean-order',
+    'stylelint-config-css-modules',
   ],
   rules: {
     'order/properties-order': [
@@ -19,7 +19,7 @@ module.exports = {
       {
         severity: 'warning',
         unspecified: 'bottomAlphabetical',
-      }
-    ]
-  }
+      },
+    ],
+  },
 };

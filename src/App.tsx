@@ -6,7 +6,6 @@ import { Search } from '@/modules/Search/Search';
 import { Card } from '@/components/Card/Card';
 
 import { Button } from '@/ui/Button/Button';
-
 const App = () => {
   return (
     <>

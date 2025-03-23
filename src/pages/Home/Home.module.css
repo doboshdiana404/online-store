@@ -1,3 +1,14 @@
 .home {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+  width: 100px;
+  height: 100px;
+
+  font-size: 16px;
+  line-height: 1.2;
   color: aqua;
+
+  background-color: aliceblue;
 }
