@@ -1,21 +1,12 @@
-import Catalog from '@/pages/Catalog/Catalog';
-import Home from '@/pages/Home/Home';
+import { BrowserRouter } from 'react-router-dom';
 
-import { Search } from '@/modules/Search/Search';
+import AppRoute from './route';
 
-import { Card } from '@/components/Card/Card';
-
-import { Button } from '@/ui/Button/Button';
 const App = () => {
   return (
-    <>
-      <h2>hello</h2>
-      <Home />
-      <Catalog />
-      <Search />
-      <Card />
-      <Button />
-    </>
+    <BrowserRouter>
+      <AppRoute />
+    </BrowserRouter>
   );
 };
 export default App;
