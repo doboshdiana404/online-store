@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { store } from './redux/store';
 import AppRoute from './route';
+import '@/i18n';
 
 const App = () => {
   return (
