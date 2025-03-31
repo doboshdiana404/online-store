@@ -1,3 +1,11 @@
 .header {
   display: flex;
+  justify-content: space-between;
+
+  padding: 10px 25px;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
 }
