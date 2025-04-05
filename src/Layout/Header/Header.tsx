@@ -14,6 +14,7 @@ export const Header = () => {
         <NavLink to={'/'}>{t('header.links.home')}</NavLink>
         <NavLink to={'/catalog'}>{t('header.links.catalog')}</NavLink>
         <NavLink to={'/users'}>{t('header.links.users')}</NavLink>
+        <NavLink to={'/category'}>{t('header.links.category')}</NavLink>
       </nav>
       <LanguageSwitcher />
     </header>
