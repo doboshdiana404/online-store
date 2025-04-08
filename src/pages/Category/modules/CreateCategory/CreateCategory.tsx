@@ -7,7 +7,7 @@ const CreateCategory = () => {
   const [description, setDescription] = useState('');
   const [createCategory] = useCreateCategoryMutation();
   const createNewCategory = () => {
-    createCategory({ description, name });
+    createCategory({ description, name, imageUrl: '' });
     setDescription('');
     setName('');
   };
