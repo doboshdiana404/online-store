@@ -1,5 +1,6 @@
 import { Link, useSearchParams } from 'react-router-dom';
 
+import CategoriesList from '@/modules/CategoriesList/CategoriesList';
 import PageSizeSelect from '@/modules/Pagination/PageSizeSelect/PageSizeSelect';
 import Pagination from '@/modules/Pagination/Pagination';
 
@@ -12,15 +13,17 @@ const Catalog = () => {
   const [searchParams] = useSearchParams();
   const pageNumber = searchParams.get('page') || 1;
   const pageSize = searchParams.get('size') || 8;
+  const categoryId = searchParams.get('CategoryId') || '';
   const {
     data: products,
     isSuccess,
     isLoading,
     isFetching,
-  } = useGetAllProductsQuery({ pageSize, pageNumber });
+  } = useGetAllProductsQuery({ pageSize, pageNumber, categoryId });
   return (
     <section className={styles.catalog}>
       <h2>Catalog</h2>
+      <CategoriesList />
       <div>
         <PageSizeSelect />
       </div>

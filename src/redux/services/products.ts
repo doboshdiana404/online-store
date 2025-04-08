@@ -57,8 +57,8 @@ export interface ProductCreate {
 export const categoryApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getAllProducts: builder.query<ProductsList, ProductsListArgs>({
-      query: ({ pageNumber = 1, pageSize = 4 }) => ({
-        url: `/products?PageNumber=${pageNumber}&PageSize=${pageSize}`,
+      query: ({ pageNumber = 1, pageSize = 4, categoryId }) => ({
+        url: `/products?PageNumber=${pageNumber}&PageSize=${pageSize}&CategoryId=${categoryId}`,
       }),
       providesTags: ['Product'],
     }),
