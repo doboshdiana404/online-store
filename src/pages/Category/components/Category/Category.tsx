@@ -8,7 +8,7 @@ import {
   type Category,
 } from '@/redux/services/category';
 
-const Category: FC<Category> = ({ description, id, name }) => {
+const Category: FC<Category> = ({ description, id, name, imageUrl }) => {
   const [isEdit, setIsEdit] = useState(false);
   const refName = useRef<HTMLInputElement | null>(null);
   const refDescription = useRef<HTMLTextAreaElement | null>(null);
@@ -26,6 +26,13 @@ const Category: FC<Category> = ({ description, id, name }) => {
   };
   return (
     <section className={styles.category}>
+      <img
+        src={imageUrl}
+        alt={`image for ${name}`}
+        width={200}
+        height={200}
+        loading="lazy"
+      />
       <form>
         <div className={styles.inputs}>
           <input

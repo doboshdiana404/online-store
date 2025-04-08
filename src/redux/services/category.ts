@@ -6,6 +6,7 @@ export interface Category {
   id: string;
   name: string;
   description: string;
+  imageUrl: string;
 }
 
 export type CategoryCreate = Omit<Category, 'id'>;
