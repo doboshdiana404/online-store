@@ -4,6 +4,7 @@ export const english = {
       home: 'Home',
       catalog: 'Catalog',
       users: 'Users',
+      category: 'Category',
     },
   },
 };

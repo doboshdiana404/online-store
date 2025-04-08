@@ -1,0 +1,6 @@
+.category {
+  display: flex;
+  gap: 64px;
+
+  padding: 24px 48px;
+}

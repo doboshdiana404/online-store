@@ -4,6 +4,7 @@ export const ukraine = {
       home: 'Головна',
       catalog: 'Каталог',
       users: 'Користувачі',
+      category: 'Категорії',
     },
   },
 };
