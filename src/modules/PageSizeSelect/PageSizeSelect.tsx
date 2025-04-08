@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 import { useSearchParams } from 'react-router-dom';
 
-const options = [8, 12, 16]; // Варіанти кількості товарів
+const options = [8, 12, 16];
 
 const PageSizeSelect = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const initialSize = Number(searchParams.get('size')) || options[0]; // Початкове значення з "size"
+  const initialSize = Number(searchParams.get('size')) || options[0];
   const [selectedSize, setSelectedSize] = useState(initialSize);
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -21,7 +21,7 @@ const PageSizeSelect = () => {
 
   return (
     <div>
-      <label htmlFor="page-size-select">Кількість товарів на сторінці:</label>
+      <label htmlFor="page-size-select">PageSize:</label>
       <select
         id="page-size-select"
         value={selectedSize}

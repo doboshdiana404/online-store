@@ -20,7 +20,7 @@ export interface ProductsList {
 export interface ProductsListArgs {
   searchQuery?: string;
   categoryId?: string;
-  isActive?: boolean;
+  isActive?: string;
   minPrice?: string;
   maxPrice?: string;
   pageNumber?: number | string;
@@ -59,12 +59,16 @@ export const categoryApi = baseApi.injectEndpoints({
     getAllProducts: builder.query<ProductsList, ProductsListArgs>({
       query: ({
         pageNumber = 1,
-        pageSize = 4,
+        pageSize = 8,
         categoryId,
         sortBy,
         sortDirection,
+        searchQuery,
+        maxPrice,
+        minPrice,
+        isActive,
       }) => ({
-        url: `/products?PageNumber=${pageNumber}&PageSize=${pageSize}&CategoryId=${categoryId}&SortBy=${sortBy}&SortDirection=${sortDirection}`,
+        url: `/products?PageNumber=${pageNumber}&PageSize=${pageSize}&CategoryId=${categoryId}&SortBy=${sortBy}&SortDirection=${sortDirection}&SearchQuery=${searchQuery}&MinPrice=${minPrice}&MaxPrice=${maxPrice}&IsActive=${isActive}`,
       }),
       providesTags: ['Product'],
     }),

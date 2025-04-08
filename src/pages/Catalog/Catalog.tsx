@@ -1,8 +1,12 @@
 import { Link, useSearchParams } from 'react-router-dom';
 
 import CategoriesList from '@/modules/CategoriesList/CategoriesList';
-import PageSizeSelect from '@/modules/Pagination/PageSizeSelect/PageSizeSelect';
+import ResetButton from '@/modules/ClearFilters/ClearFilters';
+import PageSizeSelect from '@/modules/PageSizeSelect/PageSizeSelect';
 import Pagination from '@/modules/Pagination/Pagination';
+import PriceRangeFilter from '@/modules/PriceRangeFilter/PriceRangeFilter';
+import Search from '@/modules/Search/Search';
+import SortByIsActive from '@/modules/SortByIsActive/SortByIsActive';
 import SortSelect from '@/modules/SortSelect/SortSelect';
 
 import styles from './Catalog.module.css';
@@ -17,6 +21,10 @@ const Catalog = () => {
   const categoryId = searchParams.get('CategoryId') || '';
   const sortBy = searchParams.get('SortBy') || '';
   const sortDirection = searchParams.get('SortDirection') || '';
+  const searchQuery = searchParams.get('SearchQuery') || '';
+  const maxPrice = searchParams.get('MaxPrice') || '';
+  const minPrice = searchParams.get('MinPrice') || '';
+  const isActive = searchParams.get('IsActive') || '';
 
   const {
     data: products,
@@ -29,14 +37,22 @@ const Catalog = () => {
     categoryId,
     sortBy,
     sortDirection,
+    searchQuery,
+    maxPrice,
+    minPrice,
+    isActive,
   });
   return (
     <section className={styles.catalog}>
       <h2>Catalog</h2>
+      <Search />
       <CategoriesList />
-      <div>
+      <div className={styles.filters}>
         <PageSizeSelect />
         <SortSelect />
+        <PriceRangeFilter />
+        <SortByIsActive />
+        <ResetButton />
       </div>
       <div className={styles['product-list']}>
         {isSuccess &&
