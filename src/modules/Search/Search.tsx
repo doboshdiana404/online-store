@@ -1,18 +1,21 @@
-import { useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useSearchParams } from 'react-router-dom';
 
 const Search = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const inputRef = useRef<HTMLInputElement>(null);
-  const defaultValue = searchParams.get('SearchQuery') || '';
+  const [query, setQuery] = useState(searchParams.get('SearchQuery') || '');
+
+  useEffect(() => {
+    setQuery(searchParams.get('SearchQuery') || '');
+  }, [searchParams]);
 
   const handleSearch = () => {
-    const value = inputRef.current?.value || '';
     setSearchParams((prev) => {
-      prev.set('SearchQuery', value);
-      prev.set('page', '1');
-      return prev;
+      const newParams = new URLSearchParams(prev.toString());
+      newParams.set('SearchQuery', query);
+      newParams.set('page', '1');
+      return newParams;
     });
   };
 
@@ -22,8 +25,8 @@ const Search = () => {
       <input
         id="search-input"
         type="text"
-        ref={inputRef}
-        defaultValue={defaultValue}
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
         placeholder="Enter at least 3 characters..."
       />
       <button onClick={handleSearch} type="button">
