@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import CategoriesList from '@/modules/CategoriesList/CategoriesList';
 import PageSizeSelect from '@/modules/Pagination/PageSizeSelect/PageSizeSelect';
 import Pagination from '@/modules/Pagination/Pagination';
+import SortSelect from '@/modules/SortSelect/SortSelect';
 
 import styles from './Catalog.module.css';
 
@@ -14,18 +15,28 @@ const Catalog = () => {
   const pageNumber = searchParams.get('page') || 1;
   const pageSize = searchParams.get('size') || 8;
   const categoryId = searchParams.get('CategoryId') || '';
+  const sortBy = searchParams.get('SortBy') || '';
+  const sortDirection = searchParams.get('SortDirection') || '';
+
   const {
     data: products,
     isSuccess,
     isLoading,
     isFetching,
-  } = useGetAllProductsQuery({ pageSize, pageNumber, categoryId });
+  } = useGetAllProductsQuery({
+    pageSize,
+    pageNumber,
+    categoryId,
+    sortBy,
+    sortDirection,
+  });
   return (
     <section className={styles.catalog}>
       <h2>Catalog</h2>
       <CategoriesList />
       <div>
         <PageSizeSelect />
+        <SortSelect />
       </div>
       <div className={styles['product-list']}>
         {isSuccess &&

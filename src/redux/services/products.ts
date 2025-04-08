@@ -25,8 +25,8 @@ export interface ProductsListArgs {
   maxPrice?: string;
   pageNumber?: number | string;
   pageSize?: number | string;
-  sortBy?: 'price' | 'rating';
-  sortDirection?: 'asc' | 'desc';
+  sortBy?: string;
+  sortDirection?: string;
 }
 
 export interface ProductById {
@@ -57,8 +57,14 @@ export interface ProductCreate {
 export const categoryApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getAllProducts: builder.query<ProductsList, ProductsListArgs>({
-      query: ({ pageNumber = 1, pageSize = 4, categoryId }) => ({
-        url: `/products?PageNumber=${pageNumber}&PageSize=${pageSize}&CategoryId=${categoryId}`,
+      query: ({
+        pageNumber = 1,
+        pageSize = 4,
+        categoryId,
+        sortBy,
+        sortDirection,
+      }) => ({
+        url: `/products?PageNumber=${pageNumber}&PageSize=${pageSize}&CategoryId=${categoryId}&SortBy=${sortBy}&SortDirection=${sortDirection}`,
       }),
       providesTags: ['Product'],
     }),
