@@ -6,10 +6,12 @@ export interface Category {
   id: string;
   name: string;
   description: string;
-  imageUrl: string;
+  imageName: string;
 }
 
-export type CategoryCreate = Omit<Category, 'id'>;
+export interface CategoryCreate extends Omit<Category, 'id' | 'imageName'> {
+  image: string;
+}
 
 export interface CategoryEdit extends Partial<CategoryCreate> {
   id: string;
