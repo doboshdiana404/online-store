@@ -2,9 +2,10 @@ import { useParams } from 'react-router-dom';
 
 import { skipToken } from '@reduxjs/toolkit/query';
 
+import Image from '@/components/Image/Image';
+
 import styles from './Product.module.css';
 
-import image from '@/assets/example/example.png';
 import { useGetProductByIdQuery } from '@/redux/services/products';
 
 const Product = () => {
@@ -20,12 +21,11 @@ const Product = () => {
       <h2>Product</h2>
       {isSuccess && (
         <>
-          <img
-            src={image}
+          <Image
             alt={`Image for ${product.name}`}
+            id={product.imageUrl}
             width={300}
             height={250}
-            loading="lazy"
           />
           <h3>{product.name}</h3>
           <p>{product.description}</p>

@@ -4,7 +4,7 @@ import { baseApi } from './baseApi';
 export interface Product {
   id: string;
   name: string;
-  imageUrl: string;
+  mainImageName: string;
   sortDescription: string;
   price: number;
   isActive: boolean;
@@ -42,7 +42,6 @@ export interface ProductById {
   reviews: [];
   categoryId: string;
 }
-
 export interface ProductCreate {
   name: string;
   description: string;

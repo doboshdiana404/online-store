@@ -4,10 +4,12 @@ import { ImageProps } from './types';
 
 import fallbackImg from '@/assets/example/example.png';
 
-// const baseURLApi = import.meta.env.VITE_API_BASE_URL;
-const baseURLApi = 'http://craft-sweets.runasp.net/';
-const generateImageUrl = (baseURLApi: string, id: string, type: string) =>
-  `${baseURLApi}images/${id}-${type}.webp`;
+const baseURLApi = import.meta.env.VITE_API_BASE_URL;
+// const baseURLApi = 'http://craft-sweets.runasp.net/';
+const generateImageUrl = (baseURLApi: string, id: string, type: string) => {
+  const imageId = id.endsWith('.webp') ? id.slice(0, -5) : id;
+  return `${baseURLApi}images/${imageId}-${type}.webp`;
+};
 
 const Image: React.FC<ImageProps> = ({
   id,

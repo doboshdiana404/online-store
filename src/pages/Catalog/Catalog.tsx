@@ -1,4 +1,4 @@
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 import CategoriesList from '@/modules/CategoriesList/CategoriesList';
 import ResetButton from '@/modules/ClearFilters/ClearFilters';
@@ -9,9 +9,10 @@ import Search from '@/modules/Search/Search';
 import SortByIsActive from '@/modules/SortByIsActive/SortByIsActive';
 import SortSelect from '@/modules/SortSelect/SortSelect';
 
+import { Card } from '@/components/ProductCard/ProductCard';
+
 import styles from './Catalog.module.css';
 
-import image from '@/assets/example/example.png';
 import { useGetAllProductsQuery } from '@/redux/services/products';
 
 const Catalog = () => {
@@ -57,16 +58,7 @@ const Catalog = () => {
       <div className={styles['product-list']}>
         {isSuccess &&
           products.items.map(({ id, ...product }) => (
-            <Link
-              to={`/product/${id}`}
-              key={id}
-              className={styles['product-card']}
-            >
-              <img src={image} alt="" loading="lazy" width={250} height={250} />
-              <h3>{product.name}</h3>
-              <p>{product.sortDescription}</p>
-              <p>{product.price}$</p>
-            </Link>
+            <Card key={id} {...product} id={id} />
           ))}
         {isFetching || (isLoading && <p>Loading...</p>)}
       </div>
