@@ -23,10 +23,22 @@ const Product = () => {
         <>
           <Image
             alt={`Image for ${product.name}`}
-            id={product.imageUrl}
+            id={product.mainProductImage}
             width={300}
             height={250}
           />
+          <div className={styles.images}>
+            {!!product.productImages &&
+              product.productImages.map((image) => (
+                <Image
+                  key={image}
+                  id={image}
+                  alt={`Image for ${product.name}`}
+                  width={200}
+                  height={200}
+                />
+              ))}
+          </div>
           <h3>{product.name}</h3>
           <p>{product.description}</p>
           <p>Price: {product.price}$</p>

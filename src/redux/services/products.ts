@@ -34,7 +34,8 @@ export interface ProductById {
   name: string;
   description: string;
   price: number;
-  imageUrl: string;
+  mainProductImage: string;
+  productImages: string[];
   sku: string;
   rating: number;
   stockQuantity: number;
@@ -42,6 +43,7 @@ export interface ProductById {
   reviews: [];
   categoryId: string;
 }
+
 export interface ProductCreate {
   name: string;
   description: string;
