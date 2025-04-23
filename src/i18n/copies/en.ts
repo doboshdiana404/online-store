@@ -5,6 +5,7 @@ export const english = {
       catalog: 'Catalog',
       users: 'Users',
       category: 'Category',
+      'create-product': 'Create product',
     },
   },
 };

@@ -5,6 +5,7 @@ export const ukraine = {
       catalog: 'Каталог',
       users: 'Користувачі',
       category: 'Категорії',
+      'create-product': 'Створити продукт',
     },
   },
 };

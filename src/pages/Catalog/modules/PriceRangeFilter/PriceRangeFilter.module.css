@@ -1,0 +1,14 @@
+.price-filter {
+  display: flex;
+  gap: 5px;
+}
+
+.inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+}

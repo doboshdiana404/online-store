@@ -1,0 +1,11 @@
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.categories-list > div {
+  display: flex;
+  gap: 12px;
+}

@@ -6,11 +6,15 @@ export interface Category {
   id: string;
   name: string;
   description: string;
+  imageName: string;
 }
 
-export type CategoryCreate = Omit<Category, 'id'>;
+export interface CategoryCreate extends Omit<Category, 'id' | 'imageName'> {
+  image: string;
+}
 
-export interface CategoryEdit extends Partial<CategoryCreate> {
+export interface CategoryEdit {
+  body: FormData;
   id: string;
 }
 
@@ -26,6 +30,7 @@ export const categoryApi = baseApi.injectEndpoints({
       query: (id) => ({
         url: `/categories/${id}`,
       }),
+      providesTags: ['Category'],
     }),
     deleteCategory: builder.mutation<string, string>({
       query: (id) => ({
@@ -34,7 +39,7 @@ export const categoryApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: ['Category'],
     }),
-    createCategory: builder.mutation<Category, CategoryCreate>({
+    createCategory: builder.mutation<Category, FormData>({
       query: (body) => ({
         url: `/categories`,
         method: 'POST',
@@ -43,7 +48,7 @@ export const categoryApi = baseApi.injectEndpoints({
       invalidatesTags: ['Category'],
     }),
     editCategory: builder.mutation<Category, CategoryEdit>({
-      query: ({ id, ...body }) => ({
+      query: ({ id, body }) => ({
         url: `/categories/${id}`,
         method: 'PUT',
         body,
