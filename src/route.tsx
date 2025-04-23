@@ -9,6 +9,7 @@ import Layout from './Layout/Layout/Layout';
 import Category from './pages/Category/Category';
 import AllCategory from './pages/Category/modules/AllCategory/AllCategory';
 import CreateCategory from './pages/Category/modules/CreateCategory/CreateCategory';
+import EditCategoryById from './pages/Category/modules/EditCategoryById/EditCategoryById';
 import Product from './pages/Product/Product';
 
 const AppRoute = () => {
@@ -22,6 +23,10 @@ const AppRoute = () => {
         <Route path="/category" element={<Category />}>
           <Route path="/category/all" element={<AllCategory />} />
           <Route path="/category/create" element={<CreateCategory />} />
+          <Route
+            path="/category/edit/:categoryId"
+            element={<EditCategoryById />}
+          />
         </Route>
         <Route path="*" element={<Page404 />} />
       </Route>

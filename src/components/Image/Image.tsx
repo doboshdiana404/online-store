@@ -3,13 +3,7 @@ import React, { useState } from 'react';
 import { ImageProps } from './types';
 
 import fallbackImg from '@/assets/example/example.png';
-
-const baseURLApi = import.meta.env.VITE_API_BASE_URL;
-// const baseURLApi = 'http://craft-sweets.runasp.net/';
-const generateImageUrl = (baseURLApi: string, id: string, type: string) => {
-  const imageId = id.endsWith('.webp') ? id.slice(0, -5) : id;
-  return `${baseURLApi}images/${imageId}-${type}.webp`;
-};
+import { generateImageUrl } from '@/utils/generateImageUrl';
 
 const Image: React.FC<ImageProps> = ({
   id,
@@ -21,9 +15,9 @@ const Image: React.FC<ImageProps> = ({
 }) => {
   const [error, setError] = useState(false);
 
-  const mobileSrc = generateImageUrl(baseURLApi, id, 'mobile');
-  const tabletSrc = generateImageUrl(baseURLApi, id, 'tablet');
-  const desktopSrc = generateImageUrl(baseURLApi, id, 'desktop');
+  const mobileSrc = generateImageUrl(id, 'mobile');
+  const tabletSrc = generateImageUrl(id, 'tablet');
+  const desktopSrc = generateImageUrl(id, 'desktop');
 
   return (
     <picture>
