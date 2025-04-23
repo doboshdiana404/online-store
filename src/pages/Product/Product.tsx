@@ -1,21 +1,35 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { skipToken } from '@reduxjs/toolkit/query';
 
 import Image from '@/components/Image/Image';
 
+import { Button } from '@/ui/Button/Button';
+import { Variant } from '@/ui/Button/constants';
+
 import styles from './Product.module.css';
 
-import { useGetProductByIdQuery } from '@/redux/services/products';
+import {
+  useDeleteProductMutation,
+  useGetProductByIdQuery,
+} from '@/redux/services/products';
 
 const Product = () => {
   const { productId } = useParams<{ productId: string }>();
+  const navigate = useNavigate();
+  const [deleteProduct] = useDeleteProductMutation();
   const {
     data: product,
     isSuccess,
     isLoading,
     isFetching,
   } = useGetProductByIdQuery(productId ?? skipToken);
+  const handleDeleteProduct = () => {
+    if (product && product.id) {
+      deleteProduct(product.id);
+      navigate('/catalog');
+    }
+  };
   return (
     <section className={styles.product}>
       <h2>Product</h2>
@@ -49,6 +63,11 @@ const Product = () => {
         </>
       )}
       {(isLoading || isFetching) && <p>Loading...</p>}
+      <Button
+        variant={Variant.Basic}
+        text="Delete"
+        onClick={handleDeleteProduct}
+      />
     </section>
   );
 };

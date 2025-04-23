@@ -85,9 +85,9 @@ export const categoryApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: ['Product'],
     }),
-    createProduct: builder.mutation<Product, ProductCreate>({
+    createProduct: builder.mutation<Product, FormData>({
       query: (body) => ({
-        url: `/categories`,
+        url: `/products`,
         method: 'POST',
         body,
       }),
@@ -95,7 +95,7 @@ export const categoryApi = baseApi.injectEndpoints({
     }),
     editProduct: builder.mutation<Product, Product>({
       query: ({ id, ...body }) => ({
-        url: `/categories/${id}`,
+        url: `/products/${id}`,
         method: 'PUT',
         body,
       }),

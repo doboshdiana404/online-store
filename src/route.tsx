@@ -10,6 +10,7 @@ import Category from './pages/Category/Category';
 import AllCategory from './pages/Category/modules/AllCategory/AllCategory';
 import CreateCategory from './pages/Category/modules/CreateCategory/CreateCategory';
 import EditCategoryById from './pages/Category/modules/EditCategoryById/EditCategoryById';
+import CreateProduct from './pages/CreateProduct/CreateProduct';
 import Product from './pages/Product/Product';
 
 const AppRoute = () => {
@@ -19,6 +20,7 @@ const AppRoute = () => {
         <Route index path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/users" element={<Users />} />
+        <Route path="/create-product" element={<CreateProduct />} />
         <Route path={'/product/:productId'} element={<Product />} />
         <Route path="/category" element={<Category />}>
           <Route path="/category/all" element={<AllCategory />} />
