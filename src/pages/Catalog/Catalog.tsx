@@ -1,17 +1,18 @@
 import { useSearchParams } from 'react-router-dom';
 
+import ResetButton from '@/pages/Catalog/modules/ClearFilters/ClearFilters';
+import PageSizeSelect from '@/pages/Catalog/modules/PageSizeSelect/PageSizeSelect';
+
 import CategoriesList from '@/modules/CategoriesList/CategoriesList';
-import ResetButton from '@/modules/ClearFilters/ClearFilters';
-import PageSizeSelect from '@/modules/PageSizeSelect/PageSizeSelect';
 import Pagination from '@/modules/Pagination/Pagination';
-import PriceRangeFilter from '@/modules/PriceRangeFilter/PriceRangeFilter';
-import Search from '@/modules/Search/Search';
-import SortByIsActive from '@/modules/SortByIsActive/SortByIsActive';
-import SortSelect from '@/modules/SortSelect/SortSelect';
 
 import { Card } from '@/components/ProductCard/ProductCard';
 
 import styles from './Catalog.module.css';
+import PriceRangeFilter from './modules/PriceRangeFilter/PriceRangeFilter';
+import Search from './modules/Search/Search';
+import SortByIsActive from './modules/SortByIsActive/SortByIsActive';
+import SortSelect from './modules/SortSelect/SortSelect';
 
 import { useGetAllProductsQuery } from '@/redux/services/products';
 
