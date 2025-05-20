@@ -48,11 +48,19 @@ export interface ProductCreate {
   name: string;
   description: string;
   price: number;
-  imageUrl: string;
-  sky: string;
-  stockQuantity: string;
-  categoryId: string;
+  sku: string;
   isActive: boolean;
+  stockQuantity: number;
+  categoryId: string;
+}
+
+export interface ProductResponse {
+  id: string;
+}
+
+export interface ProductCreateWithImage {
+  id: string;
+  formData: FormData;
 }
 
 export const categoryApi = baseApi.injectEndpoints({
@@ -85,7 +93,7 @@ export const categoryApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: ['Product'],
     }),
-    createProduct: builder.mutation<Product, FormData>({
+    createProduct: builder.mutation<ProductResponse, ProductCreate>({
       query: (body) => ({
         url: `/products`,
         method: 'POST',
@@ -101,6 +109,17 @@ export const categoryApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: ['Product'],
     }),
+    setImagesForProductById: builder.mutation<
+      ProductResponse,
+      ProductCreateWithImage
+    >({
+      query: ({ id, formData }) => ({
+        url: `/products/${id}/images`,
+        method: 'POST',
+        body: formData,
+      }),
+      invalidatesTags: ['Product'],
+    }),
   }),
   overrideExisting: false,
 });
@@ -111,4 +130,5 @@ export const {
   useCreateProductMutation,
   useDeleteProductMutation,
   useEditProductMutation,
+  useSetImagesForProductByIdMutation,
 } = categoryApi;
