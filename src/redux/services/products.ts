@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-invalid-void-type */
 import { baseApi } from './baseApi';
 
 // TODO: update interface Products
@@ -86,6 +87,15 @@ export const categoryApi = baseApi.injectEndpoints({
         url: `/products/${id}`,
       }),
     }),
+    getBestsellersProduct: builder.query<ProductsList, void>({
+      query: () => `/products/bestsellers`,
+    }),
+    getPopularProduct: builder.query<ProductsList, void>({
+      query: () => `/products/popular`,
+    }),
+    getLatestProduct: builder.query<ProductsList, void>({
+      query: () => `/products/latest`,
+    }),
     deleteProduct: builder.mutation<string, string>({
       query: (id) => ({
         url: `/products/${id}`,
@@ -127,6 +137,9 @@ export const categoryApi = baseApi.injectEndpoints({
 export const {
   useGetProductByIdQuery,
   useGetAllProductsQuery,
+  useGetBestsellersProductQuery,
+  useGetLatestProductQuery,
+  useGetPopularProductQuery,
   useCreateProductMutation,
   useDeleteProductMutation,
   useEditProductMutation,
