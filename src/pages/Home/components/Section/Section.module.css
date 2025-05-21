@@ -1,0 +1,15 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  padding-top: 5px;
+}
+
+.section .title {
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 112%;
+  color: #080707;
+}

@@ -1,0 +1,23 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+
+  padding-bottom: 10px;
+}
+
+.card div {
+  padding: 12px 32px 13px 31px;
+  border-radius: 80px;
+
+  background: rgb(200 128 140 / 20%);
+}
+
+.card h3 {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 108%;
+  color: #000;
+}
