@@ -152,12 +152,7 @@ export const addProductSchema = z.object({
       invalid_type_error: 'Це поле є обов`язковим.',
     })
     .regex(/^\d{1,5}$/, 'Введіть коректну кількісь'),
-  categoryId: z.string({
-    required_error: 'Це поле є обов`язковим.',
-    invalid_type_error: 'Це поле є обов`язковим.',
-  }),
-  // .array()
-  // .nonempty({ message: 'Мінімум одна категорія' }),
+  categoryId: z.string().nonempty({ message: 'Мінімум одна категорія' }),
   sku: z
     .string({
       required_error: 'Це поле є обов`язковим.',

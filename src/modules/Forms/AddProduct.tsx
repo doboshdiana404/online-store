@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 
@@ -6,24 +6,33 @@ import { Button } from '@/ui/Button/Button';
 import { Variant } from '@/ui/Button/constants';
 import Input from '@/ui/Input/Input';
 import InputFile from '@/ui/InputFile/InputFile';
+import Select from '@/ui/Select/Select';
 
-import { useCreateProductMutation } from '@/redux/services/products';
+import { useAttributesOptions } from '@/hooks/useAttributesOptions';
+import {
+  useCreateProductMutation,
+  useSetImagesForProductByIdMutation,
+} from '@/redux/services/products';
 import { addProductSchema, AddProductValues } from '@/utils/validateSchema';
 
 const AddProduct = () => {
   const [createProduct] = useCreateProductMutation();
+  const [setImagesForProductById] = useSetImagesForProductByIdMutation();
+  const { categoriesOptions, nameToIdMap } = useAttributesOptions();
   const {
     register,
     handleSubmit,
     resetField,
-    reset,
     setValue,
+    reset,
+    control,
     formState: { isValid, errors },
   } = useForm<AddProductValues>({
     defaultValues: {
       mainImage: { picture: undefined },
       productImages: { picture: undefined },
       isActive: true,
+      categoryId: '',
     },
     resolver: zodResolver(addProductSchema),
     mode: 'onTouched',
@@ -42,25 +51,31 @@ const AddProduct = () => {
         stockQuantity,
         name,
       } = data;
-      const formData = new FormData();
-      if (mainImage.picture && productImages.picture) {
-        console.log(mainImage.picture, productImages.picture, 'pictures');
-        formData.append('MainProductImage', mainImage.picture[0]);
-        for (const file of productImages.picture) {
-          formData.append('ProductImages', file);
+      const response = await createProduct({
+        categoryId: nameToIdMap[categoryId],
+        description,
+        isActive,
+        name,
+        price: Number(price),
+        sku,
+        stockQuantity: Number(stockQuantity),
+      });
+      if (response && response.data?.id) {
+        const formData = new FormData();
+        if (mainImage.picture && productImages.picture) {
+          console.log(mainImage.picture, productImages.picture, 'pictures');
+          formData.append('MainProductImage', mainImage.picture[0]);
+          for (const file of productImages.picture) {
+            formData.append('ProductImages', file);
+          }
+        }
+        try {
+          await setImagesForProductById({ id: response.data.id, formData });
+          reset();
+        } catch (error) {
+          console.error(error);
         }
       }
-      formData.append('Name', name);
-      formData.append('Description', description);
-      formData.append('Price', price);
-      formData.append('Description', description);
-      formData.append('Sku', sku);
-      formData.append('IsActive', String(isActive));
-      formData.append('StockQuantity', stockQuantity);
-      formData.append('CategoryId', categoryId);
-
-      await createProduct(formData);
-      reset();
     } catch (error) {
       const { data } = error as { data: string };
       console.log(data);
@@ -98,11 +113,20 @@ const AddProduct = () => {
         type="text"
         errorMessage={errors.stockQuantity?.message}
       />
-      <Input
-        {...register('categoryId')}
-        placeholder="Id категорії"
-        type="text"
-        errorMessage={errors.categoryId?.message}
+      <Controller
+        control={control}
+        name="categoryId"
+        render={({ field, fieldState }) => (
+          <Select
+            placeholder="Категорія"
+            value={field.value}
+            options={categoriesOptions}
+            onChange={(newValue) => field.onChange(newValue)}
+            onBlur={field.onBlur}
+            error={!!fieldState.error}
+            helperText={fieldState.error?.message}
+          />
+        )}
       />
       <InputFile
         {...register('mainImage.picture')}

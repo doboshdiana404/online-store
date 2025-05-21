@@ -1,0 +1,123 @@
+.wrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 400px;
+}
+
+div.container {
+  position: static;
+
+  padding: 0.78rem 1rem 0 0.78rem;
+
+  border: 1px solid black;
+  border-radius: 0.25rem;
+
+  font-size: 1rem;
+  line-height: 1.188rem;
+  color: black;
+  letter-spacing: 0.01em;
+
+  .option {
+    cursor: pointer;
+
+    padding: 0.75em;
+    border-radius: 4px;
+
+    animation: appear 0.35s;
+    animation-fill-mode: backwards;
+
+    &_focused {
+      cursor: pointer;
+
+      padding: 0.75em;
+      border-radius: 4px;
+
+      background-color: brown;
+    }
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .indicator {
+    display: inline-flex;
+
+    & > img {
+      transform: rotate(0);
+
+      transition: transform 0.35s;
+    }
+
+    &_opened {
+      & > img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.multi {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  margin-right: 10px;
+}
+
+.multi-remove {
+  align-self: center;
+}
+
+.value-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.message {
+  position: absolute;
+
+  font-size: 0.75em;
+  letter-spacing: 0.01em;
+}
+
+@keyframes appear {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.control {
+  cursor: pointer;
+
+  align-items: center;
+
+  min-height: auto;
+  padding-bottom: 0.75em;
+}
+
+.menu {
+  position: absolute;
+  top: 43px;
+  left: 0;
+
+  padding: 0.625rem;
+  border: 1px solid grey;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+
+  background-color: whitesmoke;
+}
+
+.menu-list {
+  scrollbar-width: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
