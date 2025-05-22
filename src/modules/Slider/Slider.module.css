@@ -1,0 +1,44 @@
+.slider {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.embla {
+  overflow: clip visible;
+
+  width: 100%;
+  max-width: 1185px;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__container > div {
+  margin-left: 40px;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.button.prev {
+  left: 0;
+}
+
+.button.next {
+  right: 0;
+}
+
+.button img {
+  width: 8px;
+  height: 21px;
+}
+
+.button.next img {
+  rotate: 180deg;
+}
