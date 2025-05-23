@@ -10,7 +10,7 @@
   max-width: 1920px;
   padding: 21px 0 19px;
 
-  background: #f6c7d2;
+  background: linear-gradient(360deg, #f5c2ce 0%, #f4bfcb 100%);
 }
 
 .wrapper {
