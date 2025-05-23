@@ -8,7 +8,7 @@ import styles from './CategoryCard.module.css';
 
 const CategoryCard: FC<Category> = ({ id, img, name }) => {
   return (
-    <Link to={`/shop/${id}`} className={styles.card}>
+    <Link to={`catalog?CategoryId=${id}`} className={styles.card}>
       <div>
         <img
           src={img}

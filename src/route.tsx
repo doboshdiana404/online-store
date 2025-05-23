@@ -16,8 +16,8 @@ import Product from './pages/Product/Product';
 const AppRoute = () => {
   return (
     <Routes>
+      <Route index path="/" element={<Home />} />
       <Route element={<Layout />}>
-        <Route index path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/users" element={<Users />} />
         <Route path="/create-product" element={<CreateProduct />} />

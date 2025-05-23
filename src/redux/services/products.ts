@@ -9,6 +9,12 @@ export interface Product {
   sortDescription: string;
   price: number;
   isActive: boolean;
+  mainImageBaseName: string;
+  rating: number;
+  views: number;
+  favoritesCount: number;
+  reviewCount: number;
+  popularityScore: number;
 }
 
 export interface ProductsList {
@@ -87,13 +93,13 @@ export const categoryApi = baseApi.injectEndpoints({
         url: `/products/${id}`,
       }),
     }),
-    getBestsellersProduct: builder.query<ProductsList, void>({
+    getBestsellersProduct: builder.query<Product[], void>({
       query: () => `/products/bestsellers`,
     }),
-    getPopularProduct: builder.query<ProductsList, void>({
+    getPopularProduct: builder.query<Product[], void>({
       query: () => `/products/popular`,
     }),
-    getLatestProduct: builder.query<ProductsList, void>({
+    getLatestProduct: builder.query<Product[], void>({
       query: () => `/products/latest`,
     }),
     deleteProduct: builder.mutation<string, string>({
