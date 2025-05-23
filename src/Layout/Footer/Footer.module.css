@@ -1,3 +1,112 @@
 .footer {
+  aspect-ratio: 1440 / 436;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  background: url('/footer/footer.svg') center/cover no-repeat;
+}
+
+.wrapper {
   display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  padding-top: 125px;
+}
+
+.wrapper > p {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 114%;
+  color: #040201;
+  text-align: center;
+}
+
+.wrapper > section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper > section h2 {
+  font-family: var(--third-family);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 75%;
+  color: #040201;
+}
+
+.wrapper .content {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 966px;
+  padding-right: 130px;
+}
+
+.wrapper .navigation {
+  display: flex;
+  gap: 120px;
+}
+
+.wrapper .navigation nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: start;
+}
+
+.wrapper address {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+
+  font-style: normal;
+}
+
+.wrapper address h3 {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 112%;
+  color: #000;
+}
+
+.wrapper address .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 114%;
+  color: #000;
+}
+
+.contacts .email {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.content .follow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.follow h3 {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 112%;
+  color: #000;
+}
+
+.follow .icons {
+  display: flex;
+  gap: 20px;
 }
