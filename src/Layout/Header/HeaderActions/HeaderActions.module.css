@@ -1,0 +1,6 @@
+.icons {
+  display: flex;
+  gap: 24px;
+
+  height: fit-content;
+}

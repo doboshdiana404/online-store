@@ -1,11 +1,37 @@
 .header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  max-width: 1920px;
+  padding: 21px 0 19px;
+
+  background: #f6c7d2;
+}
+
+.wrapper {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 
-  padding: 10px 25px;
+  width: 100%;
+}
+
+.logo {
+  max-width: 115px;
+
+  font-family: var(--third-family);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 75%;
+  color: #040201;
 }
 
 nav {
   display: flex;
-  gap: 24px;
+  gap: 20px;
 }

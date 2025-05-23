@@ -1,25 +1,31 @@
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 
-import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher';
+import Link from '@/ui/Link/Link';
 
+import { HEADER_LINKS } from './data';
 import styles from './Header.module.css';
+import HeaderActions from './HeaderActions/HeaderActions';
 
 export const Header = () => {
   const { t } = useTranslation();
   return (
     <header className={styles.header}>
-      <h2>header</h2>
-      <nav>
-        <NavLink to={'/'}>{t('header.links.home')}</NavLink>
-        <NavLink to={'/catalog'}>{t('header.links.catalog')}</NavLink>
-        <NavLink to={'/users'}>{t('header.links.users')}</NavLink>
-        <NavLink to={'/category'}>{t('header.links.category')}</NavLink>
-        <NavLink to={'/create-product'}>
-          {t('header.links.create-product')}
-        </NavLink>
-      </nav>
-      <LanguageSwitcher />
+      <div className="container">
+        <div className={styles.wrapper}>
+          <NavLink className={styles.logo} to="/">
+            Chocoza Boutique
+          </NavLink>
+          <nav>
+            {HEADER_LINKS.map(({ id, text, to }) => (
+              <Link key={id} variant="header" to={to}>
+                {t(`header.links.${text}`)}
+              </Link>
+            ))}
+          </nav>
+          <HeaderActions />
+        </div>
+      </div>
     </header>
   );
 };
