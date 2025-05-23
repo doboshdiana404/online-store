@@ -13,11 +13,11 @@ export const Card: FC<Product> = ({
   name,
   price,
   sortDescription,
-  mainImageName,
+  mainImageBaseName,
 }) => {
   return (
     <Link to={`/product/${id}`} key={id} className={styles.card}>
-      <Image alt={name} height={250} width={250} id={mainImageName} />
+      <Image alt={name} height={250} width={250} id={mainImageBaseName} />
       <h3>{name}</h3>
       <p>{sortDescription}</p>
       <p>{price}$</p>

@@ -1,0 +1,72 @@
+.link {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s;
+}
+
+.link--header {
+  width: 144px;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 40px;
+
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: -0.04em;
+
+  background: rgb(0 0 0 / 4%);
+}
+
+.link--header_active,
+.link--header:hover {
+  background: #d08895;
+}
+
+.link--primary {
+  width: 277px;
+  height: 63px;
+  padding: 22px 101px;
+  border-radius: 40px 0;
+
+  font-family: var(--second-family);
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.01em;
+
+  background: linear-gradient(50deg, #532834 0%, #b95873 100%);
+  box-shadow: 0 4px 4px 0 #b8737a;
+}
+
+.link--primary:hover {
+  background: linear-gradient(
+    50deg,
+    rgb(83 40 52 / 90%) 0%,
+    rgb(185 88 115 / 80%) 100%
+  );
+  box-shadow: 4px 4px 4px 0 #979595;
+}
+
+.link--primary:active {
+  background: linear-gradient(50deg, #532834 61.06%, #b95873 100%);
+  box-shadow: none;
+}
+
+.link--footer {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 114%;
+  color: #000;
+}
+
+.link--icon {
+}

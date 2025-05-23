@@ -19,6 +19,12 @@
   border-radius: 10px;
 }
 
+.card .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
 .card .title {
   display: flex;
   flex-direction: column;
@@ -26,6 +32,13 @@
 }
 
 .card .title h3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  min-height: 36px;
+
   font-family: var(--font-family);
   font-size: 16px;
   font-weight: 600;
@@ -35,6 +48,13 @@
 }
 
 .card .title h4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  min-height: 32px;
+
   font-family: var(--font-family);
   font-size: 14px;
   line-height: 114%;
