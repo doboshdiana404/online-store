@@ -37,6 +37,7 @@ const Banner = () => {
           width={36}
           height={36}
           alt="arrow down"
+          id="category"
         />
       </a>
       <BannerIcons />

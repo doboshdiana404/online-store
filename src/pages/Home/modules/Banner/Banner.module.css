@@ -1,13 +1,12 @@
 .banner {
   position: relative;
 
+  aspect-ratio: 16 / 9;
   width: 100%;
-  max-width: 1440px;
-  min-height: 793px;
+  max-width: 1920px;
   margin: 0 auto;
 
-  background: url('/public/banner.svg') center no-repeat;
-  background-size: cover;
+  background: url('/banner.svg') center/cover no-repeat;
 }
 
 .banner .title {
@@ -15,7 +14,7 @@
   flex-direction: column;
   gap: 53px;
 
-  padding-top: 96px;
+  padding-top: 198px;
 }
 
 .banner h1 {
@@ -64,7 +63,7 @@
 
 .banner .down {
   position: absolute;
-  bottom: 24px;
+  bottom: 18px;
   left: 50%;
   transform: translateX(-50%);
 }
