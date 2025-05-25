@@ -4,7 +4,7 @@ export const ukraine = {
       shop: 'Shop',
       about: 'About us',
       delivery: 'Delivery',
-      contacts: 'contacts',
+      contacts: 'Contacts',
     },
   },
   price: '{{price}} ГРН',

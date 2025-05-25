@@ -4,7 +4,7 @@ export const english = {
       shop: 'Shop',
       about: 'About us',
       delivery: 'Delivery',
-      contacts: 'contacts',
+      contacts: 'Contacts',
     },
   },
   price: '{{price}} UAH',

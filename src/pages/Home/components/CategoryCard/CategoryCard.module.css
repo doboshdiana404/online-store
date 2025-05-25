@@ -12,6 +12,8 @@
   border-radius: 80px;
 
   background: rgb(200 128 140 / 20%);
+
+  transition: all 0.3s;
 }
 
 .card h3 {
@@ -20,4 +22,8 @@
   font-weight: 500;
   line-height: 108%;
   color: #000;
+}
+
+.card:hover div {
+  background: #e09ba9;
 }

@@ -1,9 +1,41 @@
 .button {
   cursor: pointer;
 
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 15px;
   padding: 0;
+  padding-top: 0;
+  padding-right: 10px;
 
+  font-size: 16px;
+  line-height: 0;
   color: var(--black);
+}
+
+.button:hover {
+  border-radius: 4px;
+
+  background: #e9e0e1;
+}
+
+@media (width >= 1024px) {
+  .button {
+    width: 32px;
+    height: 32px;
+    padding-top: 3px;
+
+    font-size: 20px;
+  }
+}
+
+@media (width >= 1200px) {
+  .button {
+    padding-top: 4px;
+  }
+}
+
+@media (width >= 768px) {
+  .button {
+    padding-top: 3px;
+  }
 }
