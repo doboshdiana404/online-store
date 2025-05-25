@@ -1,0 +1,29 @@
+.burger {
+  position: relative;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 331px;
+  height: 468px;
+  border-radius: 0 40px 40px 0;
+
+  background: var(--surface);
+}
+
+.overflow {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100dvh;
+
+  background: rgb(0 0 0 / 50%);
+
+  transition: all 0.3s;
+}

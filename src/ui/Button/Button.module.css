@@ -59,9 +59,34 @@
   background: rgb(156 53 65 / 20%);
 }
 
+.button--inCard:hover {
+  background: #ffe4ea;
+  box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+}
+
 .button--slider {
   width: 26px;
   height: 35px;
   border: 1px solid var(--black);
   border-radius: 90px;
+}
+
+.button--slider:hover {
+  border-color: var(--accent);
+
+  box-shadow: 0 4px 10px 0 var(--accent);
+}
+
+.button--burger {
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+
+  background: #fff7f7;
+}
+
+@media (width >= 768px) {
+  .button--burger {
+    display: none;
+  }
 }

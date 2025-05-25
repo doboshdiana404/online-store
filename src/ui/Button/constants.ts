@@ -13,6 +13,7 @@ export enum Variant {
   Card = 'card',
   InCard = 'inCard',
   Slider = 'slider',
+  Burger = 'burger',
 }
 
 export enum Position {
