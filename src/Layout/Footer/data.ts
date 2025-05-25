@@ -2,16 +2,16 @@ export const FOOTER_ICONS = [
   {
     id: 1,
     to: '/',
-    icon: '/footer/facebook.svg',
+    icon: 'facebook',
   },
   {
     id: 2,
     to: '/',
-    icon: '/footer/instagram.svg',
+    icon: 'instagram',
   },
   {
     id: 3,
     to: '/',
-    icon: '/footer/twitter.svg',
+    icon: 'twitter',
   },
 ];

@@ -42,12 +42,9 @@ const Footer = () => {
                 <div className={styles.icons}>
                   {FOOTER_ICONS.map(({ icon, id, to }) => (
                     <Link key={id} variant="icon" to={to}>
-                      <img
-                        src={icon}
-                        width={30}
-                        height={30}
-                        className={styles.icon}
-                      />
+                      <svg className={styles.icon}>
+                        <use href={`/sprite.svg#${icon}`} />
+                      </svg>
                     </Link>
                   ))}
                 </div>

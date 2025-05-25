@@ -9,13 +9,13 @@
 }
 
 .link--header {
-  width: 144px;
-  height: 50px;
+  width: 85px;
+  height: 40px;
   border: 1px solid #fff;
   border-radius: 40px;
 
   font-family: var(--font-family);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--black);
   text-align: center;
@@ -68,5 +68,33 @@
   color: #000;
 }
 
+.link--footer:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
 .link--icon {
+}
+
+@media (width >= 1024px) {
+  .link--header {
+    width: 120px;
+    height: 50px;
+
+    font-size: 16px;
+  }
+}
+
+@media (width >= 1024px) {
+  .link--header {
+    width: 120px;
+    height: 50px;
+  }
+}
+
+@media (width >= 1200px) {
+  .link--header {
+    width: 144px;
+  }
 }

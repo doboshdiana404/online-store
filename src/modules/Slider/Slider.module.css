@@ -34,11 +34,17 @@
   right: 0;
 }
 
-.button img {
-  width: 8px;
-  height: 21px;
+.button.next .icon {
+  rotate: 180deg;
 }
 
-.button.next img {
-  rotate: 180deg;
+.icon {
+  width: 8px;
+  height: 21px;
+
+  transition: all 0.3s;
+}
+
+.button:hover .icon {
+  color: var(--accent);
 }

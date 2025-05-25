@@ -110,3 +110,16 @@
   display: flex;
   gap: 20px;
 }
+
+.icons .icon {
+  width: 32px;
+  height: 32px;
+
+  color: #000;
+
+  transition: all 0.3s;
+}
+
+.icon:hover {
+  color: var(--accent);
+}

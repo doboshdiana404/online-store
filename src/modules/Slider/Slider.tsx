@@ -28,13 +28,21 @@ const Slider: FC<SliderProps> = ({ options, children }) => {
         variant={Variant.Slider}
         onClick={scrollNext}
         className={`${styles.button} ${styles.next}`}
-        icon={<img src="/arrow.svg" width={8} height={21} />}
+        icon={
+          <svg className={styles.icon}>
+            <use href="/sprite.svg#icon-arrow" />
+          </svg>
+        }
       />
       <Button
         variant={Variant.Slider}
         onClick={scrollPrev}
         className={`${styles.button} ${styles.prev}`}
-        icon={<img src="/arrow.svg" width={8} height={21} />}
+        icon={
+          <svg className={styles.icon}>
+            <use href="/sprite.svg#icon-arrow" />
+          </svg>
+        }
       />
     </div>
   );

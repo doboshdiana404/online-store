@@ -21,7 +21,12 @@ const Link: FC<LinkProps> = ({ children, variant, ...props }) => {
   return (
     <>
       {isExternalLink ? (
-        <a href={props.to} target="_blank" rel="noopener noreferrer">
+        <a
+          href={props.to}
+          className={styles.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {children}
         </a>
       ) : (
