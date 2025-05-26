@@ -118,7 +118,9 @@ h6 {
 
 /* ===== CONTAINER ===== */
 .container {
-  overflow: hidden;
+  /* overflow-x: hidden; */
+
+  /* overflow-y: clip; */
 
   width: 100%;
   max-width: 1440px;

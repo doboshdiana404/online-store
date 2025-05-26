@@ -27,3 +27,9 @@
 
   transition: all 0.3s;
 }
+
+@media (width >= 768px) {
+  .burger {
+    display: none;
+  }
+}

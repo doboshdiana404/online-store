@@ -28,6 +28,7 @@ const Banner = () => {
             />
             <p>Free delivery from 2000 UAН</p>
           </div>
+          <BannerIcons />
         </section>
       </div>
       <a href="#category">
@@ -40,7 +41,6 @@ const Banner = () => {
           id="category"
         />
       </a>
-      <BannerIcons />
     </section>
   );
 };

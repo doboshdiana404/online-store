@@ -31,13 +31,13 @@
 }
 
 .link--primary {
-  width: 277px;
-  height: 63px;
-  padding: 22px 101px;
+  width: 201px;
+  height: 46px;
+  padding: 22px 67px;
   border-radius: 40px 0;
 
   font-family: var(--second-family);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: #fff;
   letter-spacing: -0.01em;
@@ -77,10 +77,9 @@
 .link--icon {
 }
 
-@media (width >= 1024px) {
-  .link--header {
-    width: 120px;
-    height: 50px;
+@media (width >= 768px) {
+  .link--primary {
+    padding: 22px 63px;
 
     font-size: 16px;
   }
@@ -90,6 +89,14 @@
   .link--header {
     width: 120px;
     height: 50px;
+
+    font-size: 16px;
+  }
+
+  .link--primary {
+    width: 277px;
+    height: 63px;
+    padding: 22px 101px;
   }
 }
 
