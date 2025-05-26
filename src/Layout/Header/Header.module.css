@@ -31,13 +31,34 @@
   color: #040201;
 }
 
-nav {
+.nav {
   display: none;
   gap: 12px;
 }
 
 .mobile {
   display: block;
+}
+
+@media (width >= 768px) {
+  .header {
+    padding: 15px 0 19px;
+  }
+
+  .logo {
+    max-width: 115px;
+
+    font-size: clamp(2rem, 1.429rem + 1.19vw, 2.5rem);
+    line-height: 60%;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .mobile {
+    display: none;
+  }
 }
 
 @media (width >= 1024px) {
@@ -53,27 +74,5 @@ nav {
 
   nav {
     gap: 20px;
-  }
-}
-
-@media (width >= 768px) {
-  .header {
-    padding: 15px 0 19px;
-  }
-
-  .logo {
-    max-width: 115px;
-
-    font-size: clamp(2rem, 1.429rem + 1.19vw, 2.5rem);
-    line-height: 60%;
-  }
-
-  nav {
-    display: flex;
-    gap: 20px;
-  }
-
-  .mobile {
-    display: none;
   }
 }

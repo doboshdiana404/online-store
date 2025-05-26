@@ -20,7 +20,7 @@ export const Header = () => {
           <NavLink className={styles.logo} to="/">
             Chocoza Boutique
           </NavLink>
-          <nav>
+          <nav className={styles.nav}>
             {HEADER_LINKS.map(({ id, text, to }) => (
               <Link key={id} variant="header" to={to}>
                 {t(`header.links.${text}`)}
