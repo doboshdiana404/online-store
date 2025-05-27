@@ -1,18 +1,18 @@
-// import Section from './components/Section/Section';
+import Section from './components/Section/Section';
 import styles from './Home.module.css';
 import Banner from './modules/Banner/Banner';
-// import Bestsellers from './modules/Bestsellers/Bestsellers';
-// import CategoryList from './modules/CategoryList/CategoryList';
-// import NewArrivals from './modules/NewArrivals/NewArrivals';
+import Bestsellers from './modules/Bestsellers/Bestsellers';
+import CategoryList from './modules/CategoryList/CategoryList';
+import NewArrivals from './modules/NewArrivals/NewArrivals';
 
-// import Footer from '@/Layout/Footer/Footer';
+import Footer from '@/Layout/Footer/Footer';
 
 const Home = () => {
   return (
     <>
       <main className={styles.home}>
         <Banner />
-        {/* <Section text="Popular categories">
+        <Section text="Popular categories">
           <CategoryList />
         </Section>
         <Section text="Best sellers">
@@ -20,9 +20,9 @@ const Home = () => {
         </Section>
         <Section text="New arrivals">
           <NewArrivals />
-        </Section> */}
+        </Section>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

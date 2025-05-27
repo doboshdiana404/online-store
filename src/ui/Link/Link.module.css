@@ -62,7 +62,7 @@
 
 .link--footer {
   font-family: var(--font-family);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 114%;
   color: #000;
@@ -82,6 +82,10 @@
     padding: 22px 63px;
 
     font-size: 16px;
+  }
+
+  .link--footer {
+    font-size: 14px;
   }
 }
 

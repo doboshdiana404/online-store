@@ -20,13 +20,12 @@
 }
 
 .button--card {
-  width: 153px;
-  height: 32px;
-  padding: 6px 45px 9px 34px;
+  width: 100%;
+  padding: 12.5px 28px;
   border-radius: 10px;
 
   font-family: var(--second-family);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: #fff;
   letter-spacing: -0.01em;
@@ -45,13 +44,12 @@
 }
 
 .button--inCard {
-  width: 153px;
-  height: 32px;
-  padding: 6px 45px 9px 34px;
+  width: 100%;
+  padding: 12.5px 10px;
   border-radius: 10px;
 
   font-family: var(--second-family);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--black);
   letter-spacing: -0.01em;
@@ -88,5 +86,17 @@
 @media (width >= 768px) {
   .button--burger {
     display: none;
+  }
+
+  .button--card {
+    padding: 5px 18px;
+
+    font-size: 14px;
+  }
+
+  .button--inCard {
+    padding: 5px 18px;
+
+    font-size: 14px;
   }
 }
