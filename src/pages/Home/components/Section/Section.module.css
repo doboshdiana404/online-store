@@ -1,15 +1,35 @@
 .section {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-
-  padding-top: 5px;
+  gap: 20px;
 }
 
 .section .title {
   font-family: var(--font-family);
-  font-size: 32px;
+
+  font-size: 20px;
   font-weight: 500;
-  line-height: 112%;
+  line-height: 100%;
   color: #080707;
+}
+
+@media (width >= 768px) {
+  .section {
+    gap: 20px;
+  }
+
+  .section .title {
+    font-size: clamp(1.25rem, 0.393rem + 1.786vw, 2rem);
+    line-height: 112%;
+  }
+}
+
+@media (width >= 1024px) {
+  .section {
+    gap: 32px;
+  }
+
+  .section .title {
+    line-height: 112%;
+  }
 }

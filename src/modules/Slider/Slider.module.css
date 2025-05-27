@@ -1,29 +1,13 @@
-.slider {
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-}
-
-.embla {
-  overflow: clip visible;
-
-  width: 100%;
-  max-width: 1185px;
-}
-
 .embla__container {
   display: flex;
-}
-
-.embla__container > div {
-  margin-left: 40px;
 }
 
 .button {
   position: absolute;
   top: 50%;
   translate: 0 -50%;
+
+  display: none;
 }
 
 .button.prev {
@@ -47,4 +31,114 @@
 
 .button:hover .icon {
   color: var(--accent);
+}
+
+/* product */
+.slider.product {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.embla.product {
+  overflow: clip visible;
+
+  width: 100%;
+  max-width: 1185px;
+}
+
+.embla__container.product > div {
+  flex: 0 0 calc((100% - 19px) / 2);
+
+  margin-right: 19px;
+}
+
+/* category */
+.slider.category {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.embla.category {
+  overflow: visible;
+
+  width: 100%;
+  max-width: 1296px;
+}
+
+.embla__container.category {
+  gap: clamp(0.75rem, -2.638rem + 13.793vw, 1.5rem);
+  justify-content: space-between;
+}
+
+@media (width >= 480px) {
+  .embla__container.category {
+    justify-content: space-between;
+  }
+
+  .embla__container.product > div {
+    flex: 0 0 calc((100% - 25px) / 2);
+
+    margin-right: 25px;
+
+    /* flex: 0 0 calc((100% - (2 * 12px)) / 3) */
+  }
+}
+
+@media (width >= 570px) {
+  .embla__container.category {
+    gap: 12px;
+    justify-content: space-between;
+
+    margin-left: 0;
+  }
+
+  .embla__container.category > a {
+    margin-left: 0;
+  }
+
+  .embla__container.product > div {
+    flex: 0 0 calc((100% - (2 * 12px)) / 3);
+
+    margin-right: 12px;
+  }
+}
+
+@media (width >= 768px) {
+  .embla__container.category {
+    justify-content: space-between;
+  }
+
+  .embla__container.product > div {
+    flex: 0 0 calc((100% - (3 * 16px)) / 4);
+
+    margin-right: 16px;
+  }
+}
+
+@media (width >= 1024px) {
+  .slider.product {
+    padding-inline: 50px;
+  }
+
+  .button {
+    display: flex;
+  }
+
+  .embla__container.product > div {
+    flex: 0 0 calc((100% - (3 * 25px)) / 4);
+
+    margin-right: 25px;
+  }
+}
+
+@media (width >= 1280px) {
+  .embla__container.product > div {
+    flex: 0 0 calc((100% - (4 * 40px)) / 5);
+
+    margin-right: 40px;
+  }
 }
