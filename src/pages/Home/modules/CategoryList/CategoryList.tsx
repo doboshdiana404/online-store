@@ -1,15 +1,23 @@
+import Slider from '@/modules/Slider/Slider';
+
 import CategoryCard from '../../components/CategoryCard/CategoryCard';
 import { CATEGORY_LIST } from '../../data';
 
-import styles from './CategoryList.module.css';
-
 const CategoryList = () => {
   return (
-    <div className={styles.list}>
+    <Slider
+      variant="category"
+      options={{
+        startIndex: 0,
+        active: true,
+        align: 'start',
+        breakpoints: { '(min-width: 768px)': { active: false } },
+      }}
+    >
       {CATEGORY_LIST.map((category) => (
         <CategoryCard key={category.id} {...category} />
       ))}
-    </div>
+    </Slider>
   );
 };
 
