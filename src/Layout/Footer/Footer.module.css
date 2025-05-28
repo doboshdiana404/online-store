@@ -1,23 +1,24 @@
 .footer {
-  aspect-ratio: 1440 / 436;
+  aspect-ratio: 0.88;
   width: 100%;
   max-width: 1920px;
+  max-height: 450px;
   margin: 0 auto;
 
-  background: url('/footer/footer.svg') center/cover no-repeat;
+  background: url('/footer/footer_mobile.svg') top/cover no-repeat;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 45px;
 
-  padding-top: 125px;
+  padding-top: 50px;
 }
 
 .wrapper > p {
   font-family: var(--font-family);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 114%;
   color: #040201;
@@ -26,49 +27,62 @@
 
 .wrapper > section {
   display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
   justify-content: space-between;
 }
 
 .wrapper > section h2 {
+  max-width: 100px;
+
   font-family: var(--third-family);
-  font-size: 40px;
+  font-size: clamp(1.5rem, 0.452rem + 4.267vw, 2.5rem);
   font-weight: 400;
-  line-height: 75%;
+  line-height: 83%;
   color: #040201;
+  text-align: center;
 }
 
 .wrapper .content {
   display: flex;
+  flex-direction: column-reverse;
+  gap: 22px;
+  align-items: center;
   justify-content: space-between;
 
   width: 100%;
   max-width: 966px;
-  padding-right: 130px;
 }
 
 .wrapper .navigation {
   display: flex;
-  gap: 120px;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 
 .wrapper .navigation nav {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  align-items: start;
+  gap: 13.5px;
+  align-items: center;
 }
 
 .wrapper address {
   display: flex;
   flex-direction: column;
   gap: 27px;
+  align-items: center;
 
   font-style: normal;
 }
 
 .wrapper address h3 {
+  display: none;
+
   font-family: var(--font-family);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 112%;
   color: #000;
@@ -78,9 +92,11 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-items: center;
 
   font-family: var(--font-family);
-  font-size: 14px;
+  font-size: 12px;
+
   font-weight: 500;
   line-height: 114%;
   color: #000;
@@ -88,8 +104,10 @@
 
 .contacts .email {
   display: flex;
+
   flex-direction: column;
   gap: 14px;
+  align-items: center;
 }
 
 .content .follow {
@@ -99,8 +117,10 @@
 }
 
 .follow h3 {
+  display: none;
+
   font-family: var(--font-family);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 112%;
   color: #000;
@@ -122,4 +142,145 @@
 
 .icon:hover {
   color: var(--accent);
+}
+
+@media (width >= 480px) {
+  .footer {
+    aspect-ratio: 1.2;
+
+    background: url('/footer/footer.svg') top/cover no-repeat;
+  }
+}
+
+@media (width >= 768px) {
+  .footer {
+    aspect-ratio: 768 / 375;
+    max-height: 360px;
+  }
+
+  .wrapper {
+    gap: 45px;
+
+    padding-top: 80px;
+  }
+
+  .wrapper > section {
+    gap: 42px;
+    align-items: start;
+  }
+
+  .wrapper > section h2 {
+    max-width: none;
+
+    line-height: 75%;
+  }
+
+  .wrapper .content {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .wrapper .navigation {
+    flex-direction: row;
+    gap: 190px;
+    justify-content: space-between;
+  }
+
+  .wrapper address {
+    gap: 30px;
+  }
+
+  .contacts .email {
+    gap: 18px;
+  }
+
+  .wrapper address .contacts,
+  .contacts .email,
+  .wrapper .navigation {
+    align-items: start;
+  }
+
+  .wrapper .navigation nav {
+    gap: 18px;
+    align-items: start;
+  }
+
+  .wrapper address h3,
+  .follow h3 {
+    display: block;
+    align-self: flex-start;
+  }
+}
+
+@media (width >= 1024px) {
+  .footer {
+    aspect-ratio: 1440 / 436;
+    max-height: 436px;
+  }
+
+  .wrapper {
+    gap: 40px;
+
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+
+  .wrapper > p {
+    font-size: 14px;
+  }
+
+  .wrapper address h3,
+  .follow h3 {
+    display: block;
+
+    font-size: 16px;
+  }
+
+  .wrapper address .contacts {
+    font-size: 14px;
+  }
+}
+
+@media (width >= 1280px) {
+  .wrapper {
+    gap: 80px;
+
+    padding-top: 125px;
+    padding-bottom: 0;
+  }
+
+  .wrapper > section {
+    flex-direction: row;
+  }
+}
+
+@media (width >= 1440px) {
+  .footer {
+    aspect-ratio: 1440 / 436;
+    max-width: 1920px;
+  }
+
+  .wrapper {
+    gap: 100px;
+  }
+
+  .wrapper .content {
+    padding-right: 110px;
+  }
+
+  .wrapper .navigation {
+    gap: 120px;
+  }
+
+  .wrapper address {
+    gap: 25px;
+  }
+
+  .contacts .email {
+    gap: 15px;
+  }
+
+  .wrapper .navigation nav {
+    gap: 15px;
+  }
 }
