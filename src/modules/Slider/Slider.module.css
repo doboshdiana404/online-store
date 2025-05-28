@@ -46,6 +46,7 @@
 
   width: 100%;
   max-width: 1185px;
+  padding-inline-end: 25px;
 }
 
 .embla__container.product > div {
@@ -63,7 +64,7 @@
 }
 
 .embla.category {
-  overflow: visible;
+  overflow: hidden;
 
   width: 100%;
   max-width: 1296px;
