@@ -12,10 +12,12 @@
   transition: all 0.3s;
 }
 
-.icon:hover {
-  border-radius: 4px;
+@media (hover: hover) and (pointer: fine) {
+  .icon:hover {
+    border-radius: 4px;
 
-  background: #e9e0e1;
+    background: #e9e0e1;
+  }
 }
 
 @media (width >= 768px) {

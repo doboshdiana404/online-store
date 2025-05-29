@@ -32,8 +32,10 @@
   color: #000;
 }
 
-.card:hover div {
-  background: #e09ba9;
+@media (hover: hover) and (pointer: fine) {
+  .card:hover div {
+    background: #e09ba9;
+  }
 }
 
 @media (width >= 480px) {

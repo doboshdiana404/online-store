@@ -16,29 +16,31 @@
   transition: all 0.3s;
 }
 
-.icon_9:hover,
-.icon_8:hover,
-.icon_5:hover,
-.icon_4:hover,
-.icon_3:hover,
-.icon_2:hover,
-.icon_1:hover {
-  rotate: -15deg;
-  scale: 1.1;
-}
+@media (hover: hover) and (pointer: fine) {
+  .icon_9:hover,
+  .icon_8:hover,
+  .icon_5:hover,
+  .icon_4:hover,
+  .icon_3:hover,
+  .icon_2:hover,
+  .icon_1:hover {
+    rotate: -15deg;
+    scale: 1.1;
+  }
 
-.icon_17:hover,
-.icon_16:hover,
-.icon_15:hover,
-.icon_14:hover,
-.icon_13:hover,
-.icon_12:hover,
-.icon_11:hover,
-.icon_10:hover,
-.icon_7:hover,
-.icon_6:hover {
-  rotate: 15deg;
-  scale: 1.1;
+  .icon_17:hover,
+  .icon_16:hover,
+  .icon_15:hover,
+  .icon_14:hover,
+  .icon_13:hover,
+  .icon_12:hover,
+  .icon_11:hover,
+  .icon_10:hover,
+  .icon_7:hover,
+  .icon_6:hover {
+    rotate: 15deg;
+    scale: 1.1;
+  }
 }
 
 .box {

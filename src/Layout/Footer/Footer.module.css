@@ -140,8 +140,10 @@
   transition: all 0.3s;
 }
 
-.icon:hover {
-  color: var(--accent);
+@media (hover: hover) and (pointer: fine) {
+  .icon:hover {
+    color: var(--accent);
+  }
 }
 
 @media (width >= 480px) {

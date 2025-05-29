@@ -12,10 +12,12 @@
   color: var(--black);
 }
 
-.button:hover {
-  border-radius: 4px;
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    border-radius: 4px;
 
-  background: #e9e0e1;
+    background: #e9e0e1;
+  }
 }
 
 @media (width >= 1024px) {
