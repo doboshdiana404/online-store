@@ -46,13 +46,12 @@
 
   width: 100%;
   max-width: 1185px;
-  padding-inline-end: 25px;
 }
 
 .embla__container.product > div {
-  flex: 0 0 calc((100% - 19px) / 2);
+  flex: 0 0 calc((100% - 10px) / 2);
 
-  margin-right: 19px;
+  margin-right: 10px;
 }
 
 /* category */
@@ -75,6 +74,14 @@
   justify-content: space-between;
 }
 
+@media (width >= 393px) {
+  .embla__container.product > div {
+    flex: 0 0 calc((100% - 19px) / 2);
+
+    margin-right: 19px;
+  }
+}
+
 @media (width >= 480px) {
   .embla__container.category {
     justify-content: space-between;
@@ -84,8 +91,6 @@
     flex: 0 0 calc((100% - 25px) / 2);
 
     margin-right: 25px;
-
-    /* flex: 0 0 calc((100% - (2 * 12px)) / 3) */
   }
 }
 
