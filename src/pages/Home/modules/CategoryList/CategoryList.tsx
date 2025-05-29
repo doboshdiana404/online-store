@@ -11,7 +11,7 @@ const CategoryList = () => {
         startIndex: 0,
         active: true,
         align: 'start',
-        breakpoints: { '(min-width: 768px)': { active: false } },
+        breakpoints: { '(min-width: 570px)': { active: false } },
       }}
     >
       {CATEGORY_LIST.map((category) => (

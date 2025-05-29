@@ -1,15 +1,35 @@
 .button {
   cursor: pointer;
 
-  width: 28px;
-  height: 15px;
-  padding: 0;
-  padding-top: 0;
-  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 
-  font-size: 16px;
-  line-height: 0;
+  min-width: 37px;
+  height: 24px;
+  padding: 2px;
+
   color: var(--black);
+}
+
+.button .span {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.button::after {
+  content: '';
+
+  display: inline-block;
+
+  width: 0;
+  height: 0;
+  margin-right: 3px;
+  border-top: 5px solid black;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+
+  vertical-align: middle;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -22,22 +42,31 @@
 
 @media (width >= 1024px) {
   .button {
-    width: 32px;
-    height: 32px;
+    min-width: 40px;
+    height: 28px;
     padding-top: 3px;
+  }
 
-    font-size: 20px;
+  .button .span {
+    font-size: 18px;
+  }
+
+  .button::after {
+    right: 0;
   }
 }
 
 @media (width >= 1200px) {
   .button {
-    padding-top: 4px;
+    height: 32px;
+    padding-top: 5px;
   }
-}
 
-@media (width >= 768px) {
-  .button {
-    padding-top: 3px;
+  .button .span {
+    font-size: 18px;
+  }
+
+  .button::after {
+    right: 0;
   }
 }

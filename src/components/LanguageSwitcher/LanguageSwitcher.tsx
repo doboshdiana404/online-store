@@ -25,7 +25,7 @@ const LanguageSwitcher = () => {
       className={styles.button}
       aria-label="Switch language"
     >
-      {isEnglish ? 'UA' : 'EN'}
+      <span className={styles.span}>{isEnglish ? 'UA' : 'EN'}</span>
     </button>
   );
 };

@@ -22,8 +22,6 @@
 }
 
 .logo {
-  max-width: 87px;
-
   font-family: var(--third-family);
   font-size: clamp(1.5rem, 0.976rem + 2.133vw, 2rem);
   font-weight: 400;
@@ -34,6 +32,7 @@
 .nav {
   display: none;
   gap: 12px;
+  align-items: center;
 }
 
 .mobile {
