@@ -10,7 +10,7 @@
   max-width: 1920px;
   padding: 12px 0;
 
-  background: linear-gradient(360deg, #f5c2ce 0%, #f4bfcb 100%);
+  background: linear-gradient(360deg, #f4c0cc 0%, #f7c9d4 100%);
 }
 
 .wrapper {
@@ -37,6 +37,12 @@
 
 .mobile {
   display: block;
+}
+
+@media (width >= 480px) {
+  .header {
+    background: linear-gradient(360deg, #f5c2ce 0%, #f4bfcb 100%);
+  }
 }
 
 @media (width >= 768px) {

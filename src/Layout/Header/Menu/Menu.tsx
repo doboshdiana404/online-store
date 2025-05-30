@@ -10,6 +10,8 @@ import { MENU_LIST } from './data';
 import styles from './Menu.module.css';
 
 import { FOOTER_ICONS } from '@/Layout/Footer/data';
+import { useAppSelector } from '@/redux/hooks';
+import { selectTotalCartQuantity } from '@/redux/slices/shoppingCartSlice';
 
 export interface MenuProps {
   isOpen: boolean;
@@ -17,6 +19,7 @@ export interface MenuProps {
 }
 
 const Menu: FC<MenuProps> = ({ closeMenu, isOpen }) => {
+  const totalCartQuantity = useAppSelector(selectTotalCartQuantity);
   const menuCN = clsx(styles.menu, {
     [styles.open]: isOpen,
     [styles.close]: !isOpen,
@@ -34,6 +37,9 @@ const Menu: FC<MenuProps> = ({ closeMenu, isOpen }) => {
           {MENU_LIST.map(({ id, text, to, icon }) => (
             <li key={id} className={styles.item}>
               <Link to={to} variant="footer">
+                {!!totalCartQuantity && id === 6 && (
+                  <span className={styles.count}>{totalCartQuantity}</span>
+                )}
                 <img src={icon} width={19} height={19} />
                 <p>{text}</p>
               </Link>

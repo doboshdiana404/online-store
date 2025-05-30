@@ -5,7 +5,11 @@ import { Variant } from '@/ui/Button/constants';
 
 import styles from './HeaderActions.module.css';
 
+import { useAppSelector } from '@/redux/hooks';
+import { selectTotalCartQuantity } from '@/redux/slices/shoppingCartSlice';
+
 const HeaderActions = () => {
+  const totalCartQuantity = useAppSelector(selectTotalCartQuantity);
   return (
     <nav className={styles.icons}>
       <Button
@@ -20,8 +24,15 @@ const HeaderActions = () => {
       />
       <Button
         variant={Variant.Icon}
-        icon={<img src="/header/cart.svg" width={24} height={24} />}
-        className={styles.icon}
+        icon={
+          <>
+            <img src="/header/cart.svg" width={24} height={24} />
+            {!!totalCartQuantity && (
+              <span className={styles.count}>{totalCartQuantity}</span>
+            )}
+          </>
+        }
+        className={`${styles.icon} ${styles.cart}`}
       />
       <Button
         variant={Variant.Icon}

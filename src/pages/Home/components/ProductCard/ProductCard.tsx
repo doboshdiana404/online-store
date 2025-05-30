@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
@@ -12,19 +12,25 @@ import { StarRating } from '@/ui/StarRating/StarRating';
 
 import styles from './ProductCard.module.css';
 
+import useCart from '@/hooks/useCart';
 import { Product } from '@/redux/services/products';
 
-const ProductCard: FC<Product> = ({
+type ProductCardProps = Pick<
+  Product,
+  'id' | 'mainImageBaseName' | 'name' | 'rating' | 'price'
+>;
+
+const ProductCard: FC<ProductCardProps> = ({
   id,
   mainImageBaseName,
   name,
   rating,
   price,
 }) => {
-  const [inCart, setInCart] = useState(false);
+  const { isInCart, toggleItem } = useCart();
   const handleToggleSetInCart = (event: React.MouseEvent) => {
     event.stopPropagation();
-    setInCart(!inCart);
+    toggleItem({ id, mainImageBaseName, name, price });
   };
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -46,7 +52,7 @@ const ProductCard: FC<Product> = ({
         <StarRating rating={rating} />
       </div>
       <p className={styles.price}>{t('price', { price })}</p>
-      {inCart ? (
+      {isInCart(id) ? (
         <Button
           variant={Variant.InCard}
           onClick={handleToggleSetInCart}
