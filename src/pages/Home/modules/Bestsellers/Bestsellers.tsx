@@ -1,6 +1,6 @@
 import Slider from '@/modules/Slider/Slider';
 
-import ProductCard from '../../components/ProductCard/ProductCard';
+import ProductCard from '@/components/ProductCard/ProductCard';
 
 import { useGetBestsellersProductQuery } from '@/redux/services/products';
 
