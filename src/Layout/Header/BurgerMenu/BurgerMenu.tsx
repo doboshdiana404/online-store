@@ -24,6 +24,15 @@ const BurgerMenu = () => {
       document.body.style.overflow = '';
     };
   }, [isOpen]);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isOpen]);
   return (
     <div className={styles.burger}>
       <Button
