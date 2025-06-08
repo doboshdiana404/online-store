@@ -15,7 +15,7 @@ import styles from './ProductCard.module.css';
 import useCart from '@/hooks/useCart';
 import { Product } from '@/redux/services/products';
 
-type ProductCardProps = Pick<
+export type ProductCardProps = Pick<
   Product,
   'id' | 'mainImageBaseName' | 'name' | 'rating' | 'price' | 'sortDescription'
 >;

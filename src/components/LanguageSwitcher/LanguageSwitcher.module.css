@@ -36,7 +36,7 @@
   .button:hover {
     border-radius: 4px;
 
-    background: #e9e0e1;
+    background: rgb(226 220 220 / 30%);
   }
 }
 
