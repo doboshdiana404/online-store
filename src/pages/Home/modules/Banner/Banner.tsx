@@ -16,7 +16,7 @@ const Banner = () => {
             <p>Seasonal Treats up</p>
             <span>20% OFF</span>
           </h1>
-          <Link variant="primary" to="/shop">
+          <Link variant="primary" to="/catalog">
             Shop now
           </Link>
           <div className={styles.delivery}>

@@ -55,56 +55,51 @@
 
 .icon_1 {
   right: 25px;
-
   bottom: clamp(3.188rem, 0.633rem + 10.4vw, 5.625rem);
 
-  aspect-ratio: 1;
   width: clamp(2.188rem, 0.222rem + 8vw, 4.063rem);
-
-  height: 35px;
-  height: auto;
 }
 
 .icon_2 {
   right: 12px;
-  bottom: clamp(5.125rem, 0.998rem + 16.8vw, 9.063rem);
+  bottom: clamp(5.188rem, 0.144rem + 20.533vw, 10rem);
 
   width: clamp(1.875rem, 0.238rem + 6.667vw, 3.438rem);
 }
 
 .icon_3 {
-  right: clamp(1.875rem, 1.547rem + 1.333vw, 2.188rem);
-  bottom: clamp(5.938rem, 1.156rem + 19.467vw, 10.5rem);
+  right: 40px;
+  bottom: clamp(6.688rem, 2.299rem + 17.867vw, 10.875rem);
 
-  width: clamp(2.5rem, 0.535rem + 8vw, 4.375rem);
+  width: clamp(2rem, -0.489rem + 10.133vw, 4.375rem);
 }
 
 .icon_4 {
-  top: clamp(2.313rem, 1.264rem + 4.267vw, 3.313rem);
-  right: clamp(2.188rem, 1.532rem + 2.667vw, 2.813rem);
+  top: 40px;
+  right: 13px;
 
   width: clamp(1.875rem, 0.369rem + 6.133vw, 3.313rem);
 }
 
 .icon_5 {
-  top: 10px;
-  right: 34px;
+  top: 12px;
+  right: clamp(2.063rem, 1.407rem + 2.667vw, 2.688rem);
 
   width: clamp(1.875rem, 0.565rem + 5.333vw, 3.125rem);
 }
 
 .icon_6 {
-  right: clamp(9.688rem, 3.006rem + 27.2vw, 16.063rem);
+  right: clamp(9.688rem, 3.334rem + 25.867vw, 15.75rem);
   bottom: clamp(2.813rem, 0.52rem + 9.333vw, 5rem);
 
   width: clamp(1.875rem, 0.238rem + 6.667vw, 3.438rem);
 }
 
 .icon_7 {
-  right: clamp(7.813rem, 2.507rem + 21.6vw, 12.875rem);
-  bottom: clamp(4.75rem, 0.755rem + 16.267vw, 8.563rem);
+  right: clamp(8.375rem, 3.659rem + 19.2vw, 12.875rem);
+  bottom: clamp(5.188rem, 1.651rem + 14.4vw, 8.563rem);
 
-  width: clamp(3.125rem, 0.898rem + 9.067vw, 5.25rem);
+  width: clamp(2.5rem, -0.447rem + 12vw, 5.313rem);
 }
 
 .icon_8 {
@@ -115,38 +110,40 @@
 }
 
 .icon_9 {
-  top: 20px;
-  right: clamp(5rem, 2.314rem + 10.933vw, 7.563rem);
+  top: 37px;
+  right: clamp(4.188rem, 0.651rem + 14.4vw, 7.563rem);
 
   width: clamp(1.563rem, 0.121rem + 5.867vw, 2.938rem);
 }
 
 .icon_10 {
-  right: clamp(11.25rem, 2.735rem + 34.667vw, 19.375rem);
-  bottom: clamp(4.5rem, 0.701rem + 15.467vw, 8.125rem);
+  right: clamp(11.75rem, 3.759rem + 32.533vw, 19.375rem);
+  bottom: 87px;
+  rotate: -15deg;
 
-  width: clamp(2.5rem, 0.535rem + 8vw, 4.375rem);
+  width: clamp(2.188rem, -0.105rem + 9.333vw, 4.375rem);
 }
 
 .icon_11 {
-  top: clamp(3.313rem, 1.413rem + 7.733vw, 5.125rem);
-  right: clamp(8.938rem, 2.846rem + 24.8vw, 14.75rem);
+  top: clamp(3.313rem, 2.002rem + 5.333vw, 4.563rem);
+  right: clamp(8.938rem, 2.977rem + 24.267vw, 14.625rem);
 
   width: clamp(1.25rem, 0.136rem + 4.533vw, 2.313rem);
 }
 
 .icon_12 {
-  top: 10px;
-  right: clamp(7.875rem, 2.569rem + 21.6vw, 12.938rem);
+  top: 16px;
+  right: clamp(7rem, 0.777rem + 25.333vw, 12.938rem);
 
   width: clamp(1.875rem, 0.565rem + 5.333vw, 3.125rem);
 }
 
 .icon_13 {
-  top: clamp(2.75rem, 1.178rem + 6.4vw, 4.25rem);
-  right: clamp(11.125rem, 3.2rem + 32.267vw, 18.688rem);
+  top: clamp(4.063rem, 3.342rem + 2.933vw, 4.75rem);
+  right: clamp(10.875rem, 2.884rem + 32.533vw, 18.5rem);
+  rotate: -25deg;
 
-  width: clamp(2.188rem, 0.55rem + 6.667vw, 3.75rem);
+  width: clamp(1.688rem, 0.05rem + 6.667vw, 3.25rem);
 }
 
 .icon_14 {
@@ -157,24 +154,53 @@
 }
 
 .icon_15 {
-  top: clamp(2.375rem, 1.131rem + 5.067vw, 3.563rem);
+  top: clamp(2.375rem, 1.851rem + 2.133vw, 2.875rem);
   right: clamp(13.375rem, 3.616rem + 39.733vw, 22.688rem);
 
   width: clamp(1.875rem, 0.565rem + 5.333vw, 3.125rem);
 }
 
 .icon_16 {
-  top: 10px;
-  right: clamp(11.25rem, 3.259rem + 32.533vw, 18.875rem);
+  top: 16px;
+  right: clamp(10.813rem, 2.363rem + 34.4vw, 18.875rem);
 
-  width: clamp(2.188rem, 0.877rem + 5.333vw, 3.438rem);
+  width: clamp(2rem, 0.166rem + 7.467vw, 3.75rem);
 }
 
 .icon_17 {
-  top: 7px;
-  right: clamp(14.813rem, 3.743rem + 45.067vw, 25.375rem);
+  top: 10px;
+  right: 235px;
+  rotate: -12deg;
 
-  width: clamp(2.5rem, 0.863rem + 6.667vw, 4.063rem);
+  width: clamp(2.5rem, 0.666rem + 7.467vw, 4.25rem);
+}
+
+@media (width >= 360px) {
+  .icon_10 {
+    right: clamp(11.75rem, 3.759rem + 32.533vw, 19.375rem);
+    bottom: clamp(4.75rem, 1.213rem + 14.4vw, 8.125rem);
+  }
+
+  .icon_17 {
+    top: 12.5px;
+    right: clamp(15.063rem, 3.534rem + 46.933vw, 26.063rem);
+  }
+}
+
+@media (width >= 393px) {
+  .icon_2 {
+    right: 2px;
+  }
+
+  .icon_4 {
+    right: 3px;
+  }
+}
+
+@media (width >= 480px) {
+  .icon_1 {
+    right: 15px;
+  }
 }
 
 @media (width >= 768px) {
@@ -201,21 +227,23 @@
   }
 
   .icon_2 {
-    bottom: clamp(9.063rem, 0.134rem + 18.601vw, 16.875rem);
+    right: 0;
+    bottom: clamp(10rem, -1rem + 22.917vw, 19.625rem);
 
     width: clamp(3.438rem, 0.938rem + 5.208vw, 5.625rem);
   }
 
   .icon_3 {
-    right: clamp(2.188rem, 0.973rem + 2.53vw, 3.25rem);
-    bottom: clamp(10.125rem, 0.125rem + 20.833vw, 18.875rem);
+    right: 49px;
+    bottom: clamp(10.875rem, 0.946rem + 20.685vw, 19.563rem);
 
-    width: clamp(4.375rem, 0.089rem + 8.929vw, 8.125rem);
+    width: clamp(4.375rem, 1.875rem + 5.208vw, 6.563rem);
   }
 
   .icon_4 {
-    top: clamp(3.313rem, -0.188rem + 7.292vw, 6.375rem);
-    right: clamp(2.813rem, 1.17rem + 3.423vw, 4.25rem);
+    top: clamp(2.5rem, -2.286rem + 9.97vw, 6.688rem);
+    right: 3px;
+    rotate: 15deg;
 
     width: clamp(3.313rem, -0.045rem + 6.994vw, 6.25rem);
   }
@@ -228,14 +256,14 @@
   }
 
   .icon_6 {
-    right: clamp(16.063rem, 1.277rem + 30.804vw, 29rem);
-    bottom: clamp(5rem, 0.714rem + 8.929vw, 8.75rem);
+    right: clamp(15.75rem, 4.25rem + 23.958vw, 25.813rem);
+    bottom: clamp(5.25rem, 0.25rem + 10.417vw, 9.625rem);
 
     width: clamp(3.438rem, 0.223rem + 6.696vw, 6.25rem);
   }
 
   .icon_7 {
-    right: clamp(12.875rem, 1.518rem + 23.661vw, 22.813rem);
+    right: clamp(12.875rem, 4.446rem + 17.56vw, 20.25rem);
     bottom: clamp(8.563rem, 0.563rem + 16.667vw, 15.563rem);
 
     width: clamp(5.313rem, 0.67rem + 9.673vw, 9.375rem);
@@ -243,44 +271,44 @@
 
   .icon_8 {
     top: clamp(5.5rem, -0.214rem + 11.905vw, 10.5rem);
-    right: clamp(8.875rem, 1.161rem + 16.071vw, 15.625rem);
+    right: clamp(8.875rem, 3.946rem + 10.268vw, 13.188rem);
 
     width: clamp(3.438rem, 0.223rem + 6.696vw, 6.25rem);
   }
 
   .icon_9 {
     top: clamp(1.375rem, -0.268rem + 3.423vw, 2.813rem);
-    right: clamp(7.563rem, 0.848rem + 13.988vw, 13.438rem);
+    right: clamp(7.563rem, 3.705rem + 8.036vw, 10.938rem);
 
     width: clamp(2.938rem, 0.223rem + 5.655vw, 5.313rem);
   }
 
   .icon_10 {
-    right: clamp(19.375rem, 1.875rem + 36.458vw, 34.688rem);
-    bottom: clamp(8.125rem, 0.625rem + 15.625vw, 14.688rem);
+    right: clamp(19.375rem, 0.446rem + 39.435vw, 35.938rem);
+    bottom: clamp(8.125rem, 1.911rem + 12.946vw, 13.563rem);
 
-    width: clamp(4.375rem, 0.446rem + 8.185vw, 7.813rem);
+    width: clamp(4.375rem, 0.089rem + 8.929vw, 8.125rem);
   }
 
   .icon_11 {
-    top: clamp(5.125rem, -0.304rem + 11.31vw, 9.875rem);
-    right: clamp(14.75rem, 1.321rem + 27.976vw, 26.5rem);
+    top: clamp(4.563rem, 1.777rem + 5.804vw, 7rem);
+    right: clamp(14.625rem, 1.696rem + 26.935vw, 25.938rem);
 
-    width: clamp(2.313rem, 0.313rem + 4.167vw, 4.063rem);
+    width: clamp(2.313rem, 0.67rem + 3.423vw, 3.75rem);
   }
 
   .icon_12 {
     top: 2px;
-    right: clamp(12.938rem, 1.438rem + 23.958vw, 23rem);
+    right: clamp(12.938rem, 4.438rem + 17.708vw, 20.375rem);
 
     width: clamp(3.125rem, -0.446rem + 7.44vw, 6.25rem);
   }
 
   .icon_13 {
-    top: clamp(4.25rem, -0.179rem + 9.226vw, 8.125rem);
-    right: clamp(18.688rem, 1.83rem + 35.119vw, 33.438rem);
+    top: clamp(4.75rem, -2.393rem + 14.881vw, 11rem);
+    right: clamp(18.5rem, 4.214rem + 29.762vw, 31rem);
 
-    width: clamp(3.75rem, 0.179rem + 7.44vw, 6.875rem);
+    width: clamp(3.25rem, 0.893rem + 4.911vw, 5.313rem);
   }
 
   .icon_14 {
@@ -291,28 +319,80 @@
   }
 
   .icon_15 {
-    top: clamp(3.563rem, 0.063rem + 7.292vw, 6.625rem);
-    right: clamp(22.688rem, 1.902rem + 43.304vw, 40.875rem);
+    top: clamp(2.875rem, -3.839rem + 13.988vw, 8.75rem);
+    right: clamp(22.688rem, 4.473rem + 37.946vw, 38.625rem);
 
     width: clamp(3.125rem, -0.304rem + 7.143vw, 6.125rem);
   }
 
   .icon_16 {
-    top: clamp(0rem, -1.357rem + 2.827vw, 1.188rem);
-    right: clamp(18.875rem, 1.518rem + 36.161vw, 34.063rem);
+    top: -9px;
+    right: clamp(18.875rem, 1.875rem + 35.417vw, 33.75rem);
 
-    width: clamp(3.438rem, -0.134rem + 7.44vw, 6.563rem);
+    width: clamp(3.75rem, 0.536rem + 6.696vw, 6.563rem);
   }
 
   .icon_17 {
-    top: 2px;
-    right: clamp(25.375rem, 1.946rem + 48.81vw, 45.875rem);
+    top: -2px;
+    right: clamp(26.063rem, 2.063rem + 50vw, 47.063rem);
+    rotate: 0deg;
 
-    width: clamp(4.063rem, 0.134rem + 8.185vw, 7.5rem);
+    width: clamp(4.25rem, 0.536rem + 7.738vw, 7.5rem);
   }
 }
 
 @media (width >= 1024px) {
+  .icons {
+    top: 74px;
+    right: -20px;
+
+    aspect-ratio: 1.38;
+    width: clamp(29.75rem, 1.179rem + 59.524vw, 54.75rem);
+  }
+
+  .box {
+    right: 48px;
+    bottom: -6px;
+
+    width: clamp(12.5rem, 0.5rem + 25vw, 23rem);
+  }
+
+  .icon_1 {
+    right: -2px;
+  }
+
+  .icon_2 {
+    right: -15px;
+  }
+
+  .icon_3 {
+    right: 43px;
+  }
+
+  .icon_4 {
+    right: -4px;
+    rotate: 0deg;
+  }
+
+  .icon_5 {
+    top: 21px;
+    right: 29px;
+  }
+
+  .icon_13 {
+    rotate: -10deg;
+  }
+
+  .icon_16 {
+    top: 18px;
+  }
+
+  .icon_17 {
+    top: 21px;
+  }
+}
+
+/* @media (width >= 1024px) {
   .icons {
     right: -70px;
   }
@@ -337,20 +417,16 @@
   .icon_12 {
     top: 3px;
   }
-}
+} */
 
 @media (width >= 1280px) {
   .icon_2 {
-    right: 10px;
-  }
-
-  .icon_5 {
-    top: 21px;
+    right: -40px;
   }
 }
 
 @media (width >= 1440px) {
   .icon_2 {
-    right: 0;
+    right: -55px;
   }
 }

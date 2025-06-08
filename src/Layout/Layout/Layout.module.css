@@ -1,3 +1,18 @@
 .layout {
   display: flex;
+  flex-direction: column;
+}
+
+.layout header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  left: 50%;
+  transform: translateX(0%);
+
+  padding: 20px 0 22px;
+
+  background: #f6c7d2;
+  box-shadow: 0 4px 4px 0 #edc9d1;
 }

@@ -42,7 +42,7 @@
   letter-spacing: -0.01em;
 
   background: linear-gradient(50deg, #532834 0%, #b95873 100%);
-  box-shadow: 0 4px 4px 0 #b8737a;
+  box-shadow: 2px 2px 10px 0 #94465c;
 }
 
 .link--primary:active {
@@ -71,7 +71,7 @@
       rgb(83 40 52 / 90%) 0%,
       rgb(185 88 115 / 80%) 100%
     );
-    box-shadow: 4px 4px 4px 0 #979595;
+    box-shadow: 2px 2px 10px 1px #a35b6f;
   }
 
   .link--header_active,
