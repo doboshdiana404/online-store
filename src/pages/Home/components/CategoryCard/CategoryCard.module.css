@@ -1,0 +1,77 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  /* gap: 16px; */
+  align-items: center;
+
+  min-width: 120px;
+}
+
+.card > div {
+  padding: 22px 33px 28px 34px;
+  border-radius: 40px;
+
+  background: rgb(200 128 140 / 20%);
+
+  transition: all 0.3s;
+}
+
+.card > div > img {
+  aspect-ratio: 1;
+  width: clamp(3.125rem, -0.15rem + 13.333vw, 6.25rem);
+  height: auto;
+}
+
+.card h3 {
+  font-family: var(--font-family);
+  font-size: clamp(1rem, 0.429rem + 1.19vw, 1.5rem);
+  font-weight: 500;
+  line-height: 108%;
+  color: #000;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover div {
+    background: #e09ba9;
+  }
+}
+
+@media (width >= 480px) {
+  .card {
+    gap: 8px;
+  }
+}
+
+@media (width >= 640px) {
+  .card {
+    gap: 12px;
+  }
+}
+
+@media (width >= 768px) {
+  .card {
+    gap: 16px;
+
+    aspect-ratio: 0.944;
+    width: clamp(10.5rem, 5.643rem + 10.119vw, 14.75rem);
+    padding-bottom: 10px;
+  }
+
+  .card > div {
+    padding: 22px 34px;
+    border-radius: 60px;
+  }
+
+  .card > div > img {
+    width: clamp(6.25rem, 1.036rem + 10.863vw, 10.813rem);
+  }
+}
+
+@media (width >= 1024px) {
+  .card > div {
+    padding: 12px 32px 13px 31px;
+    border-radius: 80px;
+  }
+}

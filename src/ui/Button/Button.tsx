@@ -11,11 +11,19 @@ export const Button: FC<ButtonProps> = ({
   disabled,
   onClick,
   icon,
+  size,
+  className,
   ...props
 }) => {
-  const buttonClassName = clsx(styles.button, styles[`button--${variant}`], {
-    [styles['button--disabled']]: disabled,
-  });
+  const buttonClassName = clsx(
+    styles.button,
+    className,
+    styles[`button--${variant}`],
+    styles[`button--${variant}--${size}`],
+    {
+      [styles['button--disabled']]: disabled,
+    }
+  );
   return (
     <button
       {...props}

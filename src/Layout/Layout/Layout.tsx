@@ -9,7 +9,7 @@ import styles from './Layout.module.css';
 
 const Layout = () => {
   return (
-    <>
+    <div className={styles.layout}>
       <Header />
       <main className={styles.main}>
         <Suspense fallback={<div>Loading...</div>}>
@@ -17,7 +17,7 @@ const Layout = () => {
         </Suspense>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

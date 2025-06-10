@@ -1,0 +1,432 @@
+.icons {
+  position: absolute;
+  top: 53px;
+  right: -20px;
+
+  aspect-ratio: 1.34;
+  width: clamp(16.875rem, 3.382rem + 54.933vw, 29.75rem);
+}
+
+.icon {
+  position: absolute;
+
+  aspect-ratio: 1;
+  height: auto;
+
+  transition: all 0.3s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .icon_9:hover,
+  .icon_8:hover,
+  .icon_5:hover,
+  .icon_4:hover,
+  .icon_3:hover,
+  .icon_2:hover,
+  .icon_1:hover {
+    rotate: -15deg;
+    scale: 1.1;
+  }
+
+  .icon_17:hover,
+  .icon_16:hover,
+  .icon_15:hover,
+  .icon_14:hover,
+  .icon_13:hover,
+  .icon_12:hover,
+  .icon_11:hover,
+  .icon_10:hover,
+  .icon_7:hover,
+  .icon_6:hover {
+    rotate: 15deg;
+    scale: 1.1;
+  }
+}
+
+.box {
+  position: absolute;
+  right: 42px;
+  bottom: 0;
+
+  aspect-ratio: 1;
+  width: clamp(7.063rem, 1.364rem + 23.2vw, 12.5rem);
+  height: auto;
+}
+
+.icon_1 {
+  right: 25px;
+  bottom: clamp(3.188rem, 0.633rem + 10.4vw, 5.625rem);
+
+  width: clamp(2.188rem, 0.222rem + 8vw, 4.063rem);
+}
+
+.icon_2 {
+  right: 12px;
+  bottom: clamp(5.188rem, 0.144rem + 20.533vw, 10rem);
+
+  width: clamp(1.875rem, 0.238rem + 6.667vw, 3.438rem);
+}
+
+.icon_3 {
+  right: 40px;
+  bottom: clamp(6.688rem, 2.299rem + 17.867vw, 10.875rem);
+
+  width: clamp(2rem, -0.489rem + 10.133vw, 4.375rem);
+}
+
+.icon_4 {
+  top: 40px;
+  right: 13px;
+
+  width: clamp(1.875rem, 0.369rem + 6.133vw, 3.313rem);
+}
+
+.icon_5 {
+  top: 12px;
+  right: clamp(2.063rem, 1.407rem + 2.667vw, 2.688rem);
+
+  width: clamp(1.875rem, 0.565rem + 5.333vw, 3.125rem);
+}
+
+.icon_6 {
+  right: clamp(9.688rem, 3.334rem + 25.867vw, 15.75rem);
+  bottom: clamp(2.813rem, 0.52rem + 9.333vw, 5rem);
+
+  width: clamp(1.875rem, 0.238rem + 6.667vw, 3.438rem);
+}
+
+.icon_7 {
+  right: clamp(8.375rem, 3.659rem + 19.2vw, 12.875rem);
+  bottom: clamp(5.188rem, 1.651rem + 14.4vw, 8.563rem);
+
+  width: clamp(2.5rem, -0.447rem + 12vw, 5.313rem);
+}
+
+.icon_8 {
+  top: clamp(3.563rem, 1.532rem + 8.267vw, 5.5rem);
+  right: clamp(5.625rem, 2.219rem + 13.867vw, 8.875rem);
+
+  width: clamp(1.875rem, 0.238rem + 6.667vw, 3.438rem);
+}
+
+.icon_9 {
+  top: 37px;
+  right: clamp(4.188rem, 0.651rem + 14.4vw, 7.563rem);
+
+  width: clamp(1.563rem, 0.121rem + 5.867vw, 2.938rem);
+}
+
+.icon_10 {
+  right: clamp(11.75rem, 3.759rem + 32.533vw, 19.375rem);
+  bottom: 87px;
+  rotate: -15deg;
+
+  width: clamp(2.188rem, -0.105rem + 9.333vw, 4.375rem);
+}
+
+.icon_11 {
+  top: clamp(3.313rem, 2.002rem + 5.333vw, 4.563rem);
+  right: clamp(8.938rem, 2.977rem + 24.267vw, 14.625rem);
+
+  width: clamp(1.25rem, 0.136rem + 4.533vw, 2.313rem);
+}
+
+.icon_12 {
+  top: 16px;
+  right: clamp(7rem, 0.777rem + 25.333vw, 12.938rem);
+
+  width: clamp(1.875rem, 0.565rem + 5.333vw, 3.125rem);
+}
+
+.icon_13 {
+  top: clamp(4.063rem, 3.342rem + 2.933vw, 4.75rem);
+  right: clamp(10.875rem, 2.884rem + 32.533vw, 18.5rem);
+  rotate: -25deg;
+
+  width: clamp(1.688rem, 0.05rem + 6.667vw, 3.25rem);
+}
+
+.icon_14 {
+  top: clamp(3.875rem, 1.517rem + 9.6vw, 6.125rem);
+  right: clamp(15rem, 3.865rem + 45.333vw, 25.625rem);
+
+  width: clamp(1.563rem, 0.449rem + 4.533vw, 2.625rem);
+}
+
+.icon_15 {
+  top: clamp(2.375rem, 1.851rem + 2.133vw, 2.875rem);
+  right: clamp(13.375rem, 3.616rem + 39.733vw, 22.688rem);
+
+  width: clamp(1.875rem, 0.565rem + 5.333vw, 3.125rem);
+}
+
+.icon_16 {
+  top: 16px;
+  right: clamp(10.813rem, 2.363rem + 34.4vw, 18.875rem);
+
+  width: clamp(2rem, 0.166rem + 7.467vw, 3.75rem);
+}
+
+.icon_17 {
+  top: 10px;
+  right: 235px;
+  rotate: -12deg;
+
+  width: clamp(2.5rem, 0.666rem + 7.467vw, 4.25rem);
+}
+
+@media (width >= 360px) {
+  .icon_10 {
+    right: clamp(11.75rem, 3.759rem + 32.533vw, 19.375rem);
+    bottom: clamp(4.75rem, 1.213rem + 14.4vw, 8.125rem);
+  }
+
+  .icon_17 {
+    top: 12.5px;
+    right: clamp(15.063rem, 3.534rem + 46.933vw, 26.063rem);
+  }
+}
+
+@media (width >= 393px) {
+  .icon_2 {
+    right: 2px;
+  }
+
+  .icon_4 {
+    right: 3px;
+  }
+}
+
+@media (width >= 480px) {
+  .icon_1 {
+    right: 15px;
+  }
+}
+
+@media (width >= 768px) {
+  .icons {
+    top: 74px;
+    right: -20px;
+
+    aspect-ratio: 1.38;
+    width: clamp(29.75rem, 1.179rem + 59.524vw, 54.75rem);
+  }
+
+  .box {
+    right: 58px;
+    bottom: 2px;
+
+    width: clamp(12.5rem, 0.5rem + 25vw, 23rem);
+  }
+
+  .icon_1 {
+    right: clamp(1.563rem, 0.991rem + 1.19vw, 2.063rem);
+    bottom: clamp(5.625rem, 0.625rem + 10.417vw, 10rem);
+
+    width: clamp(4.063rem, 0.134rem + 8.185vw, 7.5rem);
+  }
+
+  .icon_2 {
+    right: 0;
+    bottom: clamp(10rem, -1rem + 22.917vw, 19.625rem);
+
+    width: clamp(3.438rem, 0.938rem + 5.208vw, 5.625rem);
+  }
+
+  .icon_3 {
+    right: 49px;
+    bottom: clamp(10.875rem, 0.946rem + 20.685vw, 19.563rem);
+
+    width: clamp(4.375rem, 1.875rem + 5.208vw, 6.563rem);
+  }
+
+  .icon_4 {
+    top: clamp(2.5rem, -2.286rem + 9.97vw, 6.688rem);
+    right: 3px;
+    rotate: 15deg;
+
+    width: clamp(3.313rem, -0.045rem + 6.994vw, 6.25rem);
+  }
+
+  .icon_5 {
+    top: -10px;
+    right: clamp(2.688rem, 1.116rem + 3.274vw, 4.063rem);
+
+    width: clamp(3.125rem, 0.268rem + 5.952vw, 5.625rem);
+  }
+
+  .icon_6 {
+    right: clamp(15.75rem, 4.25rem + 23.958vw, 25.813rem);
+    bottom: clamp(5.25rem, 0.25rem + 10.417vw, 9.625rem);
+
+    width: clamp(3.438rem, 0.223rem + 6.696vw, 6.25rem);
+  }
+
+  .icon_7 {
+    right: clamp(12.875rem, 4.446rem + 17.56vw, 20.25rem);
+    bottom: clamp(8.563rem, 0.563rem + 16.667vw, 15.563rem);
+
+    width: clamp(5.313rem, 0.67rem + 9.673vw, 9.375rem);
+  }
+
+  .icon_8 {
+    top: clamp(5.5rem, -0.214rem + 11.905vw, 10.5rem);
+    right: clamp(8.875rem, 3.946rem + 10.268vw, 13.188rem);
+
+    width: clamp(3.438rem, 0.223rem + 6.696vw, 6.25rem);
+  }
+
+  .icon_9 {
+    top: clamp(1.375rem, -0.268rem + 3.423vw, 2.813rem);
+    right: clamp(7.563rem, 3.705rem + 8.036vw, 10.938rem);
+
+    width: clamp(2.938rem, 0.223rem + 5.655vw, 5.313rem);
+  }
+
+  .icon_10 {
+    right: clamp(19.375rem, 0.446rem + 39.435vw, 35.938rem);
+    bottom: clamp(8.125rem, 1.911rem + 12.946vw, 13.563rem);
+
+    width: clamp(4.375rem, 0.089rem + 8.929vw, 8.125rem);
+  }
+
+  .icon_11 {
+    top: clamp(4.563rem, 1.777rem + 5.804vw, 7rem);
+    right: clamp(14.625rem, 1.696rem + 26.935vw, 25.938rem);
+
+    width: clamp(2.313rem, 0.67rem + 3.423vw, 3.75rem);
+  }
+
+  .icon_12 {
+    top: 2px;
+    right: clamp(12.938rem, 4.438rem + 17.708vw, 20.375rem);
+
+    width: clamp(3.125rem, -0.446rem + 7.44vw, 6.25rem);
+  }
+
+  .icon_13 {
+    top: clamp(4.75rem, -2.393rem + 14.881vw, 11rem);
+    right: clamp(18.5rem, 4.214rem + 29.762vw, 31rem);
+
+    width: clamp(3.25rem, 0.893rem + 4.911vw, 5.313rem);
+  }
+
+  .icon_14 {
+    top: clamp(6.125rem, -0.089rem + 12.946vw, 11.563rem);
+    right: clamp(25.625rem, 2.054rem + 49.107vw, 46.25rem);
+
+    width: clamp(2.625rem, -0.089rem + 5.655vw, 5rem);
+  }
+
+  .icon_15 {
+    top: clamp(2.875rem, -3.839rem + 13.988vw, 8.75rem);
+    right: clamp(22.688rem, 4.473rem + 37.946vw, 38.625rem);
+
+    width: clamp(3.125rem, -0.304rem + 7.143vw, 6.125rem);
+  }
+
+  .icon_16 {
+    top: -9px;
+    right: clamp(18.875rem, 1.875rem + 35.417vw, 33.75rem);
+
+    width: clamp(3.75rem, 0.536rem + 6.696vw, 6.563rem);
+  }
+
+  .icon_17 {
+    top: -2px;
+    right: clamp(26.063rem, 2.063rem + 50vw, 47.063rem);
+    rotate: 0deg;
+
+    width: clamp(4.25rem, 0.536rem + 7.738vw, 7.5rem);
+  }
+}
+
+@media (width >= 1024px) {
+  .icons {
+    top: 74px;
+    right: -20px;
+
+    aspect-ratio: 1.38;
+    width: clamp(29.75rem, 1.179rem + 59.524vw, 54.75rem);
+  }
+
+  .box {
+    right: 48px;
+    bottom: -6px;
+
+    width: clamp(12.5rem, 0.5rem + 25vw, 23rem);
+  }
+
+  .icon_1 {
+    right: -2px;
+  }
+
+  .icon_2 {
+    right: -15px;
+  }
+
+  .icon_3 {
+    right: 43px;
+  }
+
+  .icon_4 {
+    right: -4px;
+    rotate: 0deg;
+  }
+
+  .icon_5 {
+    top: 21px;
+    right: 29px;
+  }
+
+  .icon_13 {
+    rotate: -10deg;
+  }
+
+  .icon_16 {
+    top: 18px;
+  }
+
+  .icon_17 {
+    top: 21px;
+  }
+}
+
+/* @media (width >= 1024px) {
+  .icons {
+    right: -70px;
+  }
+
+  .box {
+    right: 89px;
+    bottom: 0;
+  }
+
+  .icon_2 {
+    right: 30px;
+  }
+
+  .icon_3 {
+    bottom: clamp(15rem, 5.462rem + 14.904vw, 18.875rem);
+  }
+
+  .icon_5 {
+    top: 10px;
+  }
+
+  .icon_12 {
+    top: 3px;
+  }
+} */
+
+@media (width >= 1280px) {
+  .icon_2 {
+    right: -40px;
+  }
+}
+
+@media (width >= 1440px) {
+  .icon_2 {
+    right: -55px;
+  }
+}

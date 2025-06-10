@@ -8,4 +8,5 @@ export interface ButtonProps
   text?: string;
   icon?: ReactNode;
   link?: string;
+  size?: 's' | 'm' | 'l';
 }

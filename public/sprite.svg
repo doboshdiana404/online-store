@@ -1,0 +1,24 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+  <symbol id="icon-arrow" viewBox="0 0 10 23" fill='none'>
+    <path d="M9 22L1 11.5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+  <symbol id='facebook' viewBox="0 0 19 32" fill="none">
+    <path d="M17.5 1H13C11.0109 1 9.10322 1.79018 7.6967 3.1967C6.29018 4.60322 5.5 6.51088 5.5 8.5V13H1V19H5.5V31H11.5V19H16L17.5 13H11.5V8.5C11.5 8.10218 11.658 7.72064 11.9393 7.43934C12.2206 7.15804 12.6022 7 13 7H17.5V1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+  <symbol id='instagram' viewBox="0 0 32 32" fill="none">
+    <path d="M1 16C1 8.92947 1 5.39263 3.19630 3.19630C5.39263 1 8.92789 1 16 1C23.0705 1 26.6074 1 28.8037 3.19630C31 5.39263 31 8.92789 31 16C31 23.0705 31 26.6074 28.8037 28.8037C26.6074 31 23.0721 31 16 31C8.92947 31 5.39263 31 3.19630 28.8037C1 26.6074 1 23.0721 1 16Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M24.6966 7.31543H24.6808M23.1051 15.9996C23.1051 17.8841 22.3565 19.6913 21.024 21.0238C19.6915 22.3563 17.8842 23.1049 15.9998 23.1049C14.1154 23.1049 12.3081 22.3563 10.9756 21.0238C9.64312 19.6913 8.89453 17.8841 8.89453 15.9996C8.89453 14.1152 9.64312 12.308 10.9756 10.9755C12.3081 9.64297 14.1154 8.89438 15.9998 8.89438C17.8842 8.89438 19.6915 9.64297 21.024 10.9755C22.3565 12.308 23.1051 14.1152 23.1051 15.9996Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+  <symbol id='twitter' viewBox="0 0 30 30" fill="none">
+    <g clip-path="url(#clip0_473_3788)">
+      <path d="M0.19125 0H9.0225L16.8844 11.2444L26.325 0H29.1469L17.9625 12.7875L30 30H21.1688L12.9581 18.2587L2.82 30H0L11.8819 16.7194L0.19125 0ZM3.675 1.76437L22.185 28.2356H26.5163L8.00625 1.7625L3.675 1.76437Z" fill="currentColor"/>
+    </g>
+    <defs>
+      <clipPath id="clip0_473_3788">
+        <rect width="30" height="30" fill="white"/>
+      </clipPath>
+    </defs>
+  </symbol>
+</defs>
+</svg>

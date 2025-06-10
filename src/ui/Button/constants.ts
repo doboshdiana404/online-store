@@ -8,6 +8,12 @@ export enum Sizes {
 export enum Variant {
   Basic = 'basic',
   Primary = 'primary',
+  Link = 'link',
+  Icon = 'icon',
+  Card = 'card',
+  InCard = 'inCard',
+  Slider = 'slider',
+  Burger = 'burger',
 }
 
 export enum Position {

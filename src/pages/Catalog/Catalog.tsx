@@ -6,7 +6,7 @@ import PageSizeSelect from '@/pages/Catalog/modules/PageSizeSelect/PageSizeSelec
 import CategoriesList from '@/modules/CategoriesList/CategoriesList';
 import Pagination from '@/modules/Pagination/Pagination';
 
-import { Card } from '@/components/ProductCard/ProductCard';
+import ProductCard from '@/components/ProductCard/ProductCard';
 
 import styles from './Catalog.module.css';
 import PriceRangeFilter from './modules/PriceRangeFilter/PriceRangeFilter';
@@ -58,8 +58,8 @@ const Catalog = () => {
       </div>
       <div className={styles['product-list']}>
         {isSuccess &&
-          products.items.map(({ id, ...product }) => (
-            <Card key={id} {...product} id={id} />
+          products.items.map((product) => (
+            <ProductCard key={product.id} {...product} />
           ))}
         {isFetching || (isLoading && <p>Loading...</p>)}
       </div>
