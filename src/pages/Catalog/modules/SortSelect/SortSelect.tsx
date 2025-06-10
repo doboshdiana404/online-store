@@ -1,72 +1,49 @@
-import { useState } from 'react';
+import { useMemo } from 'react';
 
 import { useSearchParams } from 'react-router-dom';
 
-const sortOptions = [
-  { sortBy: '', sortDirection: '', label: 'No Sorting' },
-  { sortBy: 'Price', sortDirection: 'Asc', label: 'Price Ascending' },
-  { sortBy: 'Price', sortDirection: 'Desc', label: 'Price Descending' },
-  { sortBy: 'Rating', sortDirection: 'Asc', label: 'Rating Ascending' },
-  { sortBy: 'Rating', sortDirection: 'Desc', label: 'Rating Descending' },
-];
+import Select from '@/ui/Select/Select';
+
+import { SORT_OPTIONS } from './data';
 
 const SortSelect = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const initialSortBy = searchParams.get('SortBy') || '';
-  const initialSortDirection = searchParams.get('SortDirection') || '';
-
-  const [selectedOption, setSelectedOption] = useState(
-    sortOptions.find(
-      (option) =>
-        option.sortBy === initialSortBy &&
-        option.sortDirection === initialSortDirection
-    ) || sortOptions[0]
-  );
-
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedValue = event.target.value;
-    const [sortBy, sortDirection] = selectedValue.split('&');
-    const newOption = sortOptions.find(
-      (option) =>
-        option.sortBy === sortBy && option.sortDirection === sortDirection
+  const selectedOption = useMemo(() => {
+    const sortBy = searchParams.get('SortBy');
+    const sortDirection = searchParams.get('SortDirection');
+    return (
+      SORT_OPTIONS.find(
+        (option) =>
+          option.sortBy === sortBy && option.sortDirection === sortDirection
+      ) || SORT_OPTIONS[0]
     );
+  }, [searchParams]);
 
-    if (newOption) {
-      setSelectedOption(newOption);
-      setSearchParams((prev) => {
-        const params = new URLSearchParams(prev.toString());
-        if (newOption.sortBy) {
-          params.set('SortBy', newOption.sortBy);
-          params.set('SortDirection', newOption.sortDirection);
-        } else {
-          params.delete('SortBy');
-          params.delete('SortDirection');
-        }
-        params.set('page', '1');
-        return params;
-      });
+  const handleChange = (label: string) => {
+    const option = SORT_OPTIONS.find((opt) => opt.label === label);
+    if (!option) return;
+
+    const params = new URLSearchParams(searchParams.toString());
+    if (option.sortBy) {
+      params.set('SortBy', option.sortBy);
+      params.set('SortDirection', option.sortDirection);
+    } else {
+      params.delete('SortBy');
+      params.delete('SortDirection');
     }
+    params.set('page', '1');
+    setSearchParams(params);
   };
 
   return (
-    <div>
-      <label htmlFor="sort-select">Sort By:</label>
-      <select
-        id="sort-select"
-        value={`${selectedOption.sortBy}&${selectedOption.sortDirection}`}
-        onChange={handleChange}
-      >
-        {sortOptions.map((option) => (
-          <option
-            key={`${option.sortBy}&${option.sortDirection}`}
-            value={`${option.sortBy}&${option.sortDirection}`}
-          >
-            {option.label}
-          </option>
-        ))}
-      </select>
-    </div>
+    <Select
+      value={selectedOption.label}
+      onChange={handleChange}
+      options={SORT_OPTIONS.map((opt) => opt.label)}
+      placeholder="Sort by ..."
+      variant="sort"
+    />
   );
 };
 
