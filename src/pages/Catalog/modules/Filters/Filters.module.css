@@ -1,0 +1,11 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.filter .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}

@@ -118,6 +118,7 @@ const AddProduct = () => {
         name="categoryId"
         render={({ field, fieldState }) => (
           <Select
+            variant="select"
             placeholder="Категорія"
             value={field.value}
             options={categoriesOptions}
