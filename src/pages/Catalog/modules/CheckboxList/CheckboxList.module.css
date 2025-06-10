@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.wrapper .title {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.wrapper .list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
