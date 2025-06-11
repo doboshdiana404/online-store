@@ -1,0 +1,21 @@
+.crumbs ul {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.crumbs ul li {
+  width: fit-content;
+
+  font-family: var(--second-family);
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.crumbs ul li.crumbs_dark {
+  color: black;
+}
+
+.crumbs ul li.crumbs_light {
+  color: #fff;
+}
