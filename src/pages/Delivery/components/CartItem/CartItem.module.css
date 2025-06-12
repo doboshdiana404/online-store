@@ -1,0 +1,20 @@
+.cartItemFlexWrap {
+  display: flex;
+  gap: 22px;
+}
+.cartItem {
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  width: 417px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+.titleProduct {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14286;
+  margin-top: 12px;
+}
