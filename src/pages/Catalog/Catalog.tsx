@@ -4,9 +4,11 @@ import { useSearchParams } from 'react-router-dom';
 
 import Pagination from '@/modules/Pagination/Pagination';
 
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 import ProductCard from '@/components/ProductCard/ProductCard';
 
 import styles from './Catalog.module.css';
+import SeeMore from './components/SeeMore/SeeMore';
 import Filters from './modules/Filters/Filters';
 import ProductList from './modules/ProductList/ProductList';
 
@@ -43,7 +45,10 @@ const Catalog = () => {
     <section className={styles.catalog}>
       <div className="container">
         <div className={styles.wrapper}>
-          <section className={styles['bread-crams']}>Main / Shop</section>
+          <Breadcrumbs
+            variant="crumbs_dark"
+            crumbs={[{ link: '/catalog', name: 'Shop' }]}
+          />
           <main>
             <Filters />
             {isSuccess && (
@@ -55,11 +60,14 @@ const Catalog = () => {
             )}
           </main>
           {isSuccess && (
-            <Pagination
-              skip={products.skip}
-              take={products.take}
-              totalItems={products.totalItems}
-            />
+            <div className={styles.pagination}>
+              <SeeMore isActive={false} />
+              <Pagination
+                skip={products.skip}
+                take={products.take}
+                totalItems={products.totalItems}
+              />
+            </div>
           )}
         </div>
       </div>
