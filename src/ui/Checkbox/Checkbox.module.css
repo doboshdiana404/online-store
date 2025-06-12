@@ -9,6 +9,7 @@
 .input {
   cursor: pointer;
 
+  min-width: 19px;
   border-radius: 0.15em;
 
   appearance: none;
@@ -65,5 +66,5 @@
   width: 11px;
   height: 11px;
 
-  background: url("/public/checked.svg") no-repeat center/cover;
+  background: url('/public/checked.svg') no-repeat center/cover;
 }
