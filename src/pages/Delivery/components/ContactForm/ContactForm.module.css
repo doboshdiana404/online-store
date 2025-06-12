@@ -1,0 +1,50 @@
+.wrapper {
+  padding: 16px 50px 16px 16px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-bottom: 99px;
+}
+.contactFormInput {
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 462px;
+  height: 32px;
+  background: #fff;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.field {
+  margin-bottom: 16px;
+}
+.field::placeholder {
+  font-size: 14px;
+  line-height: 1.14286;
+  color: #595d62;
+}
+
+.field label {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+  margin-bottom: 8px;
+}
+/* 
+.field input {
+  padding: 0.5rem;
+  width: 100%;
+} */
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+}
+.contactFormTitle {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.125;
+}

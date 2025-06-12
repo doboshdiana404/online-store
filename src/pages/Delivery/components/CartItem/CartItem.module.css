@@ -18,3 +18,24 @@
   line-height: 1.14286;
   margin-top: 12px;
 }
+.itemAmount {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+}
+.quantity {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 0.58333;
+  letter-spacing: 0em;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.itemPrice {
+  display: flex;
+  gap: 40px;
+  margin-top: 7px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+}

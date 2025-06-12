@@ -1,0 +1,25 @@
+.radioFormWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.radioForm {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 16px 50px 16px 16px;
+  width: 528px;
+}
+.radioFormTitle {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.125;
+}
+.radioFormField {
+  margin-right: 12px;
+}
+.radioForm label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+}

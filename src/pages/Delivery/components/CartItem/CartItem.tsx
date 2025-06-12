@@ -31,7 +31,7 @@ const CartItem: FC<Props> = ({ item }) => {
           />
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <p>Amount </p>
+              <p className={s.itemAmount}>Amount </p>
 
               <button
                 onClick={() => dispatch(decreaseQuantity(item.id))}
@@ -39,12 +39,15 @@ const CartItem: FC<Props> = ({ item }) => {
               >
                 <img src="/burger/minus.svg" width={28} height={29} />
               </button>
-              <span>{item.quantity}</span>
+              <span className={s.quantity}>{item.quantity}</span>
               <button onClick={() => dispatch(increaseQuantity(item.id))}>
                 <img src="/burger/plus.svg" width={28} height={29} />
               </button>
             </div>
-            <p style={{ display: 'flex', gap: '40px', marginTop: '7px' }}>
+            <p
+              className={s.itemPrice}
+              style={{ display: 'flex', gap: '40px', marginTop: '7px' }}
+            >
               Price <span>{item.quantity * item.price} UAH</span>
             </p>
           </div>

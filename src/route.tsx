@@ -11,7 +11,7 @@ import AllCategory from './pages/Category/modules/AllCategory/AllCategory';
 import CreateCategory from './pages/Category/modules/CreateCategory/CreateCategory';
 import EditCategoryById from './pages/Category/modules/EditCategoryById/EditCategoryById';
 import CreateProduct from './pages/CreateProduct/CreateProduct';
-import CartPage from './pages/Delivery/DeliveryPage';
+import DeliveryPage from './pages/Delivery/DeliveryPage';
 import Product from './pages/Product/Product';
 
 const AppRoute = () => {
@@ -23,7 +23,7 @@ const AppRoute = () => {
         <Route path="/users" element={<Users />} />
         <Route path="/create-product" element={<CreateProduct />} />
         <Route path={'/product/:productId'} element={<Product />} />
-        <Route path={'/delivery'} element={<CartPage />} />
+        <Route path={'/delivery'} element={<DeliveryPage />} />
 
         <Route path="/category" element={<Category />}>
           <Route path="/category/all" element={<AllCategory />} />

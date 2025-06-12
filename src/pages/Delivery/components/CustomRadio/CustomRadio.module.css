@@ -1,0 +1,18 @@
+.customRadio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+}
+
+.customRadio input[type='radio'] {
+  display: none;
+}
+
+.customRadio .icon {
+  width: 20px;
+  height: 20px;
+}

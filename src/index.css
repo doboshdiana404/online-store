@@ -130,7 +130,9 @@ h6 {
 
   /* padding-inline: clamp(1.5rem, -1.929rem + 7.143vw, 4.5rem); */
 }
-
+button {
+  cursor: pointer;
+}
 @media (width >= 393px) {
   .container {
     padding-inline: clamp(1.5rem, -1.929rem + 7.143vw, 4.5rem);
