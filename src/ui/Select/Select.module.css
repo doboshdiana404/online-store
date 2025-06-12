@@ -10,13 +10,12 @@ div.container.sort {
 
   position: static;
 
-  padding: 5px 8px 5px 9px;
-
+  padding: 8px 8px 9px 11px;
   border: 1px solid #000;
   border-radius: 10px;
 
   font-family: var(--font-family);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 114%;
   color: #000;
@@ -29,13 +28,13 @@ div.container.sort .option {
 
   display: block;
 
-  padding: 5px 9px;
+  padding: 8px 9.5px;
   border-radius: 0;
 
   font-family: var(--font-family);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 114%;
+  line-height: 133%;
   color: #000;
 
   animation: appear 0.35s;
@@ -105,7 +104,7 @@ div.container.sort > div.control {
 
 div.container.sort .menu {
   position: absolute;
-  top: 36px;
+  top: 43px;
   left: 0;
 
   padding: 0;
@@ -119,7 +118,44 @@ div.container.sort .menu {
 
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0;
 
   border-radius: 10px;
+}
+
+@media (width >= 768px) {
+  div.container.sort {
+    padding: 4px 8px 5px 11px;
+  }
+
+  div.container.sort .menu {
+    top: 34px;
+  }
+
+  div.container.sort .option {
+    padding: 8px 10px 7px;
+  }
+}
+
+@media (width >= 1024px) {
+  div.container.sort {
+    padding: 5px 8px 5px 9px;
+
+    font-size: 14px;
+  }
+
+  div.container.sort .menu {
+    top: 36px;
+  }
+
+  div.container.sort .option {
+    padding: 5px 9px;
+
+    font-size: 14px;
+    line-height: 114%;
+  }
+
+  .menu-list {
+    gap: 8px;
+  }
 }

@@ -1,0 +1,31 @@
+.sort {
+  display: flex;
+  gap: 21px;
+}
+
+div.btn {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+div.btn svg {
+  width: 20px;
+  height: 19px;
+}
+
+.sort > div,
+.sort > button {
+  width: calc((100% - 21px) / 2);
+}
+
+@media (width >= 768px) {
+  .sort > button {
+    display: none;
+  }
+
+  .sort > div,
+  .sort > button {
+    width: 100%;
+  }
+}

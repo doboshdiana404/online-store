@@ -14,6 +14,8 @@ export enum Variant {
   InCard = 'inCard',
   Slider = 'slider',
   Burger = 'burger',
+  Filter = 'filter',
+  FilterActive = 'filter_active',
 }
 
 export enum Position {

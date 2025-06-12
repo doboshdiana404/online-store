@@ -67,6 +67,31 @@
   background: #fff7f7;
 }
 
+.button--filter {
+  width: 100%;
+  padding: 11px 40px;
+  border: 1px solid #000;
+  border-radius: 10px;
+
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+}
+
+.button--filter_active {
+  width: 100%;
+  padding: 11.8px 40px;
+  border-radius: 10px;
+
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+
+  background: linear-gradient(50deg, #532834 0%, #b95873 100%);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .button--slider:hover {
     border-color: var(--accent);

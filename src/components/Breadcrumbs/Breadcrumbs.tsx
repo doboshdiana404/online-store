@@ -12,6 +12,11 @@ const Breadcrumbs: FC<BreadCrumbsProps> = ({
 }) => {
   return (
     <nav className={styles.crumbs}>
+      <Link to="/" variant="icon">
+        <svg className={styles.icon}>
+          <use href="/sprite.svg#crumbs" />
+        </svg>
+      </Link>
       <ul>
         <li>
           <Link to="/" variant={variant}>

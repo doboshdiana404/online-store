@@ -1,12 +1,12 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 19px;
+  gap: 12px;
 }
 
 .wrapper .title {
   font-family: var(--font-family);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #000;
 }
@@ -15,4 +15,24 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+@media (width >= 768px) {
+  .wrapper {
+    gap: 16px;
+  }
+
+  .wrapper .title {
+    font-size: 16px;
+  }
+}
+
+@media (width >= 1024px) {
+  .wrapper {
+    gap: 19px;
+  }
+
+  .wrapper .title {
+    font-size: 18px;
+  }
 }
