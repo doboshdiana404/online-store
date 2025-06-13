@@ -47,10 +47,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.checkbox-container.primary:hover .label {
-  color: var(--accent);
-}
-
 .checkbox-container.primary > .input:checked {
   position: relative;
 }
@@ -67,4 +63,10 @@
   height: 11px;
 
   background: url('/public/checked.svg') no-repeat center/cover;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .checkbox-container.primary:hover .label {
+    color: var(--accent);
+  }
 }

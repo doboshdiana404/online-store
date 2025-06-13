@@ -23,14 +23,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.btn.arrow:hover {
-  border-color: var(--accent);
-}
-
-.btn.arrow:hover svg {
-  color: var(--accent);
-}
-
 .btn.arrow:disabled {
   cursor: auto;
 
@@ -54,18 +46,28 @@
   color: #000;
 }
 
-.btn.number:hover {
-  border-color: var(--accent);
-
-  color: var(--accent);
-}
-
 .btn.number.active {
   cursor: auto;
 
   color: #fff;
 
   background: #9c3540;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn.number:hover {
+    border-color: var(--accent);
+
+    color: var(--accent);
+  }
+
+  .btn.arrow:hover {
+    border-color: var(--accent);
+  }
+
+  .btn.arrow:hover svg {
+    color: var(--accent);
+  }
 }
 
 @media ((width >= 768px) and (width <= 1024px)) {

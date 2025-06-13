@@ -12,6 +12,7 @@
 
   height: 100%;
   max-height: 447px;
+  max-height: calc(90dvh - 115px);
 }
 
 .mobile-filters .scrolling > div {
@@ -27,7 +28,6 @@
   line-height: 133%;
 
   background: linear-gradient(50deg, #532834 0%, #b95873 100%);
-  background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
