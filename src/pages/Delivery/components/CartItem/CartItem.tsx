@@ -25,7 +25,7 @@ const CartItem: FC<Props> = ({ item }) => {
         <div className={s.cartItemFlexWrap}>
           <Image
             id={item.mainImageBaseName}
-            alt={`image for ${name} product`}
+            alt={`image for ${item.name} product`}
             width={65}
             height={65}
           />
@@ -37,11 +37,35 @@ const CartItem: FC<Props> = ({ item }) => {
                 onClick={() => dispatch(decreaseQuantity(item.id))}
                 className={s.btnVolume}
               >
-                <img src="/burger/minus.svg" width={28} height={29} />
+                <svg
+                  className={s.iconVolume}
+                  width="28"
+                  height="29"
+                  viewBox="0 0 28 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.0337 14.5L6.96635 14.5M27.0625 14.5C27.0625 21.7142 21.2142 27.5625 14 27.5625C6.78578 27.5625 0.9375 21.7142 0.9375 14.5C0.9375 7.28578 6.78578 1.4375 14 1.4375C21.2142 1.4375 27.0625 7.28578 27.0625 14.5Z"
+                    strokeLinecap="round"
+                  />
+                </svg>
               </button>
               <span className={s.quantity}>{item.quantity}</span>
               <button onClick={() => dispatch(increaseQuantity(item.id))}>
-                <img src="/burger/plus.svg" width={28} height={29} />
+                <svg
+                  className={s.iconVolume}
+                  width="28"
+                  height="29"
+                  viewBox="0 0 28 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.0337 14.5L6.96635 14.5M14 21.5338V7.46647M27.0625 14.5C27.0625 21.7142 21.2142 27.5625 14 27.5625C6.78578 27.5625 0.9375 21.7142 0.9375 14.5C0.9375 7.28578 6.78578 1.4375 14 1.4375C21.2142 1.4375 27.0625 7.28578 27.0625 14.5Z"
+                    strokeLinecap="round"
+                  />
+                </svg>
               </button>
             </div>
             <p

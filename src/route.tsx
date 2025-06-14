@@ -10,8 +10,10 @@ import Category from './pages/Category/Category';
 import AllCategory from './pages/Category/modules/AllCategory/AllCategory';
 import CreateCategory from './pages/Category/modules/CreateCategory/CreateCategory';
 import EditCategoryById from './pages/Category/modules/EditCategoryById/EditCategoryById';
+import Checkout from './pages/Checkout/Checkout';
 import CreateProduct from './pages/CreateProduct/CreateProduct';
 import DeliveryPage from './pages/Delivery/DeliveryPage';
+import OrderSuccess from './pages/OrderSuccess/OrderSuccess';
 import Product from './pages/Product/Product';
 
 const AppRoute = () => {
@@ -24,7 +26,8 @@ const AppRoute = () => {
         <Route path="/create-product" element={<CreateProduct />} />
         <Route path={'/product/:productId'} element={<Product />} />
         <Route path={'/delivery'} element={<DeliveryPage />} />
-
+        <Route path={'/checkout'} element={<Checkout />} />
+        <Route path={'/order-success'} element={<OrderSuccess />} />
         <Route path="/category" element={<Category />}>
           <Route path="/category/all" element={<AllCategory />} />
           <Route path="/category/create" element={<CreateCategory />} />

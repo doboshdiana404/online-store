@@ -3,11 +3,13 @@ import React from 'react';
 import s from './CustomRadio.module.css';
 
 type CustomRadioProps = {
-  label: string;
+  label: React.ReactNode;
   name: string;
-  value: string;
+  value?: string;
   checked: boolean;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  checkedIcon: string;
+  type?: 'radio' | 'checkbox';
 };
 
 const CustomRadio: React.FC<CustomRadioProps> = ({
@@ -16,21 +18,28 @@ const CustomRadio: React.FC<CustomRadioProps> = ({
   value,
   checked,
   onChange,
+  checkedIcon,
+  type = 'radio',
 }) => {
   return (
     <label className={s.customRadio}>
       <input
-        type="radio"
+        type={type}
         name={name}
-        value={value}
+        {...(type === 'radio' && value ? { value } : {})}
         checked={checked}
         onChange={onChange}
       />
       <span className={s.icon}>
         {checked ? (
-          <img src="/burger/check.svg" width={18} height={17} />
+          <img src={checkedIcon} width={18} height={17} alt="Checked" />
         ) : (
-          <img src="/burger/Ellipse.svg" width={19} height={18} />
+          <img
+            src="/burger/Ellipse.svg"
+            width={19}
+            height={18}
+            alt="Unchecked"
+          />
         )}
       </span>
       <span>{label}</span>

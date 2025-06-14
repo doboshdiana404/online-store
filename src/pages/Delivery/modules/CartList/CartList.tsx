@@ -25,7 +25,7 @@ const CartList = () => {
             fontSize: '18px',
           }}
         >
-          <span>Total</span> <span>{totalPrice} UAH</span>
+          <span>Total</span> <span>{totalPrice.toFixed(2)} UAH</span>
         </h3>
       )}
     </div>

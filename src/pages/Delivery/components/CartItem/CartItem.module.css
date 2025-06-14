@@ -30,6 +30,7 @@
   letter-spacing: 0em;
   margin-left: 8px;
   margin-right: 8px;
+  font-family: var(--font5);
 }
 .itemPrice {
   display: flex;
@@ -38,4 +39,10 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14286;
+}
+.iconVolume:hover {
+  stroke: #9c3541;
+}
+.iconVolume {
+  stroke: #000;
 }

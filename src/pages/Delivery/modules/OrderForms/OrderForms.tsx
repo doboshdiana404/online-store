@@ -8,6 +8,10 @@ import PaymentMethodForm from '../../components/PaymentMethodForm/PaymentMethodF
 
 import s from './OrderForm.module.css';
 
+import { useAppDispatch } from '@/redux/hooks';
+import { clearCart } from '@/redux/slices/shoppingCartSlice';
+import { store } from '@/redux/store';
+
 const initialValues = {
   firstName: '',
   lastName: '',
@@ -15,6 +19,11 @@ const initialValues = {
   email: '',
   paymentMethod: '',
   deliveryMethod: '',
+  courierComment: '',
+  novaPostBranch: '',
+  areaRef: '',
+  cityRef: '',
+  warehouseRef: '',
 };
 
 const validationSchema = Yup.object({
@@ -24,13 +33,35 @@ const validationSchema = Yup.object({
   email: Yup.string().email('Incorrect email').required('Required field'),
   paymentMethod: Yup.string().required('Choose a payment method'),
   deliveryMethod: Yup.string().required('Choose a delivery method'),
+  courierComment: Yup.string().when('deliveryMethod', {
+    is: 'courier',
+    then: (schema) => schema.required('Please enter a comment for courier'),
+  }),
+  novaPostBranch: Yup.string().when('deliveryMethod', {
+    is: 'nova_poshta',
+    then: (schema) => schema.required('Please enter branch number'),
+  }),
 });
-
 const OrderForm = () => {
-  const handleSubmit = (values: typeof initialValues) => {
-    console.log('Дані форми:', values);
-  };
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+  const handleSubmit = (values: typeof initialValues) => {
+    const cartItems = store.getState().shoppingCart.items;
+
+    const finalOrderData = {
+      ...values,
+      items: cartItems,
+    };
+
+    if (values.paymentMethod === 'credit') {
+      navigate('/checkout', { state: { orderData: finalOrderData } });
+    } else {
+      console.log('FULL ORDER DATA (cash):', finalOrderData);
+      dispatch(clearCart());
+      navigate('/order-success');
+    }
+  };
+
   return (
     <Formik
       initialValues={initialValues}
@@ -41,9 +72,11 @@ const OrderForm = () => {
         <ContactForm />
         <PaymentMethodForm />
         <DeliveryMethodForm />
+
         <button type="submit" className={s.orderBtn}>
           Place order
         </button>
+
         <button
           type="button"
           onClick={() => navigate('/catalog')}

@@ -1,0 +1,24 @@
+.cardInfoInput {
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 462px;
+  background-color: #fff;
+}
+.cardInfoForm {
+  border: 1px solid #e2dcdc;
+  border-radius: 10px;
+  padding: 16px 50px 16px 16px;
+  width: 528px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.cardInfoLabel {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+  margin-bottom: 8px;
+}

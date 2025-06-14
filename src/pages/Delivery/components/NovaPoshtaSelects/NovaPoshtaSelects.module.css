@@ -1,0 +1,29 @@
+.selectWrap {
+  display: flex;
+  flex-direction: column;
+}
+.selectAddressField {
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 8px 8px 8px 12px;
+  width: 140px;
+  height: 40px;
+  background-color: #fff;
+  font-size: 14px;
+  font-family: var(--font3);
+}
+
+.choiseAddress {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+.addressSelectLabel {
+  height: 32px;
+  display: flex;
+  margin-bottom: 5px;
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+}

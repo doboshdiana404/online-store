@@ -23,3 +23,36 @@
   font-size: 14px;
   line-height: 1.14286;
 }
+.commentLabel {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14286;
+}
+.commentWrap {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.commentField {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 7px 12px;
+  width: 462px;
+  resize: none;
+  height: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+  margin-top: 8px;
+}
+.commentField::placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+  color: #595d62;
+}
+.error {
+  color: red;
+  font-size: 0.85rem;
+}
