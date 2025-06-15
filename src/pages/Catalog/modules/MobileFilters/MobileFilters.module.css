@@ -26,8 +26,5 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 133%;
-
-  background: linear-gradient(50deg, #532834 0%, #b95873 100%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #000;
 }

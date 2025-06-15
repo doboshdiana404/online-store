@@ -16,6 +16,7 @@ export enum Variant {
   Burger = 'burger',
   Filter = 'filter',
   FilterActive = 'filter_active',
+  ClearFilter = 'clear_filter',
 }
 
 export enum Position {

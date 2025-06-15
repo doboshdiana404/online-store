@@ -10,7 +10,7 @@ import { CheckboxListProps } from './types';
 const CheckboxList: FC<CheckboxListProps> = ({ list, title, searchName }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const activeId = searchParams.get(searchName ?? '') || '';
-  console.log(activeId, `activeId ${searchName}`);
+
   const handleChangeSearchParams = (id: string) => {
     setSearchParams((prev) => {
       const params = new URLSearchParams(prev.toString());
@@ -28,7 +28,7 @@ const CheckboxList: FC<CheckboxListProps> = ({ list, title, searchName }) => {
           list.map(({ id, name }) => (
             <Checkbox
               key={id}
-              defaultChecked={id === activeId}
+              checked={id === activeId}
               variant="primary"
               type="radio"
               name={title}

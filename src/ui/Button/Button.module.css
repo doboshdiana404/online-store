@@ -92,7 +92,25 @@
   background: linear-gradient(50deg, #532834 0%, #b95873 100%);
 }
 
+.button--clear_filter {
+  width: fit-content;
+
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 133%;
+  color: var(--accent);
+  text-align: left;
+}
+
 @media (hover: hover) and (pointer: fine) {
+  .button--clear_filter:hover {
+    border-color: transparent;
+
+    background: #fff7f7;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+  }
+
   .button--slider:hover {
     border-color: var(--accent);
 
@@ -113,6 +131,25 @@
 @media (width >= 768px) {
   .button--burger {
     display: none;
+  }
+
+  .button--clear_filter {
+    width: 100%;
+    padding: 7.2px 0;
+    border: 1px solid #000;
+    border-radius: 10px;
+
+    font-family: var(--second-family);
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+    letter-spacing: -0.01em;
+  }
+
+  .button--clear_filter:disabled {
+    color: #fff;
+
+    background: var(--light-gray);
   }
 }
 

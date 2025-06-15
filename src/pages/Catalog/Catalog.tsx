@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 import ProductCard from '@/components/ProductCard/ProductCard';
 
 import styles from './Catalog.module.css';
-import SeeMore from './components/SeeMore/SeeMore';
+// import SeeMore from './components/SeeMore/SeeMore';
 import Filters from './modules/Filters/Filters';
 import ProductList from './modules/ProductList/ProductList';
 
@@ -61,7 +61,7 @@ const Catalog = () => {
           </main>
           {isSuccess && (
             <div className={styles.pagination}>
-              <SeeMore isActive={false} />
+              {/* <SeeMore isActive={false} /> */}
               <Pagination
                 skip={products.skip}
                 take={products.take}

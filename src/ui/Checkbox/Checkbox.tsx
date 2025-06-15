@@ -9,10 +9,7 @@ const Checkbox: FC<InputProps> = ({
   label,
   errorMessage,
   variant,
-  value,
-  name,
   type,
-  onChange,
   children,
   ...rest
 }) => {
@@ -22,15 +19,7 @@ const Checkbox: FC<InputProps> = ({
   });
   return (
     <div className={checkboxClassNames}>
-      <input
-        {...rest}
-        id={id}
-        type={type}
-        value={value}
-        onChange={onChange}
-        name={name}
-        className={styles.input}
-      />
+      <input {...rest} id={id} type={type} className={styles.input} />
       <label htmlFor={id} className={styles.label}>
         {label}
         {children && children}
