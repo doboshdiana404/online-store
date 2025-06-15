@@ -61,6 +61,12 @@
     color: var(--accent);
   }
 
+  .btn.number.active:hover {
+    cursor: auto;
+
+    color: #fff;
+  }
+
   .btn.arrow:hover {
     border-color: var(--accent);
   }

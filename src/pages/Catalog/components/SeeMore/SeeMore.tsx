@@ -5,13 +5,13 @@ import clsx from 'clsx';
 import styles from './SeeMore.module.css';
 import { SeeMoreProps } from './types';
 
-const SeeMore: FC<SeeMoreProps> = ({ isActive }) => {
+const SeeMore: FC<SeeMoreProps> = ({ isActive, onClick }) => {
   const wrapperCN = clsx(styles.wrapper, {
     [styles.active]: isActive,
   });
 
   return (
-    <button className={styles.more}>
+    <button className={styles.more} onClick={onClick}>
       <div className={wrapperCN}>
         <svg
           className={styles.icon}
