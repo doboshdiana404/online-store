@@ -1,3 +1,5 @@
+import MediaQuery from 'react-responsive';
+
 import ClearFilters from '../../components/ClearFilters/ClearFilters';
 import CheckboxFilters from '../CheckboxFilters/CheckboxFilters';
 import Sort from '../Sort/Sort';
@@ -9,7 +11,9 @@ const Filters = () => {
     <aside className={styles.filter}>
       <div className={styles.wrapper}>
         <Sort />
-        <CheckboxFilters />
+        <MediaQuery minWidth={768}>
+          <CheckboxFilters />
+        </MediaQuery>
       </div>
       <ClearFilters />
     </aside>
