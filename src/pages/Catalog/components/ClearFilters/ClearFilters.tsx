@@ -10,14 +10,7 @@ const ClearFilters = () => {
 
   const handleClearFilters = useCallback(() => {
     setSearchParams(new URLSearchParams());
-    //   setSearchParams((prev) => {
-    //     const params = new URLSearchParams(prev.toString());
-    //     params.delete('page');
-    //     params.delete('CategoryId');
-    //     params.delete('SortDirection');
-    //     params.delete('SortBy');
-    //     return params;
-    //   });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [setSearchParams]);
   return (
     <Button

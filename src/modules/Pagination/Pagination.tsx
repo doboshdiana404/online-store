@@ -39,15 +39,12 @@ const Pagination: FC<PaginationProps> = ({
 
     if (isSamePage && searchScroll) {
       onClick(true);
-      requestAnimationFrame(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
     } else {
       onClick(false);
-      requestAnimationFrame(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
     }
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   };
 
   return (
