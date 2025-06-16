@@ -1,0 +1,21 @@
+.wrapper {
+  display: none;
+  flex-direction: column;
+  gap: 31px;
+}
+
+@media (width >= 768px) {
+  .wrapper {
+    display: flex;
+
+    gap: 24px;
+  }
+}
+
+@media (width >= 1024px) {
+  .wrapper {
+    display: flex;
+
+    gap: 29px;
+  }
+}

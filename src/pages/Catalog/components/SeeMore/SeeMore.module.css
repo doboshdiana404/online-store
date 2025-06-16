@@ -1,0 +1,56 @@
+.more {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  align-self: center;
+
+  padding-right: 10px;
+
+  color: var(--accent);
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+}
+
+.wrapper.active {
+  animation: spin 1s linear infinite;
+}
+
+.icon {
+  transform-origin: center;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.more p {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 133%;
+}
+
+@media (width >= 768px) {
+  .more {
+    display: none;
+  }
+}

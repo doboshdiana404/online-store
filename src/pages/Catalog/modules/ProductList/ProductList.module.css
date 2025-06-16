@@ -1,0 +1,39 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+
+  height: fit-content;
+}
+
+@media (width <= 393px) {
+  .list > div {
+    min-width: 150px;
+  }
+}
+
+@media (width >= 393px) {
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(162px, 1fr));
+    gap: 16px 21px;
+  }
+}
+
+@media (width >= 768px) {
+  .list {
+    gap: 33px 16px;
+  }
+}
+
+@media (width >= 1024px) {
+  .list {
+    gap: 32px 24px;
+  }
+}
+
+@media (width >= 1280px) {
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(182px, 1fr));
+    gap: 50px 29px;
+  }
+}

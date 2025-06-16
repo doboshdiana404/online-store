@@ -1,7 +1,5 @@
 import { FC } from 'react';
 
-import clsx from 'clsx';
-
 import { Button } from '@/ui/Button/Button';
 import { Variant } from '@/ui/Button/constants';
 import Link from '@/ui/Link/Link';
@@ -18,14 +16,10 @@ export interface MenuProps {
   closeMenu: () => void;
 }
 
-const Menu: FC<MenuProps> = ({ closeMenu, isOpen }) => {
+const Menu: FC<MenuProps> = ({ closeMenu }) => {
   const totalCartQuantity = useAppSelector(selectTotalCartQuantity);
-  const menuCN = clsx(styles.menu, {
-    [styles.open]: isOpen,
-    [styles.close]: !isOpen,
-  });
   return (
-    <div className={menuCN}>
+    <div className={styles.menu}>
       <Button
         className={styles.close}
         variant={Variant.Burger}

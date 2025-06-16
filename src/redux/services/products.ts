@@ -36,6 +36,10 @@ export interface ProductsListArgs {
   sortDirection?: string;
 }
 
+interface ProjectsInitialPageParam {
+  page: number;
+  size: number;
+}
 export interface ProductById {
   id: string;
   name: string;
@@ -72,6 +76,48 @@ export interface ProductCreateWithImage {
 
 export const categoryApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
+    // TODO: fix infinity scrolling
+    getAllProductsInfinity: builder.infiniteQuery<
+      ProductsList,
+      ProductsListArgs,
+      ProjectsInitialPageParam
+    >({
+      infiniteQueryOptions: {
+        initialPageParam: {
+          page: 1,
+          size: 8,
+        },
+        getNextPageParam: (lastPage, allPages, lastPageParam) => {
+          const nextPage = lastPageParam.page + 1;
+          const remainingPages =
+            lastPage?.totalItems - (lastPage?.skip + lastPage?.take);
+
+          if (remainingPages <= 0) {
+            return undefined;
+          }
+
+          return {
+            ...lastPageParam,
+            page: nextPage,
+          };
+        },
+      },
+      query: ({
+        pageParam: { page, size },
+        queryArg: {
+          categoryId,
+          sortBy,
+          sortDirection,
+          searchQuery,
+          maxPrice,
+          minPrice,
+          isActive,
+        },
+      }) => ({
+        url: `/products?PageNumber=${page}&PageSize=${size}&CategoryId=${categoryId}&SortBy=${sortBy}&SortDirection=${sortDirection}&SearchQuery=${searchQuery}&MinPrice=${minPrice}&MaxPrice=${maxPrice}&IsActive=${isActive}`,
+      }),
+      keepUnusedDataFor: 0,
+    }),
     getAllProducts: builder.query<ProductsList, ProductsListArgs>({
       query: ({
         pageNumber = 1,
@@ -150,4 +196,5 @@ export const {
   useDeleteProductMutation,
   useEditProductMutation,
   useSetImagesForProductByIdMutation,
+  useGetAllProductsInfinityInfiniteQuery,
 } = categoryApi;

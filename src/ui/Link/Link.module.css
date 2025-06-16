@@ -58,7 +58,33 @@
   color: #000;
 }
 
+.link--crumbs_dark {
+  width: fit-content;
+
+  font-family: var(--second-family);
+  font-size: 12px;
+  line-height: 15px;
+  color: #000;
+}
+
+.link--crumbs_light {
+  width: fit-content;
+
+  font-family: var(--second-family);
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+}
+
 @media (hover: hover) and (pointer: fine) {
+  .link--crumbs_dark:hover {
+    color: var(--accent);
+  }
+
+  .link--crumbs_light:hover {
+    color: #f8c6d0;
+  }
+
   .link--footer:hover {
     color: var(--accent);
     text-decoration: underline;

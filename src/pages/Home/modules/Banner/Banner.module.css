@@ -11,7 +11,7 @@
   max-height: 483px;
   margin: 0 auto;
 
-  background: url('/banner.svg') top/cover no-repeat;
+  background: url('/banner.svg') bottom/cover no-repeat;
 }
 
 .banner .title {
@@ -239,7 +239,7 @@
 
 @media (width >= 1440px) {
   .banner {
-    max-height: none;
+    /* max-height: none; */
   }
 
   .banner .title {
