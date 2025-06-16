@@ -1,0 +1,30 @@
+.mobile-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+
+  width: 100%;
+  padding: 24px 24px 39px;
+}
+
+.mobile-filters .scrolling {
+  overflow-y: auto;
+
+  height: 100%;
+  max-height: 447px;
+  max-height: calc(90dvh - 115px);
+}
+
+.mobile-filters .scrolling > div {
+  display: flex;
+}
+
+.mobile-filters > .close {
+  align-self: center;
+
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 133%;
+  color: #000;
+}

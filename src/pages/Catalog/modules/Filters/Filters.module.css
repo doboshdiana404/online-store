@@ -1,0 +1,21 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.filter > button {
+  display: none;
+}
+
+@media (width >= 768px) {
+  .filter > button {
+    display: flex;
+  }
+}

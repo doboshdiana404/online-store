@@ -4,7 +4,7 @@
   display: block;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 8px;
 
   width: 100%;
   min-width: 162px;
@@ -26,14 +26,14 @@
 .card .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 7px;
   align-items: center;
 }
 
 .card .title {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .card .title h3 {
@@ -102,6 +102,8 @@
 @media (width >= 1024px) {
   .card {
     gap: 12px;
+
+    padding: 12px 34px 21px 33px;
   }
 
   .card .title h3 {
@@ -119,6 +121,6 @@
 
 @media (width >= 1280px) {
   .card {
-    max-width: 203px;
+    max-width: 220px;
   }
 }

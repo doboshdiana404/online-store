@@ -11,8 +11,22 @@
   left: 50%;
   transform: translateX(0%);
 
-  padding: 20px 0 22px;
+  padding: 12px 0;
 
-  background: #f6c7d2;
-  box-shadow: 0 4px 4px 0 #edc9d1;
+  background: linear-gradient(360deg, #f4c0cc 0%, #f7c9d4 100%);
+}
+
+@media (width >= 768px) {
+  .layout header {
+    padding: 20px 0 24px;
+
+    background: #f6c7d2;
+    box-shadow: 0 4px 4px 0 #edc9d1;
+  }
+}
+
+@media (width >= 1024px) {
+  .layout header {
+    padding: 20px 0 22px;
+  }
 }

@@ -3,49 +3,27 @@ import { FC, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import PaginationButton from './Components/PaginationButton';
+import styles from './Pagination.module.css';
+import { PaginationProps } from './types';
 
-export interface PaginationProps {
-  totalItems: number;
-  skip: number;
-  take: number;
-}
+import { usePagination } from '@/hooks/usePagination';
 
-const calculatePagination = (
-  totalItems: number,
-  skip: number,
-  take: number
-) => {
-  const currentPage = Math.floor(skip / take) + 1;
-  const totalPages = Math.ceil(totalItems / take);
-  const hasNextPage = currentPage < totalPages;
-  const hasPreviousPage = currentPage > 1;
-
-  return {
-    currentPage,
-    totalPages,
-    hasNextPage,
-    hasPreviousPage,
-    nextPage: hasNextPage ? currentPage + 1 : null,
-    previousPage: hasPreviousPage ? currentPage - 1 : null,
-  };
-};
-
-const Pagination: FC<PaginationProps> = ({ skip, take, totalItems }) => {
-  const [, setSearchParams] = useSearchParams();
-  const {
-    currentPage,
-    nextPage,
-    previousPage,
-    hasNextPage,
-    hasPreviousPage,
-    totalPages,
-  } = calculatePagination(totalItems, skip, take);
+const Pagination: FC<PaginationProps> = ({
+  skip,
+  take,
+  totalItems,
+  onClick,
+}) => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const { currentPage, hasNextPage, hasPreviousPage, paginationRange } =
+    usePagination(totalItems, skip, take);
 
   const setNewSearchParams = useCallback(
     (newPage: string) => {
       setSearchParams((prev) => {
         const params = new URLSearchParams(prev.toString());
         params.set('page', newPage);
+        params.delete('scroll');
         return params;
       });
     },
@@ -53,43 +31,54 @@ const Pagination: FC<PaginationProps> = ({ skip, take, totalItems }) => {
   );
 
   const handlePageChange = (newPage: number) => {
+    const currentSearchPage = searchParams.get('page') ?? '1';
+    const isSamePage = currentSearchPage === String(newPage);
+    const searchScroll = searchParams.get('scroll');
+
     setNewSearchParams(String(newPage));
+
+    if (isSamePage && searchScroll) {
+      onClick(true);
+    } else {
+      onClick(false);
+    }
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   };
 
   return (
-    <nav aria-label="Pagination">
+    <nav aria-label="Pagination" className={styles.pagination}>
       <PaginationButton
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={!hasPreviousPage}
-        pageNumber="Prev"
+        variant="arrow"
+        arrow={
+          <svg className={styles.icon}>
+            <use href="/sprite.svg#icon-arrow" />
+          </svg>
+        }
       />
-      <PaginationButton
-        disabled={currentPage === 1}
-        onClick={() => handlePageChange(1)}
-        pageNumber={1}
-      />
-      {previousPage && (
-        <PaginationButton
-          onClick={() => handlePageChange(previousPage)}
-          pageNumber={previousPage}
-        />
-      )}
-      <PaginationButton disabled pageNumber={currentPage} />
-      {nextPage && (
-        <PaginationButton
-          onClick={() => handlePageChange(nextPage)}
-          pageNumber={nextPage}
-        />
-      )}
-      <PaginationButton
-        disabled={currentPage === totalPages}
-        onClick={() => handlePageChange(totalPages)}
-        pageNumber={totalPages}
-      />
+      <div>
+        {paginationRange.map((page) => (
+          <PaginationButton
+            key={page}
+            onClick={() => handlePageChange(page)}
+            pageNumber={page}
+            disabled={page === currentPage}
+            variant={page === currentPage ? 'active' : 'number'}
+          />
+        ))}
+      </div>
       <PaginationButton
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={!hasNextPage}
-        pageNumber="Next"
+        variant="arrow"
+        arrow={
+          <svg className={`${styles.icon} ${styles.next}`}>
+            <use href="/sprite.svg#icon-arrow" />
+          </svg>
+        }
       />
     </nav>
   );

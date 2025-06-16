@@ -5,39 +5,46 @@
   max-width: 400px;
 }
 
-div.container {
+div.container.sort {
   cursor: pointer;
 
   position: static;
 
-  padding: 0.78rem 1rem 0 0.78rem;
+  padding: 8px 8px 9px 11px;
+  border: 1px solid #000;
+  border-radius: 10px;
 
-  border: 1px solid black;
-  border-radius: 0.25rem;
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 114%;
+  color: #000;
 
-  font-size: 1rem;
-  line-height: 1.188rem;
-  color: black;
   letter-spacing: 0.01em;
 }
 
-div.container .option {
+div.container.sort .option {
   cursor: pointer;
 
-  padding: 0.75em;
-  border-radius: 4px;
+  display: block;
+
+  padding: 8px 9.5px;
+  border-radius: 0;
+
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 133%;
+  color: #000;
 
   animation: appear 0.35s;
   animation-fill-mode: backwards;
 }
 
-div.container .option_focused {
+div.container.sort .option_focused {
   cursor: pointer;
 
-  padding: 0.75em;
-  border-radius: 4px;
-
-  background-color: brown;
+  background: #d7a6af;
 }
 
 .indicator {
@@ -86,26 +93,24 @@ div.container .option_focused {
   }
 }
 
-.control {
-  cursor: pointer !important;
+div.container.sort > div.control {
+  cursor: pointer;
 
   align-items: center;
 
   min-height: auto;
-  padding-bottom: 0.75em;
+  padding: 0;
 }
 
-.menu {
+div.container.sort .menu {
   position: absolute;
   top: 43px;
   left: 0;
 
-  padding: 0.625rem;
-  border: 1px solid grey;
-  border-top: none;
-  border-radius: 0 0 4px 4px;
+  padding: 0;
+  border-radius: 10px;
 
-  background-color: whitesmoke;
+  background-color: #fbfbfb;
 }
 
 .menu-list {
@@ -113,5 +118,44 @@ div.container .option_focused {
 
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: 0;
+
+  border-radius: 10px;
+}
+
+@media (width >= 768px) {
+  div.container.sort {
+    padding: 4px 8px 5px 11px;
+  }
+
+  div.container.sort .menu {
+    top: 34px;
+  }
+
+  div.container.sort .option {
+    padding: 8px 10px 7px;
+  }
+}
+
+@media (width >= 1024px) {
+  div.container.sort {
+    padding: 5px 8px 5px 9px;
+
+    font-size: 14px;
+  }
+
+  div.container.sort .menu {
+    top: 36px;
+  }
+
+  div.container.sort .option {
+    padding: 5px 9px;
+
+    font-size: 14px;
+    line-height: 114%;
+  }
+
+  .menu-list {
+    gap: 8px;
+  }
 }

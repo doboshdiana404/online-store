@@ -145,8 +145,8 @@
 
 @media (width >= 1280px) {
   .embla__container.product > div {
-    flex: 0 0 calc((100% - (4 * 40px)) / 5);
+    flex: 0 0 calc((100% - (4 * 18px)) / 5);
 
-    margin-right: 40px;
+    margin-right: 18px;
   }
 }

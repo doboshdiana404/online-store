@@ -1,16 +1,10 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 
 import clsx from 'clsx';
 import { NavLink } from 'react-router-dom';
 
 import styles from './Link.module.css';
-
-export interface LinkProps {
-  to: string;
-  children: ReactNode;
-  icon?: string;
-  variant: 'header' | 'primary' | 'footer' | 'icon';
-}
+import { LinkProps } from './types';
 
 const Link: FC<LinkProps> = ({ children, variant, ...props }) => {
   const isExternalLink = props.to.startsWith('http');

@@ -1,0 +1,56 @@
+.crumbs {
+  display: flex;
+  gap: 1px;
+  align-items: center;
+}
+
+.crumbs ul {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.crumbs ul li {
+  width: fit-content;
+
+  font-family: var(--second-family);
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.crumbs ul li.crumbs_dark {
+  color: black;
+}
+
+.crumbs ul li.crumbs_light {
+  color: #fff;
+}
+
+.crumbs > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 9px;
+}
+
+.crumbs > a .icon {
+  width: 6px;
+  height: 10px;
+}
+
+@media (width >= 768px) {
+  .crumbs > a {
+    display: none;
+  }
+
+  .crumbs ul {
+    gap: 5px;
+  }
+}
+
+@media (width >= 1024px) {
+  .crumbs ul {
+    gap: 4px;
+  }
+}

@@ -27,7 +27,7 @@ const Select = ({
   onChange,
   error,
   helperText,
-  style,
+  variant,
   ...props
 }: SelectProps) => {
   const selectValue = value ? { value, label: value } : undefined;
@@ -39,7 +39,7 @@ const Select = ({
 
   const containerClName = clsx(styles.container, {
     [styles['container-error']]: error,
-    [styles.secondary]: style,
+    [styles[variant]]: variant,
   });
   return (
     <div className={styles.wrapper}>
