@@ -33,7 +33,7 @@
   letter-spacing: -0.01em;
 }
 .successEmbleme {
-  background-image: url('/success-embleme/success-embleme.png');
+  background-image: url('/successEmbleme/successEmbleme.png');
   background-size: cover;
   background-position: center;
   width: 611px;
