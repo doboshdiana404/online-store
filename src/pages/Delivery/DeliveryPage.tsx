@@ -16,7 +16,12 @@ const DeliveryPage = () => {
       <h2 className={s.deliveryPageTitle}>Your cart</h2>
       <div className={s.deliveryPageWrap}>
         <CartList />
-        {cartItems.length == 0 && (
+
+        {cartItems.length > 0 && <OrderForms />}
+      </div>
+      {cartItems.length == 0 && (
+        <div className={s.emptyCart}>
+          <p>Your cart is empty.</p>
           <button
             type="button"
             onClick={() => navigate('/catalog')}
@@ -24,9 +29,8 @@ const DeliveryPage = () => {
           >
             Continue shopping
           </button>
-        )}
-        {cartItems.length > 0 && <OrderForms />}
-      </div>
+        </div>
+      )}
     </section>
   );
 };

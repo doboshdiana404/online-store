@@ -1,96 +1,144 @@
-import { useEffect, useState } from 'react';
+import { useMemo } from 'react';
 
-import { useFormikContext } from 'formik';
+import { useFormContext, Controller } from 'react-hook-form';
+
+import Select from '@/ui/Select/Select';
 
 import s from './NovaPoshtaSelects.module.css';
 
-import { getAreas, getCities, getWarehouses } from '@/hooks/useNovaPoshtaApi';
+import {
+  useGetAreasQuery,
+  useGetCitiesQuery,
+  useGetWarehousesQuery,
+} from '@/redux/services/novaPoshtaApi';
 
 const NovaPoshtaSelects = () => {
-  const { values, setFieldValue } = useFormikContext<any>();
+  const { control, setValue, watch } = useFormContext();
 
-  const [areas, setAreas] = useState([]);
-  const [cities, setCities] = useState([]);
-  const [warehouses, setWarehouses] = useState([]);
+  const areaRef = watch('areaRef');
+  const cityRef = watch('cityRef');
+  const warehouseRef = watch('warehouseRef');
 
-  useEffect(() => {
-    getAreas().then(setAreas);
-  }, []);
+  const { data: areasData = [], isLoading: isLoadingAreas } =
+    useGetAreasQuery(undefined);
+  const { data: citiesData = [], isLoading: isLoadingCities } =
+    useGetCitiesQuery(areaRef, { skip: !areaRef });
+  const { data: warehousesData = [], isLoading: isLoadingWarehouses } =
+    useGetWarehousesQuery(cityRef, { skip: !cityRef });
 
-  useEffect(() => {
-    if (values.areaRef) {
-      getCities(values.areaRef).then(setCities);
+  const areasOptions = useMemo(
+    () => areasData.map((a) => a.Description),
+    [areasData]
+  );
+  const selectedArea = useMemo(
+    () => areasData.find((a) => a.Ref === areaRef)?.Description || '',
+    [areasData, areaRef]
+  );
+
+  const citiesOptions = useMemo(
+    () => citiesData.map((c) => c.Description),
+    [citiesData]
+  );
+  const selectedCity = useMemo(
+    () => citiesData.find((c) => c.Ref === cityRef)?.Description || '',
+    [citiesData, cityRef]
+  );
+
+  const warehousesOptions = useMemo(
+    () => warehousesData.map((w) => w.Description),
+    [warehousesData]
+  );
+  const selectedWarehouse = useMemo(
+    () => warehousesData.find((w) => w.Ref === warehouseRef)?.Description || '',
+    [warehousesData, warehouseRef]
+  );
+
+  const handleAreaChange = (selected: string) => {
+    const selectedRef =
+      areasData.find((a) => a.Description === selected)?.Ref || '';
+    if (selectedRef !== areaRef) {
+      setValue('areaRef', selectedRef);
+      setValue('cityRef', '');
+      setValue('warehouseRef', '');
     }
-  }, [values.areaRef]);
+  };
 
-  useEffect(() => {
-    if (values.cityRef) {
-      getWarehouses(values.cityRef).then(setWarehouses);
+  const handleCityChange = (selected: string) => {
+    const selectedRef =
+      citiesData.find((c) => c.Description === selected)?.Ref || '';
+    if (selectedRef !== cityRef) {
+      setValue('cityRef', selectedRef);
+      setValue('warehouseRef', '');
     }
-  }, [values.cityRef]);
+  };
+
+  const handleWarehouseChange = (selected: string) => {
+    const selectedRef =
+      warehousesData.find((w) => w.Description === selected)?.Ref || '';
+    if (selectedRef !== warehouseRef) {
+      setValue('warehouseRef', selectedRef);
+    }
+  };
 
   return (
     <div className={s.choiseAddress}>
       <div className={s.selectWrap}>
         <label className={s.addressSelectLabel}>Select the region</label>
-        <select
+        <Controller
           name="areaRef"
-          value={values.areaRef || ''}
-          onChange={(e) => {
-            setFieldValue('areaRef', e.target.value);
-            setFieldValue('cityRef', '');
-            setFieldValue('warehouseRef', '');
-          }}
-          className={s.selectAddressField}
-        >
-          <option value="">Region</option>
-          {areas.map((area: any) => (
-            <option key={area.Ref} value={area.Ref}>
-              {area.Description}
-            </option>
-          ))}
-        </select>
+          control={control}
+          render={({ field }) => (
+            <Select
+              {...field}
+              value={selectedArea}
+              options={areasOptions}
+              onChange={handleAreaChange}
+              variant="select"
+              placeholder="Region"
+              isDisabled={isLoadingAreas}
+            />
+          )}
+        />
       </div>
 
       <div className={s.selectWrap}>
-        <label className={s.addressSelectLabel}>Select the sity</label>
-        <select
+        <label className={s.addressSelectLabel}>Select the city</label>
+        <Controller
           name="cityRef"
-          value={values.cityRef || ''}
-          onChange={(e) => {
-            setFieldValue('cityRef', e.target.value);
-            setFieldValue('warehouseRef', '');
-          }}
-          disabled={!values.areaRef}
-          className={s.selectAddressField}
-        >
-          <option value="">City</option>
-          {cities.map((city: any) => (
-            <option key={city.Ref} value={city.Ref}>
-              {city.Description}
-            </option>
-          ))}
-        </select>
+          control={control}
+          render={({ field }) => (
+            <Select
+              {...field}
+              value={selectedCity}
+              options={citiesOptions}
+              onChange={handleCityChange}
+              variant="select"
+              placeholder="City"
+              isDisabled={!areaRef || isLoadingCities}
+            />
+          )}
+        />
       </div>
 
       <div className={s.selectWrap}>
         <label className={s.addressSelectLabel}>
           Select the post office number
         </label>
-        <select
+        <Controller
           name="warehouseRef"
-          value={values.warehouseRef || ''}
-          onChange={(e) => setFieldValue('warehouseRef', e.target.value)}
-          disabled={!values.cityRef}
-          className={s.selectAddressField}
-        >
-          <option value="">Post number</option>
-          {warehouses.map((wh: any) => (
-            <option key={wh.Ref} value={wh.Ref}>
-              {wh.Description}
-            </option>
-          ))}
-        </select>
+          control={control}
+          render={({ field }) => (
+            <Select
+              {...field}
+              value={selectedWarehouse}
+              options={warehousesOptions}
+              onChange={handleWarehouseChange}
+              variant="select"
+              placeholder="Branch"
+              isDisabled={!cityRef || isLoadingWarehouses}
+            />
+          )}
+        />
       </div>
     </div>
   );

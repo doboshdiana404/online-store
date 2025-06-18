@@ -1,26 +1,41 @@
-import { useFormikContext, ErrorMessage } from 'formik';
+import { useFormContext, Controller } from 'react-hook-form';
 
 import CustomRadio from '@/pages/Delivery/components/CustomRadio/CustomRadio';
-
-import { CheckoutFormValues } from '../types/forms';
 
 import s from './AgreementCheckbox.module.css';
 
 const AgreementCheckbox = () => {
-  const { values, setFieldValue } = useFormikContext<CheckoutFormValues>();
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext();
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    onChange: (value: boolean) => void
+  ) => {
+    onChange(e.target.checked);
+  };
 
   return (
     <div className={s.agreement}>
-      <CustomRadio
+      <Controller
         name="agreement"
-        checked={values.agreement}
-        value="true"
-        onChange={(e) => setFieldValue('agreement', e.target.checked)}
-        checkedIcon="/burger/check.svg"
-        label="I have read and understand the Privacy Policy*"
-        type="checkbox"
+        control={control}
+        render={({ field }) => (
+          <CustomRadio
+            {...field}
+            checked={field.value}
+            onChange={(e) => handleChange(e, field.onChange)}
+            checkedIcon="/burger/check.svg"
+            label="I have read and understand the Privacy Policy*"
+            type="checkbox"
+          />
+        )}
       />
-      <ErrorMessage name="agreement" component="div" className={s.error} />
+
+      {typeof errors.agreement?.message === 'string' && (
+        <div className={s.error}>{errors.agreement.message}</div>
+      )}
     </div>
   );
 };

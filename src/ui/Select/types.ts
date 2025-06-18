@@ -13,4 +13,5 @@ export interface SelectProps
   error?: boolean;
   helperText?: string;
   variant: 'sort' | 'select';
+  placeholder?: string;
 }

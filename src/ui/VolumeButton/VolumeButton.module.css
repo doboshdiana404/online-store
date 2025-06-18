@@ -1,0 +1,20 @@
+.btn {
+  cursor: pointer;
+
+  border: none;
+
+  background: none;
+}
+
+.icon {
+  width: 28px;
+  height: 29px;
+
+  fill: transparent;
+  stroke: #000;
+}
+
+.icon:hover,
+.icon:focus {
+  stroke: var(--accent);
+}

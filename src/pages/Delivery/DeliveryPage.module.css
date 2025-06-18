@@ -1,31 +1,46 @@
 .sectionDeliveryPage {
   width: 100%;
   max-width: 1440px;
+  min-height: 400px;
   margin: 0 auto;
   padding: 24px 48px;
   padding: 2rem;
-  min-height: 400px;
 }
+
 .deliveryPageTitle {
   margin-bottom: 20px;
+
   font-weight: 500;
   line-height: 1.08333;
 }
+
 .deliveryPageWrap {
   display: flex;
   justify-content: space-between;
 }
+
 .continueBtn {
-  border: 1px solid #000;
-  border-radius: 10px;
   width: 307px;
   height: 40px;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.01em;
   margin-top: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+
   font-family: var(--second-family);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
+
 .continueBtn:hover {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+}
+
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 400px;
 }

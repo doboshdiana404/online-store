@@ -1,24 +1,31 @@
 .wrapper {
+  margin-bottom: 99px;
   padding: 16px 50px 16px 16px;
   border: 1px solid #000;
   border-radius: 10px;
-  margin-bottom: 99px;
 }
+
 .contactFormInput {
-  border: 1px solid #e2e2e2;
-  border-radius: 8px;
-  padding: 8px 12px;
   width: 462px;
   height: 32px;
+  padding: 8px 12px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+
+  font-size: 14px;
+
   background: #fff;
 }
+
 .form {
   display: flex;
   flex-direction: column;
 }
+
 .field {
   margin-bottom: 16px;
 }
+
 .field::placeholder {
   font-size: 14px;
   line-height: 1.14286;
@@ -27,24 +34,34 @@
 
 .field label {
   display: block;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14286;
+
   margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14286;
 }
-/* 
-.field input {
-  padding: 0.5rem;
-  width: 100%;
-} */
 
 .error {
-  color: red;
   font-size: 0.85rem;
+  color: red;
 }
+
 .contactFormTitle {
   margin-bottom: 16px;
-  font-weight: 600;
+
   font-size: 16px;
+  font-weight: 600;
   line-height: 1.125;
+}
+
+:global(input:-webkit-autofill),
+:global(input:-webkit-autofill:hover),
+:global(input:-webkit-autofill:focus) {
+  font-size: 14px;
+  color: #000 !important;
+
+  box-shadow: 0 0 0 1000px white inset;
+
+  transition: background-color 5000s ease-in-out 0s;
 }
