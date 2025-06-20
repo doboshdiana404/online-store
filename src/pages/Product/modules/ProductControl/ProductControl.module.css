@@ -1,0 +1,68 @@
+.section {
+  display: flex;
+  grid-area: 1 / 2 / 2 / 3;
+  flex-direction: column;
+  gap: 32px;
+
+  width: 100%;
+}
+
+.section h1 {
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 112%;
+  color: #000;
+}
+
+.section .price {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  text-transform: capitalize;
+  letter-spacing: -0.04em;
+}
+
+.amount {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.amount > p {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  text-transform: capitalize;
+  letter-spacing: -0.04em;
+}
+
+.amount > .control {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.control > span {
+  display: block;
+
+  min-width: 30px;
+
+  font-family: var(--font5);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 58%;
+  color: #000;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 418px;
+}

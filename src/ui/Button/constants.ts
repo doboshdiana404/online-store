@@ -17,6 +17,9 @@ export enum Variant {
   Filter = 'filter',
   FilterActive = 'filter_active',
   ClearFilter = 'clear_filter',
+  Shop = 'shop',
+  ProductCart = 'product_cart',
+  ProductInCart = 'product_in_cart',
 }
 
 export enum Position {
