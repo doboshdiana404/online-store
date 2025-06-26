@@ -29,5 +29,11 @@
       </clipPath>
     </defs>
   </symbol>
+  <symbol id="icon-minus" viewBox="0 0 31 32">
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.1034" d="M23.21 16h-15.523M29.862 16c0 7.96-6.453 14.414-14.414 14.414s-14.414-6.453-14.414-14.414c0-7.961 6.453-14.414 14.414-14.414s14.414 6.453 14.414 14.414z"></path>
+</symbol>
+<symbol id="icon-plus" viewBox="0 0 31 32">
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.1034" d="M23.21 16h-15.523M15.448 23.761v-15.523M29.862 16c0 7.96-6.453 14.414-14.414 14.414s-14.414-6.453-14.414-14.414c0-7.961 6.453-14.414 14.414-14.414s14.414 6.453 14.414 14.414z"></path>
+</symbol>
 </defs>
 </svg>

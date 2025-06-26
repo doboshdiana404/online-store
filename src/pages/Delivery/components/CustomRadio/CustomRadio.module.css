@@ -1,0 +1,24 @@
+.customRadio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+}
+
+.customRadio input[type='radio'],
+.customRadio input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.customRadio .icon {
+  width: 20px;
+  height: 20px;
+}

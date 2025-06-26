@@ -1,0 +1,22 @@
+.paymentList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.paymentTitle {
+  margin-bottom: 16px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14286;
+}
+
+.paymentMethodForm {
+  margin-bottom: 20px;
+}
+
+.error {
+  font-size: 0.85rem;
+  color: red;
+}

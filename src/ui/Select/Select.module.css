@@ -23,6 +23,23 @@ div.container.sort {
   letter-spacing: 0.01em;
 }
 
+div.container.select {
+  cursor: pointer;
+
+  width: 158px;
+  padding: 8px 8px 8px 12px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 1.71429;
+  color: #000;
+  letter-spacing: 0.01em;
+
+  background-color: #fbfbfb;
+}
+
 div.container.sort .option {
   cursor: pointer;
 
@@ -41,7 +58,26 @@ div.container.sort .option {
   animation-fill-mode: backwards;
 }
 
+div.container.select .option {
+  cursor: pointer;
+
+  padding: 6px 12px;
+
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 1.14286;
+  color: #000;
+
+  animation-fill-mode: backwards;
+}
+
 div.container.sort .option_focused {
+  cursor: pointer;
+
+  background: #d7a6af;
+}
+
+div.container.select .option_focused {
   cursor: pointer;
 
   background: #d7a6af;
@@ -102,7 +138,27 @@ div.container.sort > div.control {
   padding: 0;
 }
 
+div.container.select > div.control {
+  cursor: pointer;
+
+  align-items: center;
+
+  min-height: auto;
+  padding: 0;
+}
+
 div.container.sort .menu {
+  position: absolute;
+  top: 43px;
+  left: 0;
+
+  padding: 0;
+  border-radius: 10px;
+
+  background-color: #fbfbfb;
+}
+
+div.container.select .menu {
   position: absolute;
   top: 43px;
   left: 0;
@@ -121,6 +177,12 @@ div.container.sort .menu {
   gap: 0;
 
   border-radius: 10px;
+}
+
+.placeholder {
+  font-size: 14px;
+  line-height: 1.71429;
+  color: #595d62;
 }
 
 @media (width >= 768px) {

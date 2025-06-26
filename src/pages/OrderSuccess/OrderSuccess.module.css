@@ -1,0 +1,47 @@
+.orderSuccessTitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.08333;
+  margin-bottom: 20px;
+}
+.successOrderPage {
+  padding-top: 16px;
+  padding-bottom: 88px;
+}
+.successMessage {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.successTitleMessage {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.08333;
+  text-align: center;
+  font-family: var(--font8);
+}
+.continueBtn {
+  font-family: var(--second-family);
+  border-radius: 10px;
+  width: 238px;
+  height: 40px;
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+.successEmbleme {
+  background-image: url('/successEmbleme/successEmbleme.png');
+  background-size: cover;
+  background-position: center;
+  width: 611px;
+  height: 556px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 309px;
+  gap: 40px;
+  margin: 0 auto;
+}

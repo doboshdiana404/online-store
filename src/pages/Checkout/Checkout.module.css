@@ -1,0 +1,57 @@
+.sectionCheckoutPage {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 48px;
+  padding: 2rem;
+}
+.checkoutDescription {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.paymentForm {
+  gap: 0;
+}
+.paymentTitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.08333;
+}
+.orderBtn {
+  border-radius: 10px;
+  width: 307px;
+  height: 40px;
+  background: #9c3541;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin-top: 52px;
+  font-family: var(--second-family);
+}
+.orderBtn:hover {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #ba4b59;
+}
+.orderBtn:focus {
+  box-shadow: none;
+  background: #6c1b24;
+}
+.returnBtn {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 307px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  margin-top: 20px;
+  font-family: var(--second-family);
+}
+.returnBtn:hover {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #fff7f7;
+}

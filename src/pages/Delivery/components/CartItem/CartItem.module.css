@@ -1,0 +1,48 @@
+.cartItemFlexWrap {
+  display: flex;
+  gap: 22px;
+}
+.cartItem {
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  width: 417px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+.titleProduct {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14286;
+  margin-top: 12px;
+}
+.itemAmount {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+}
+.quantity {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 0.58333;
+  letter-spacing: 0em;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-family: var(--font5);
+}
+.itemPrice {
+  display: flex;
+  gap: 40px;
+  margin-top: 7px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+}
+.iconVolume:hover {
+  stroke: #9c3541;
+}
+.iconVolume {
+  stroke: #000;
+}

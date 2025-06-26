@@ -22,6 +22,7 @@ const optionClName = (focused: boolean) => {
 };
 
 const Select = ({
+  placeholder = 'Select ...',
   value,
   options,
   onChange,
@@ -52,6 +53,7 @@ const Select = ({
         controlShouldRenderValue
         blurInputOnSelect
         components={{ DropdownIndicator, IndicatorSeparator: null }}
+        placeholder={placeholder}
         classNames={{
           container: () => containerClName,
           control: () => styles.control,
@@ -59,6 +61,7 @@ const Select = ({
           indicatorSeparator: () => styles.separator,
           menuList: () => styles['menu-list'],
           option: (state) => optionClName(state.isFocused),
+          placeholder: () => styles.placeholder,
         }}
         {...props}
       />
