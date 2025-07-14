@@ -76,6 +76,22 @@
   color: #fff;
 }
 
+.link--review {
+  display: flex;
+  gap: 7px;
+
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 133%;
+  color: var(--accent);
+}
+
+.link--review svg {
+  width: 32px;
+  height: 32px;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .link--crumbs_dark:hover {
     color: var(--accent);
@@ -130,6 +146,16 @@
 
   .link--footer {
     font-size: 14px;
+  }
+
+  .link--review {
+    gap: 2px;
+
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 114%;
+    color: var(--accent);
   }
 }
 

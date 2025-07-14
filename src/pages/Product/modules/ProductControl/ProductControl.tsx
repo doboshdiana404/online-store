@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
+import MediaQuery from 'react-responsive';
 
 import { Button } from '@/ui/Button/Button';
 import { Variant } from '@/ui/Button/constants';
@@ -31,22 +32,24 @@ const ProductControl: FC<ProductControlProps> = ({
     <section className={styles.section}>
       <h1>{name}</h1>
       <p className={styles.price}>{t('price', { price })}</p>
-      <div className={styles.amount}>
-        <p>Amount</p>
-        <div className={styles.control}>
-          <VolumeButton
-            typeIcon="minus"
-            onClick={handleDecreaseItem}
-            type="button"
-          />
-          <span>{getQuantity(id)}</span>
-          <VolumeButton
-            typeIcon="plus"
-            onClick={handleIncreaseItem}
-            type="button"
-          />
+      <MediaQuery minWidth={767}>
+        <div className={styles.amount}>
+          <p>Amount</p>
+          <div className={styles.control}>
+            <VolumeButton
+              typeIcon="minus"
+              onClick={handleDecreaseItem}
+              type="button"
+            />
+            <span>{getQuantity(id)}</span>
+            <VolumeButton
+              typeIcon="plus"
+              onClick={handleIncreaseItem}
+              type="button"
+            />
+          </div>
         </div>
-      </div>
+      </MediaQuery>
       <div className={styles.btns}>
         <Button variant={Variant.Shop} text="Shop now" />
         <>

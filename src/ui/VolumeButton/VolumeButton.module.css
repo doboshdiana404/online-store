@@ -1,0 +1,17 @@
+.volume {
+  width: 44px;
+  height: 35px;
+}
+
+.volume > svg {
+  cursor: pointer;
+
+  width: 44px;
+  height: 35px;
+
+  transition: all 0.3s;
+}
+
+svg:hover {
+  color: #9c3541;
+}

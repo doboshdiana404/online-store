@@ -3,24 +3,27 @@
   --slide-size: 100%;
 
   display: flex;
-  grid-area: 1 / 1 / 2 / 2;
-  flex-direction: row;
-  gap: 59px;
+  flex-direction: column-reverse;
+  gap: 25px;
+
+  align-items: center;
 
   width: 100%;
   max-width: 563px;
-  height: 278px;
 }
 
 .embla > .wrapper {
   position: relative;
 
   width: 100%;
-  max-width: 418px;
+  max-width: clamp(16.5rem, -12.375rem + 60.156vw, 26.125rem);
 }
 
 .embla__viewport {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
 }
 
 .embla__container {
@@ -39,7 +42,8 @@
 }
 
 .embla__slide > picture > img {
-  aspect-ratio: 1.5;
+  /* aspect-ratio: 1.5; */
+  aspect-ratio: 0.93;
   width: 100%;
   height: auto;
 
@@ -71,6 +75,41 @@
   transition: all 0.3s;
 }
 
+.embla__dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.embla__dot {
+  touch-action: manipulation;
+  cursor: pointer;
+
+  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  appearance: none;
+  appearance: none;
+  background-color: #b2b2b2;
+}
+
+.embla__dot--selected {
+  background: linear-gradient(50deg, #532834 0%, #b95873 100%);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .button:hover .icon {
     color: var(--accent);
@@ -78,18 +117,26 @@
 }
 
 .embla-thumbs {
+  width: 100%;
+  max-width: 418px;
 }
 
 .embla-thumbs__viewport {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 
   height: 100%;
 }
 
 .embla-thumbs__container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
+
+  width: 100%;
+  max-width: 418px;
+  max-width: clamp(16.5rem, -12.375rem + 60.156vw, 26.125rem);
 
   height: 100%;
 }
@@ -115,4 +162,38 @@
 
 .embla-thumbs__slide--selected .embla-thumbs__slide__number {
   opacity: 0.2;
+}
+
+@media (width >= 768px) {
+  .embla {
+    grid-area: 1 / 1 / 2 / 2;
+
+    padding-right: 20px;
+  }
+
+  .embla__slide > picture > img {
+    aspect-ratio: 1.76;
+  }
+}
+
+@media (width >= 1024px) {
+  .embla__slide > picture > img {
+    aspect-ratio: 1.5;
+  }
+}
+
+@media (width >= 1280px) {
+  .embla {
+    flex-direction: row;
+    gap: 59px;
+    align-items: normal;
+  }
+
+  .embla-thumbs {
+    max-width: 52px;
+  }
+
+  .embla-thumbs__container {
+    flex-direction: column;
+  }
 }

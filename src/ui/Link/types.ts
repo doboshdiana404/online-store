@@ -10,5 +10,6 @@ export interface LinkProps {
     | 'footer'
     | 'icon'
     | 'crumbs_dark'
+    | 'review'
     | 'crumbs_light';
 }

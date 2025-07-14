@@ -2,12 +2,14 @@ import { useState, useEffect, useCallback, type FC } from 'react';
 
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
+import MediaQuery from 'react-responsive';
 
 import Image from '@/components/Image/Image';
 
 import { Button } from '@/ui/Button/Button';
 import { Variant } from '@/ui/Button/constants';
 
+import { DotButton, useDotButton } from './components/Dot/Dot';
 import { Thumb } from './components/Thumb/Thumb';
 import styles from './ProductSlider.module.css';
 
@@ -23,7 +25,11 @@ const ProductSlider: FC<ProductSliderProps> = ({ slides, options }) => {
     containScroll: 'keepSnaps',
     dragFree: true,
   });
-
+  const {
+    selectedIndex: selectedDotIndex,
+    scrollSnaps,
+    onDotButtonClick,
+  } = useDotButton(emblaMainApi);
   const scrollPrev = useCallback(() => {
     if (emblaMainApi) {
       emblaMainApi.scrollPrev();
@@ -58,20 +64,25 @@ const ProductSlider: FC<ProductSliderProps> = ({ slides, options }) => {
 
   return (
     <div className={styles.embla}>
-      <div className={styles['embla-thumbs']}>
-        <div className={styles['embla-thumbs__viewport']} ref={emblaThumbsRef}>
-          <div className={styles['embla-thumbs__container']}>
-            {slides.map((image, index) => (
-              <Thumb
-                key={index}
-                onClick={() => onThumbClick(index)}
-                selected={index === selectedIndex}
-                image={image}
-              />
-            ))}
+      <MediaQuery minWidth={768}>
+        <div className={styles['embla-thumbs']}>
+          <div
+            className={styles['embla-thumbs__viewport']}
+            ref={emblaThumbsRef}
+          >
+            <div className={styles['embla-thumbs__container']}>
+              {slides.map((image, index) => (
+                <Thumb
+                  key={index}
+                  onClick={() => onThumbClick(index)}
+                  selected={index === selectedIndex}
+                  image={image}
+                />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </MediaQuery>
       <div className={styles.wrapper}>
         <div className={styles.embla__viewport} ref={emblaMainRef}>
           <div className={styles.embla__container}>
@@ -81,7 +92,7 @@ const ProductSlider: FC<ProductSliderProps> = ({ slides, options }) => {
               </div>
             ))}
           </div>
-          <>
+          <MediaQuery minWidth={768}>
             <Button
               variant={Variant.Slider}
               onClick={scrollNext}
@@ -102,7 +113,18 @@ const ProductSlider: FC<ProductSliderProps> = ({ slides, options }) => {
                 </svg>
               }
             />
-          </>
+          </MediaQuery>
+          <MediaQuery maxWidth={767}>
+            <div className={styles[`embla__dots`]}>
+              {scrollSnaps.map((_, index) => (
+                <DotButton
+                  key={index}
+                  onClick={() => onDotButtonClick(index)}
+                  className={`${styles[`embla__dot`]} ${index === selectedDotIndex ? styles['embla__dot--selected'] : ''}`}
+                />
+              ))}
+            </div>
+          </MediaQuery>
         </div>
       </div>
     </div>

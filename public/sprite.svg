@@ -3,6 +3,9 @@
   <symbol id="cart" viewBox="0 0 26 27" fill="none">
     <path d="M23.1538 9.8077L22.0449 20.9479C21.7876 23.5318 19.6137 25.5 17.0171 25.5H8.98291C6.38625 25.5 4.21235 23.5318 3.95513 20.9479L2.84615 9.80772M13 16.2693V19.9616M17.6154 16.2693V19.9616M8.38462 16.2693V19.9616M10.2308 1.5L7.46159 8.88462M1 9.8077H25M15.7692 1.50001L18.5385 8.88462" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
+  <symbol id="review" viewBox="0 0 32 32" fill="none">
+   <path d="M5.99988 16.0037L25.9963 15.9999M25.9963 15.9999L20.6127 10.6143M25.9963 15.9999L20.6127 21.3854" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
   <symbol id="plus" viewBox="0 0 44 44" fill="none">
     <path d="M29.0337 22L14.9663 22M22 29.0338V14.9665M35.0625 22C35.0625 29.2142 29.2142 35.0625 22 35.0625C14.7858 35.0625 8.9375 29.2142 8.9375 22C8.9375 14.7858 14.7858 8.9375 22 8.9375C29.2142 8.9375 35.0625 14.7858 35.0625 22Z" stroke="currentColor" stroke-linecap="round" />
   </symbol>

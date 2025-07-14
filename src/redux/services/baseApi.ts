@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 import { RootState } from '../store';
 
-const baseURLApi = import.meta.env.VITE_API_BASE_URL_WITH_S;
+const baseURLApi = import.meta.env.VITE_API_BASE_URL;
 // export const baseURLApi = 'http://craft-sweets.runasp.net/';
 const baseQuery = fetchBaseQuery({
   baseUrl: baseURLApi,

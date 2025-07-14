@@ -6,5 +6,5 @@ export interface SliderProps {
   options?: EmblaOptionsType;
   children: ReactNode;
   isButton?: boolean;
-  variant?: 'product' | 'category';
+  variant?: 'product' | 'category' | 'review';
 }

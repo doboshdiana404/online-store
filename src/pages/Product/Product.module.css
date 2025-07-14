@@ -1,15 +1,186 @@
 .product {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 
   width: 100%;
-  padding: 32px 24px;
+  margin: 0 auto;
+  padding-top: 12px;
+  padding-bottom: 33px;
+
+  background: #ffedf1;
 }
 
-.images {
+.product .wrapper {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product .wrapper .header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.reviews,
+.like {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.reviews h2,
+.like h2 {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 111%;
+  color: #000;
+}
+
+.like {
+  margin-top: 6px;
+}
+
+.reviews {
+  margin-top: 12px;
+}
+
+.reviews > a {
+  margin-top: 0;
+}
+
+.product .wrapper .like > div {
+  padding-inline: 0;
+}
+
+.product .wrapper .like > div > div {
+  max-width: 1300px;
+}
+
+.product .wrapper .like > div > div > div > div {
+  flex: 0 0 calc((100% - 10px) / 2);
+
+  margin-right: 10px;
+}
+
+@media (width >= 560px) {
+  .product .wrapper .like > div > div > div > div {
+    flex: 0 0 calc((100% - (2 * 6px)) / 3);
+
+    margin-right: 6px;
+  }
+}
+
+@media (width >= 768px) {
+  .product {
+    padding-bottom: 40px;
+  }
+
+  .product .wrapper {
+    gap: 24px;
+  }
+
+  .product .wrapper .like > div > div > div > div {
+    flex: 0 0 calc((100% - (3 * 16px)) / 4);
+
+    margin-right: 16px;
+  }
+
+  .product .wrapper .header {
+    display: grid;
+    grid-gap: 30px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+  }
+
+  .reviews > a {
+    align-self: start;
+
+    margin-top: 6px;
+  }
+
+  .reviews {
+    gap: 16px;
+
+    margin-top: 18px;
+  }
+
+  .like {
+    gap: 16px;
+
+    margin-top: 22px;
+  }
+}
+
+@media (width >= 1024px) {
+  .product .wrapper .like > div {
+    padding-inline: 44px;
+  }
+
+  .product {
+    padding-top: 17px;
+  }
+
+  .product .wrapper {
+    gap: 19.5px;
+  }
+
+  .reviews h2,
+  .like h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 108%;
+  }
+
+  .product .wrapper .header {
+    grid-gap: 21px 100px;
+  }
+
+  .reviews,
+  .like {
+    gap: 20px;
+  }
+
+  /* .product .wrapper .like > div > div > div > div {
+    flex: 0 0 calc((100% - (4 * 10px)) / 5);
+
+    margin-right: 10px;
+  } */
+
+  .reviews > a {
+    margin-top: 8px;
+  }
+
+  .like {
+    margin-top: 40px;
+  }
+
+  .reviews {
+    margin-top: 40px;
+  }
+}
+
+@media (width >= 1280px) {
+  .product .wrapper .like > div > div > div > div {
+    flex: 0 0 calc((100% - (4 * 28px)) / 5);
+
+    margin-right: 28px;
+  }
+
+  .product {
+    padding-bottom: 55px;
+  }
+
+  .product .wrapper .header {
+    grid-column-gap: 20px;
+  }
+
+  .like {
+    margin-top: 86px;
+  }
+
+  .reviews {
+    margin-top: 80px;
+  }
 }

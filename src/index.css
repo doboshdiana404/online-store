@@ -58,6 +58,11 @@ svg {
   max-width: 100%;
 }
 
+svg {
+  width: 42px;
+  height: 42px;
+}
+
 button,
 input,
 select,

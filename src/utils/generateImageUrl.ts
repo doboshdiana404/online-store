@@ -1,4 +1,5 @@
-const baseURLApi = import.meta.env.VITE_API_BASE_URL_WITH_S;
+const baseURLApi = import.meta.env.VITE_API_BASE_URL;
+
 export const generateImageUrl = (
   id: string,
   type: 'mobile' | 'tablet' | 'desktop'
