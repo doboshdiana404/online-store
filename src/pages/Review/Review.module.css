@@ -1,0 +1,177 @@
+.review {
+  padding-block: 12px 69px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.wrapper h1 {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.11111;
+  color: var(--color-black);
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-list > div {
+  max-width: 749px;
+  padding-top: 24px;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+
+  height: fit-content;
+}
+
+.aside > button {
+  padding-block: 11px;
+}
+
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  width: 100%;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  width: 100%;
+  height: fit-content;
+  padding: 24px;
+  padding-bottom: 10px;
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+}
+
+.rating > div {
+  gap: 4px;
+}
+
+.rating > div > img {
+  width: 20px;
+  height: 20px;
+}
+
+.rating_title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.11111;
+  color: var(--accent);
+}
+
+.rating_subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33333;
+  color: var(--black);
+}
+
+@media (width > 580px) {
+  .aside {
+    flex-flow: row wrap;
+    gap: 22px 44px;
+  }
+
+  .progress-list {
+    width: calc((100% - 44px) * 0.63);
+  }
+
+  .rating {
+    width: calc((100% - 44px) * 0.37);
+  }
+}
+
+@media (width > 768px) {
+  .review {
+    padding-block: 17px 69px;
+  }
+
+  .wrapper {
+    gap: 20px;
+  }
+
+  .wrapper h1 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.08333;
+  }
+
+  .reviews {
+    grid-template-columns: 307px 1fr;
+    gap: 70px;
+  }
+
+  .aside {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .progress-list,
+  .rating {
+    width: 100%;
+  }
+
+  .rating {
+    gap: 24px;
+
+    padding-bottom: 20px;
+  }
+
+  .rating > div > img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .rating_title {
+    font-size: 32px;
+    line-height: 1.125;
+    color: var(--accent);
+  }
+
+  .rating_subtitle {
+    font-size: 14px;
+    line-height: 1.14286;
+    color: var(--black);
+  }
+
+  .progress-list {
+    gap: 12px;
+  }
+
+  .aside > button {
+    padding-block: 9px;
+  }
+}
+
+@media (width >= 1024px) {
+  .reviews {
+    gap: 134px;
+  }
+}

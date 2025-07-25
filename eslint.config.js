@@ -54,10 +54,11 @@ export default tseslint.config(
               group: 'external',
               position: 'before',
             },
-            { 
+            {
               pattern: '*',
               group: 'external',
-              position: 'before' },
+              position: 'before',
+            },
             {
               pattern: '@/pages/**',
               group: 'internal',

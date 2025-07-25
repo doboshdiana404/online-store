@@ -12,6 +12,7 @@ import CreateCategory from './pages/Category/modules/CreateCategory/CreateCatego
 import EditCategoryById from './pages/Category/modules/EditCategoryById/EditCategoryById';
 import CreateProduct from './pages/CreateProduct/CreateProduct';
 import Product from './pages/Product/Product';
+import Review from './pages/Review/Review';
 
 const AppRoute = () => {
   return (
@@ -30,6 +31,7 @@ const AppRoute = () => {
             element={<EditCategoryById />}
           />
         </Route>
+        <Route path="/review" element={<Review />} />
         <Route path="*" element={<Page404 />} />
       </Route>
     </Routes>

@@ -1,0 +1,70 @@
+.progressReview {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-left: 6px;
+}
+
+.rating {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.rating span {
+  width: 10px;
+}
+
+.progressReview span {
+  display: inline-block;
+
+  min-width: 14px;
+
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14286;
+  color: var(--black);
+  text-align: center;
+}
+
+.progressReview progress {
+  width: 100%;
+  max-width: 310px;
+  height: 12px;
+}
+
+progress[value] {
+  --color: #fd0; /* the progress color */
+  --background: #e2dcdc; /* the background color */
+
+  border-radius: 10em;
+  appearance: none;
+  background: var(--background);
+}
+
+progress[value]::-webkit-progress-bar {
+  border-radius: 10em;
+
+  background: var(--background);
+}
+
+progress[value]::-webkit-progress-value {
+  border-radius: 10em;
+
+  background: var(--color);
+}
+
+progress[value]::-moz-progress-bar {
+  border-radius: 10em;
+
+  background: var(--color);
+}
+
+@media (width > 768px) {
+  .progressReview progress {
+    max-width: 225px;
+  }
+}
