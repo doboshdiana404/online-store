@@ -1,6 +1,4 @@
 .button {
-  cursor: pointer;
-
   display: flex;
   gap: 10px;
   align-items: center;
@@ -11,6 +9,29 @@
   outline: none;
 
   transition: all 0.3s;
+}
+
+.button:not(:disabled):hover {
+  cursor: pointer;
+}
+
+.button--basic {
+  width: 100%;
+  padding-block: 10px 11px;
+  border-radius: 10px;
+
+  font-family: var(--second-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1875;
+  color: #fff;
+  letter-spacing: -0.01em;
+
+  background-color: var(--accent);
+}
+
+.button--basic:disabled {
+  background-color: var(--light-gray);
 }
 
 .button--icon {
@@ -196,6 +217,16 @@
   .button--product_in_cart:hover {
     background: #f4d7dd;
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+  }
+
+  .button--basic:not(:disabled):hover {
+    background-color: var(--hover);
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+  }
+
+  .button--basic:active {
+    background-color: var(--pressed);
+    box-shadow: none;
   }
 
   .button--product_cart:hover {

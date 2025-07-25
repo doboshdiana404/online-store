@@ -11,7 +11,10 @@ export interface Reviews {
 }
 
 export interface ReviewCreate {
-  id: string;
+  rating: number;
+  comment: string;
+  productId: string;
+  userId: string;
 }
 
 export interface ReviewEdit {

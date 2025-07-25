@@ -1,4 +1,7 @@
+import { useParams } from 'react-router-dom';
+
 import Breadcrumbs from '@components/Breadcrumbs/Breadcrumbs';
+import { skipToken } from '@reduxjs/toolkit/query';
 
 import { Button } from '@/ui/Button/Button';
 import { Variant } from '@/ui/Button/constants';
@@ -11,7 +14,20 @@ import { REVIEW_FACE } from '../Product/data';
 import { PROGRESS_REVIEW } from './data';
 import styles from './Review.module.css';
 
+import { useAppDispatch } from '@/redux/hooks';
+import { useGetReviewsByIdQuery } from '@/redux/services/review';
+import { toggleModal } from '@/redux/slices/modalSlice';
+
 const Review = () => {
+  const { productId } = useParams<{ productId: string }>();
+  const dispatch = useAppDispatch();
+  const { data: reviews } = useGetReviewsByIdQuery(productId ?? skipToken);
+  console.log(reviews);
+
+  const handleOpenModal = () => {
+    dispatch(toggleModal({ openedModalType: 'review' }));
+  };
+
   return (
     <section className={styles.review}>
       <div className="container">
@@ -39,7 +55,11 @@ const Review = () => {
                   <ProgressReview key={item.rating} {...item} />
                 ))}
               </div>
-              <Button variant={Variant.Card} text="Write review" />
+              <Button
+                onClick={handleOpenModal}
+                variant={Variant.Card}
+                text="Write review"
+              />
             </aside>
             <main className={styles['review-list']}>
               {REVIEW_FACE.slice(0, 4).map((review) => (

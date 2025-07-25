@@ -31,7 +31,7 @@ const AppRoute = () => {
             element={<EditCategoryById />}
           />
         </Route>
-        <Route path="/review" element={<Review />} />
+        <Route path="/review?/:productId" element={<Review />} />
         <Route path="*" element={<Page404 />} />
       </Route>
     </Routes>
