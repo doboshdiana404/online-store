@@ -1,0 +1,43 @@
+.wrapper {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+
+  overflow-y: auto;
+
+  width: 100%;
+  height: 100dvh;
+
+  background-color: rgb(00 00 00 / 55%);
+}
+
+.content-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content-center {
+  display: grid;
+  place-content: center;
+}
+
+.portal-enter {
+  opacity: 0;
+}
+
+.portal-enter-active {
+  opacity: 1;
+
+  transition: opacity 300ms ease;
+}
+
+.portal-exit {
+  opacity: 1;
+}
+
+.portal-exit-active {
+  opacity: 0;
+
+  transition: opacity 300ms ease;
+}
